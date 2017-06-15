@@ -1,0 +1,8 @@
+{
+  "font_color" : "#AAA",
+  "background_color" : "black",
+  "highlight_font_color" : "yellow",
+  "box_background_color" : "#333",
+  "box_font_color" : "#AAA",
+  "box_highlight_font_color" : "yellow"
+}

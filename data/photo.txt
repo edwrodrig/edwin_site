@@ -1,0 +1,60 @@
+OOOOOOOOOOOOOOOOOo:................ ......:::::..............:oooOOOOOOOOOOOOOOOoOooooooooooo::::::ooo
+OOOOOOOOOOOOOOOo:...............        .....................ooooOOOOOOOOOOOOOOOOOooooooooooooo:::oooo
+OOOOOOOOOOOOOoo....          ..               . ...........:::ooOOOOOOOOOOOOOOOOoOooooooooooooo:oooooo
+OOOOOOOOOOOOo:....                                 ........::::oOOOOOOOOOOOOOOOOOooooooooooooooooooooo
+OOOOOOOOOOOo:...  .....                            ..........:ooOOOOOOOOOOOOOOOOOOoooooooooooooooooooo
+OOOOOOOOOOo:...  ......                               .......:ooOOOOOOOOOOOOOOOOOooooooooooooooooooooo
+OOOOOOOOOo:............                                ....:.:ooOOOOOOOOOOOOOOOOOooooooooooooooooooooo
+OOOOOOOOo:...   ............    .                        ...::ooooOOOOOOOOOOOOOOOOoooooooooooooooooooo
+OOOOOOOo:..          .....                                 ...::ooooOOOOOOOOOOOOOOOOoooooooooooooooooo
+OOOoOOo..                                                    ..:oooOOOOOOOOOOOOOOOOooooooooooooooooooo
+OOo:::.                                                       ..:oOOOOOOOOOOOOOOOOOooooooooooooooooooo
+Ooo:...                                                        ..:OOOOOOOOOOOOOOOOOooooooooooo:ooooooo
+Oo::..                         ..........                      ..:oOOOOOOOOOOOOOOOoooooooooooooooooooo
+Oo:..                         .....................            ...:oOOOOOOOOOOOOOOOooooooooooooooooooo
+o:..                      .   ........................           .:oOOOOOOOOOOOOOOOooooooooooooooooooo
+o:.                    ....  ...:::::::::::............      ......oOOOOOOOOOOOOOoOooooooooooooooooooo
+O:.                   ...... ..::ooooooo::::::::........     ...:.:oOOOOOOOOOOOOOOoooooooooooooooooooo
+o:.                 ..........::oooooooooo:::::::::.....    ...:::oOOOOOOOOOOOOOOoOooooooooooooooooooo
+o:                 ..........::ooOOOoooooooo:::::::::....    ..::ooOOOOOOOOOOOOOOOoooooooooooooooooooo
+o:.               ..::::...:o:oOOOOOOoooooooooooo::::::..    .:::oOOOOOOOOOOOOOOoooooooooooooooooooooo
+Oo.               ..:::ooooooooOOOOOOOOOOOooooooooooo:::..  ..ooooOOOOOOOOOOOOOooOoooooooooooooooooooo
+Oo.               ..::oooOOOooOOOOOOOOOOOOOooooooooooo:::.  ..:ooooOOOOOOOOOOOoOoooooooooooooooooooooo
+Oo.               ..::oooOOOOOOOOOOOOOOOOOOOOooooooooo:::..  ::ooOOOOOOOOOOOOoOoOooooooooooooooooooooo
+Oo:.              ...::ooOOOOOOOOOOOOOOOOOOOOooooooooo::..  .:ooOOOOOOOOOOOOOooooooooooooooooooooooooo
+OOo..             ...:ooOOOOOOOOOOOOOOOOOOOooooooooo:::.... .:ooOOOOOOOOOOOOoooooooooooo::::::::oooooO
+OOo..             ...:ooOOOOOOOOOoooooooooooooo:oo::::.. ....ooOOOOOOOOOOoooooo::::::::.........:ooooO
+OOo..              ..ooOOOOOOOoo:::::::.:::::::::::::.......:OOOOOoooooo::::::::::...............ooooO
+OOo:. .           ..:ooOoooooo:::::::..........:::::.......::oo::::::::::::::::..:...............:oooO
+OOO:.             .:oooooooo::::ooooo:::......::oo::..... ..::::::::::::::::::....................:ooO
+OOO:.            .:oooOOooo::ooooooo:::......::oOoo:.... ...:::::::::::::::::::::.................:ooO
+ooo:             .:ooOOooooooooo:::::..   .:::oOOOoo:.......:::::::::::::::::::...................:ooo
+:::.             .:ooOOOoooooo:.......  .::ooOOOOOOoo:.:::::::::::::::::::::::::...................ooo
+.....  .         .:ooOOOOOOOoooo:::::...::oOOOOOOOOOo:::::::::::::::.::::::........................:oo
+...........      .:ooOOOOOOOOOOOooo::::::oOOOOOOOOOOoo::::::......::..:::..........................:oo
+.......::::.     .:oooOoOOOOOOOOOoooooo:oOOOOOOOOOOOOo::::::.......................................:oo
+.......::oo..    .:oooooOOOOOOOOOOOOooooOOOOOOOOOOOOOoo:::::.......................................:oo
+.......:ooo:..   .:oooooOOOOOOOOOOOooooOOOOOOOOOOOOOOOo:::::...:::.................................:oo
+........:ooo::.  .::ooooooOOOOOOOOOoooooOOOooooOOOOOOOoo::::ooooooooo::....................  .......oo
+........:ooooo.. .::ooooooooooooooooooooOoooooOOOOOOOOoo:::ooooooOOOOOOo:.................. ........:o
+.........:oooo:....::ooooooooooooooooooooooooooOOOooooo::::ooooooOOOOOOOOo:..........................:
+..........:oOOo....::oooooooooooooooooooooooooooo:::oo:::::oooooOOOOOO8888OO:........................:
+...........:ooo:..:::ooooooooooooooooooooooOOo:::::::....::oooooOOOOO8888888Oo:.......................
+...........:oooo...:ooooooooooooooooooooooOOOOoooo::......:oooooOOOO8888888888Oo......................
+.............:::..::oooooooooooooooooooooOOOOoooooo:::...::oooooOOOO888888888888O:....................
+...............  .:oooooooooooooooooooooOOOoooooooo::o::::::ooooOOO888888888888888Oo.................:
+..................:oooooooooooooooooooooooooooooooo:::...::::ooOOO888888888888888888O:...............:
+................::::ooooooooooooooooooooooooooo::::.....::::oooOOO8888888888888888888Oo:..........::oo
+..............:Oo::o:oooooooooooooooooooo:::::::::::::::::::oooOO888888888888888888888OO:......  ..ooO
+............:o88Ooooo:ooooooooooooooooo:::::::ooo:::::::::::oooOO88888OooOO88888888888OOOo..     .:OOO
+...........:O888Ooooo::::oooooooooooooo:::ooooo:::::.:::::::oooOO8888OooO88888888888888O8O:..  ..:oOOO
+.........:o88888Oooooo::::oooooooooooo:::ooooo::::.....:::::oooOOOOOooO8888888888888888888O:::ooooOOOO
+.......:oO8888O8OOooooo:::oooooooooo::::::::ooo:::::::::::::oooOOOoooO888888888888888888O88oOOOOOOOOOO
+....:oO8888##88Oooooooooo::::::ooooo::::oooooooooo:::::::::ooooOo::o88888888888888888OO8O88OOOOOOOOOoo
+..:oO8888888#888OOoooooooo::::::::ooo:ooooooooooo::::::::::oooOo::o8888888888888888888OOOO8OOOOOOOOOOo
+.:O888888888##8888Oooooooooo::::::::oooooooooo:::::::.::::oooOo::o8888888888OOO88888888OOOOOOOOOOOOooo
+oO888888888888888888Ooooooooo:::::::::::::::::::::::::::::oOoo:oo88888888888OOO888888888OOOOOOOOOOoooo
+O88888888888#888888888OOoooooo:::::::::::::::::::::::::::oOo::oo88888888888OO8888888888OOOOOOOOOOOoooo
+888888888888#####88888888OOooooo::::...::::::...::::::::oOoo::o888888888888888888888888OOOOOOOOOOOoooo
+8888888888888#######888888888888OOOOOOooo:::::::::::::ooOo::oo888888O8888OOO888888888888OOOOOOOOOooooo
+8888888888888888#######88888888888OOOOoooooooo::::::ooooo::oO888888OO8888OO8888888888888OOOOOOOOOooooo
