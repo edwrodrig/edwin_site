@@ -1,7 +1,7 @@
 {
     "title": {
         "en": "JSON formatting with jq",
-        "es": "Trucos para json con jq",
+        "es": "Trucos para json con jq"
     },
     "description": {
       "en": "JSON formatting with jq",
