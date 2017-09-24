@@ -7,8 +7,8 @@ function link() {
   return sprintf('/post/%s.html', $this['id']);
 }
 
-static function sort($a, $b) {
-  return $b['date'] <=> $a['date'];
+static function compare($a, $b) {
+  return $a['date'] <=> $b['date'];
 }
 
 }

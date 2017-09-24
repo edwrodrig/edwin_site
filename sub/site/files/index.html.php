@@ -1,16 +1,12 @@
 <?php
 
 
-(new class extends MyTemplatePage {
-
-function __construct() {
-  parent::__construct();
-}
+(new class extends \edwin\web\TemplatePage {
 
 function section_posts() {
   t__();
     tag($this->title)(tr(['en' => 'Posts', 'es' => 'Artículos']));
-    foreach ( \Data::forPost() as $index => $post ) {
+    foreach ( \data()['posts'] as $index => $post ) {
       if ( $index > 4 ) break;
       (new \blog\web\PostBox)($post);
     }
@@ -23,7 +19,7 @@ function section_posts() {
 function section_projects() {
   t__();
     tag($this->title)(tr(['en' => 'Featured projects', 'es' => 'Proyectos']));
-    foreach ( \Data::forProject() as $index => $pro ) {
+    foreach ( \data()['projects'] as $index => $pro ) {
       if ( $index > 2 ) break;
       (new \blog\web\ProjectBox)($pro);
     }
@@ -56,5 +52,5 @@ container__()([$this->style_container_padding]);
 __container();
 }
 
-})();
+})->print();
 

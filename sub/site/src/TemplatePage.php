@@ -1,6 +1,8 @@
 <?php
 
-class MyTemplatePage extends \blog\web\TemplatePage {
+namespace edwin\web;
+
+class TemplatePage extends \theme\console_blog\TemplatePage {
 
 function __construct($metadata = []) {
   parent::__construct($metadata);
@@ -11,7 +13,7 @@ function __construct($metadata = []) {
   ];
 }
 
-function header($content) {
+function header($content = '') {
  tag($this->nav->desktop->item, ['href' => url('/'), style(['font-family' => "'VT323', monospace"])])('Edwin Rodríguez');
  t_spacer();
  $this->nav->header_section();
