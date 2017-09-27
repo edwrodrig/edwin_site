@@ -6,17 +6,18 @@ class TemplatePage extends \theme\console_blog\TemplatePage {
 
 function __construct($metadata = []) {
   parent::__construct($metadata);
+}
 
-  $this->nav->data = [
+function fragment_nav() {
+  $links = [
     ['href' => url('/posts.html'), 'content' => tr(['es' => 'Artículos', 'en' => 'Posts'])],
     ['href' => url('/projects.html'), 'content' => tr(['es' => 'Proyectos', 'en' => 'Projects'])]
   ];
-}
 
-function header($content = '') {
- tag($this->nav->desktop->item, ['href' => url('/'), style(['font-family' => "'VT323', monospace"])])('Edwin Rodríguez');
- t_spacer();
- $this->nav->header_section();
+  foreach ( $links as $link ) {
+    $this->fragment_nav_item($link);
+  }
+
 }
 
 function footer_section_social_buttons() {
@@ -30,19 +31,18 @@ function footer_section_social_buttons() {
   ['http://www.codepen.io/edwrodrig', 'codepen.png'],
   ['https://www.youtube.com/user/edwrodrig1', 'youtube.png']
 ];
-  $tag = tag('a', [
-    style_def([
-      'display' => 'block',
-      'bg-cover' => true,
-      'size' => '50px'
-    ])
-  ]);
+  $tag = tag('a', ['style' => [
+    'display' => 'block',
+    'bg-cover' => true,
+    'width' => '50px',
+    'height' => '50px'
+  ]]);
 
-  t__([
-    style([
+  t__(['class' => 
+    [
       'layout' => 'row-center',
-      '> *' => style(['margin' => '0.5em'])
-    ])
+      '> *' => ['margin' => '0.5em']
+    ]
   ]);
   foreach ( $social_buttons as $button ) {
     tag($tag, ['href' => $button[0], style(['bg-img' => url(sprintf('/img/icons/%s', $button[1]))])])();

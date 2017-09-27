@@ -6,8 +6,16 @@ class Builder {
 
 function make() {
   \data()['projects'] = json_decode(file_get_contents(__DIR__ . '/../../data/files/projects.json'), true);
-  TemplatePage::$base_metadata = json_decode(file_get_contents(__DIR__ . '/../../data/files/base_metadata.json'), true);
-  TemplatePage::$style = json_decode(file_get_contents(__DIR__ . '/../../data/files/template_style.json'), true);
+
+  TemplatePage::$base_metadata = array_replace_recursive(
+    TemplatePage::$base_metadata,
+    json_decode(file_get_contents(__DIR__ . '/../../data/files/base_metadata.json'), true)
+  );
+
+  TemplatePage::$style = array_replace_recursive(
+    TemplatePage::$style,
+    json_decode(file_get_contents(__DIR__ . '/../../data/files/template_style.json'), true)
+  );
 
   $posts = [];
 
