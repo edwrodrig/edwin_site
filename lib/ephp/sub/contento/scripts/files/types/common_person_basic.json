@@ -1,0 +1,10 @@
+{
+  "name": "common_person_basic",
+  "type": "object",
+  "fields": [
+    {"field": "name", "type": "string", "display" : true, "label": { "es": "nombres", "en": "name" }},
+    {"field": "surname", "type": "string", "display" : true, "label": { "es": "apellido paterno", "en" : "lastname" }},
+    {"field": "surname2", "type": "string", "label": { "es": "apellido materno", "en": "lastname 2"}}
+  ],
+  "label" : { "es" : "persona", "en" : "person" }
+}

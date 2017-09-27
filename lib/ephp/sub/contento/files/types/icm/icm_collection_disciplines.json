@@ -1,0 +1,10 @@
+{
+    "name": "icm_disciplines",
+    "type": "collection",
+    "label": {"es" : "disciplinas", "en" : "disciplines" },
+    "elem": {
+        "type": "custom",
+        "id": ["name"],
+        "type_name": "icm_discipline"
+    }
+}

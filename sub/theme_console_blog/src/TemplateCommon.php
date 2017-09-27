@@ -9,7 +9,7 @@ static public $style = [
   'font_color' => '#AAA',
   'background_color' => 'black',
   'highlight_font_color' => 'yellow',
-  'box_background_color' => '#333',
+  'box_background_color' => '#AAA',
   'box_font_color' => '#AAA',
   'box_highlight_font_color' => 'yellow',
   'font_normal' => "'Cutive Mono', monospace",
@@ -21,12 +21,14 @@ function styles() {
     \ephp\web\TemplatePage::style_layout();
 
     style('body', [
-      'font-family' => self::$style['font_normal']
+      'font-family' => self::$style['font_normal'],
+      'background-color' => self::$style['background_color'],
+      'color' => self::$style['font_color']
     ]);
 
     style('h1, h2, h3, h4, h5, h6', [
       'font-family' => self::$style['font_emph'],
-      'font-weight' => 'unset'
+      'font-weight' => 'unset',
     ]);
 
     style('p', [
@@ -35,8 +37,11 @@ function styles() {
 
     style('a', [
       'cursor' => 'pointer',
-      'text-decoration' => 'none',
-      ':hover' => ['text-decoration' => 'underline']
+      'color' => 'inherit',
+      'text-decoration' => 'underline',
+      ':hover' => [
+        'color' => self::$style['highlight_font_color']
+      ]
     ]);
 
     style('hr', [
@@ -44,6 +49,14 @@ function styles() {
       'border-bottom' => '1px dashed',
       'margin' => '3em 0'
     ]);
+
+    style('.section-container', [
+      ' > *' => [
+        'max-width' => '1300px',
+        'margin' => '0 auto'
+      ]
+    ]);
+
 
     style('.paragraph', [
       '> h2' => [
@@ -68,10 +81,6 @@ function styles() {
       '> pre a' => ['color' => 'inherit', 'text-decoration' => 'none']
   ]);
 
-  style('.container-padding', [
-    'padding' => '1em'
-  ]);
-
   style('.font-normal', [
     'font-family' => self::$style['font_normal']
   ]);
@@ -87,8 +96,8 @@ function styles() {
 
   style('.box-hover', [
     ':hover' => [
-      'color' => self::$style['background_color'],
-      'background-color' => self::$style['highlight_font_color']
+      'background-color' => self::$style['background_color'],
+      'color' => self::$style['highlight_font_color']
     ]  
   ]);
 
@@ -99,10 +108,17 @@ function styles() {
     'color' => self::$style['background_color'],
     'text-decoration' => 'none',
     'cursor' => 'pointer',
+    'border' => 0,
     'text-align' => 'center',
-    ':hover' => ['background-color' => self::$style['highlight_font_color']],
+    ':hover' => [
+      'background-color' => self::$style['highlight_font_color'],
+      'color' => self::$style['background_color'],
+      'text-decoration' => 'none'
+    ],
     'padding' => '0.5em 0.7em'
   ]);
+
+  __t();
 }
 
 }

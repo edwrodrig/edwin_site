@@ -1,12 +1,14 @@
 {
     "title": {
-        "en": "Get file and line where a function is called in php"
+        "en": "Get file and line where a function is called in php",
+        "es": "Obtener el archivo y la linea de una llamada de función en PHP"
     },
     "description": {
-        "en": "Get file and line where a function is called in php"
+        "en": "Get file and line where a function is called in php",
+        "es": "Obtener el archivo y la linea de una llamada de función en PHP"
     },
     "date": "2017-02-01",
-    "tags": []
+    "tags": ["php"]
 }
 ---
 <p>There is the code</p>

@@ -1,0 +1,12 @@
+{
+    "name": "web_links",
+    "type": "collection",
+    "label": {
+        "es": "v\u00ednculos",
+        "en": "links"
+    },
+    "elem": {
+        "type": "custom",
+        "type_name": "web_links"
+    }
+}

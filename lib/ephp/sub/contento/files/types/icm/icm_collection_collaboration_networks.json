@@ -1,0 +1,9 @@
+{
+  "name": "icm_collaboration_networks",
+  "type": "collection",
+  "label" : { "es" : "redes formales de colaboración", "en" : "formal collaboration networks" },
+  "elem" : {
+    "type" : "custom",
+    "type_name" : "icm_collaboration_network"
+  }
+}

@@ -1,0 +1,10 @@
+{
+    "name": "icm_software",
+    "type": "collection",
+    "label": { "es" : "software", "en" : "software" },
+    "elem": {
+        "type": "custom",
+        "id" : [ "name" ],
+        "type_name": "icm_software"
+    }
+}

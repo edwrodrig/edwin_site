@@ -9,44 +9,7 @@ static public $base_metadata = [];
 
 function __construct($metadata = []) {
   parent::__construct(array_replace_recursive(self::$base_metadata, $metadata));
-/*
-  $this->nav = new \ephp\web\NavResponsive('inside');
-  $this->nav->mobile->container->set([
-    style([
-      'bg-color' => self::$style['box_background_color'],
-      'box-shadow' => 'inset 0 4px 4px rgba(0,0,0,0.5)'
-    ])
-  ]);
-  $item_style = style_def([
-    'color' => 'inherit',
-    'text-decoration' => 'none',
-    ':hover' => ['bg-color' => self::$style['box_font_color'], 'color' => self::$style['box_background_color']]
-  ]);
-  $this->nav->mobile->item->set([$item_style]);
-  $this->nav->desktop->item->set([$item_style]);
-*/
   $this->font_files = ['https://fonts.googleapis.com/css?family=Cutive+Mono|VT323'];
-/*
-  $this->body->set(['style' => [[
-    'font-family' => self::$style['font_normal'],
-    'background-color' => self::$style['background_color'],
-    'color' => self::$style['font_color'],
-  ]);
-
-  $this->nav->button->set([
-    style_def([
-      'margin' => '0.5em',
-      'border-color' => self::$style['box_font_color'],
-      'background-color' => 'transparent',
-      '> *' => style(['bg-color' => self::$style['box_font_color']]),
-      ':hover' => style([
-        'background-color' => 'rgba(0,0,0,0.15)',
-        'border-color' => self::$style['box_highlight_font_color'],
-        '> *' => style(['bg-color' => self::$style['box_highlight_font_color']])
-      ])
-    ])
-  ]);
-*/
 
   $this->nav_min_width = '600px';
 }
@@ -74,8 +37,10 @@ function header($content = '') {
       ]
     ]
   ]);
-    t__('header', ['class' => ['layout-row'], 'style' => ['position' => 'relative']]);
-      tag('a', ['class' => ['font-emph'], 'href' => '/'])('Edwin Rodríguez');
+    t__('header', ['class' => ['layout-row', 'layout-align-end'], 'style' => ['flex-grow' => 1, 'position' => 'relative', '> *' => ['padding' => '1em']]]);
+      t__();
+        tag('a', ['class' => ['font-emph'], 'style' => ['font-weight' => 'bold', 'text-decoration' => 'none', 'font-size' => '2em'], 'href' => '/'])('Edwin Rodríguez');
+      __t();
       tag(['style' => ['flex-grow' => 1]])();
       t__(['style' => ['align-self' => 'flex-end', 'display' => 'none', "@media ( max-width : $this->nav_min_width)" => ['display' => 'block']]]);
         t__('button', [
@@ -102,6 +67,7 @@ function header($content = '') {
       'class' => [[
         'overflow-x' => 'hidden',
         'display' => 'flex',
+        'align-items' => 'flex-end',
         "@media (max-width: $this->nav_min_width)" => [
           'display' => 'none',
           'flex-direction' => 'column',
@@ -112,9 +78,8 @@ function header($content = '') {
       ]]
     ]);
       echo $content;
+      $this->fragment_nav();
     __t();
-
-    $this->fragment_nav();
   __t();
   __t();
 }
@@ -125,9 +90,10 @@ function fragment_nav_item($item) {
     'href' => $item['href'],
     'class' => [
       'bg-hover',
+      'container-padding',
       [
+        'text-decoration' => 'none',
         'display' => 'block',
-        'padding' => '0.5em 0.7em',
         'white-space' => 'nowrap',
       ]
     ]

@@ -1,6 +1,6 @@
 {
-  "title" : { "en" :"Traverse directories on PHP" },
-  "description": { "en" : "Diferent ways to traverse directories on php"},
+  "title" : { "en" :"Traverse directories on PHP","es" : "Recorrer directorios en PHP" },
+  "description": { "en" : "Diferent ways to traverse directories on php", "es" : "Recorrer directorios en PHP"},
   "date" : "2016-12-23",
   "tags" : [ "php", "english" ]
 }

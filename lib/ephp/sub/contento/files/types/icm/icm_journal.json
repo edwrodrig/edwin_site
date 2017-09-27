@@ -1,0 +1,24 @@
+{
+  "name": "icm_journal",
+  "type": "object",
+  "label" : { "es" : "revista científica", "en" : "scientific journal" },
+  "fields": [
+    {"field": "name", "type": "string", "display": true, "label": { "es": "título", "en": "title" }},
+    {"field": "type", "type": "enum", "display" : true, "options": [ {"value": "isi"}, {"value": "scielo"}, {"value": "other", "label" : { "es" : "otro", "en" : "other"}}]},
+    {"field": "fis", "type": "list", "label": { "es" : "factores de impacto", "en" : "impact factors" }, "elem" : {
+      "type": "object",
+      "fields": [
+        { "field": "year", "type": "string", "display": true, "label": { "es" : "año", "en" : "year" }},
+        { "field": "valor", "type": "string", "display": true, "label": { "es" : "valor", "en" : "value" }}
+      ] 
+    }},
+    {"field": "jifpercentile", "type": "list", "label": { "es" : "percentil JIF", "en" : "JIF percentile" }, "elem" : {
+      "type": "object",
+      "fields": [          
+        { "field": "year", "type": "string", "display": true, "label": { "es" : "año", "en" : "year" }},
+        { "field": "valor", "type": "string", "display": true, "label": { "es" : "valor", "en" : "value" }}
+      ] 
+    }},
+    {"field": "url", "type": "string" }
+  ]
+}

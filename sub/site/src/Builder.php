@@ -6,7 +6,7 @@ class Builder {
 
 function make() {
   \data()['projects'] = json_decode(file_get_contents(__DIR__ . '/../../data/files/projects.json'), true);
-
+  \data()['ascii_photos'] = [['id' => 'edwin', 'data' => file_get_contents(__DIR__ . '/../../data/files/photo.txt')]];
   TemplatePage::$base_metadata = array_replace_recursive(
     TemplatePage::$base_metadata,
     json_decode(file_get_contents(__DIR__ . '/../../data/files/base_metadata.json'), true)
@@ -46,8 +46,18 @@ function build($lang) {
 
   $b('.');
 
-  \ephp\web\contento\Image::cache_images(\data()['images']);
+//  \ephp\web\contento\Image::cache_images(\data()['images']);
   $b->finalize();
+}
+
+function upload() {
+  $d = new \ephp\deploy\Github();
+  $d->user = 'edwrodrig';
+  $d->target = 'edwrodrig.github.io';
+  $d->source = __DIR__ . '/../../../../output/site/es';
+
+
+  $d();
 }
 
 }

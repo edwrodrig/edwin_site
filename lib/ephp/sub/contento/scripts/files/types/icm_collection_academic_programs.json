@@ -1,0 +1,10 @@
+{
+  "name": "icm_academic_programs",
+  "type": "collection",
+  "label" : { "es" : "programas académicos", "en" : "academic programs" },
+  "elem" : {
+    "type" : "custom",
+    "id" : [ "name", "institution"],
+    "type_name" : "icm_academic_program"
+  }
+}

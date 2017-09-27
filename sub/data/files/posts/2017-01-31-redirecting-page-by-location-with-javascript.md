@@ -1,9 +1,11 @@
 {
     "title": {
-        "en": "Redirecting page by location with javascript"
+        "en": "Redirecting page by location with javascript",
+        "es": "Redireccionando página según idioma con javascript"
     },
     "description": {
-        "en": "Redirecting page by location with javascript"
+        "en": "Redirecting page by location with javascript",
+        "es": "Redireccionando página según idioma con javascript"
     },
     "date": "2017-01-31",
     "tags": []

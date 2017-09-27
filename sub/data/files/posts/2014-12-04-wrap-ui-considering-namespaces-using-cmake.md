@@ -1,6 +1,6 @@
 {
-  "title" : { "en" :"Wrap UI considering namespace using CMake" },
-  "description" : { "en" : "There is a macro for wrap Qt ui files considering namespace." },
+  "title" : { "en" :"Wrap UI considering namespace using CMake", "es" : "Envolver UI considerando namespace usando CMake" },
+  "description" : { "en" : "There is a macro for wrap Qt ui files considering namespace.", "es" : "Una macro para envolver archivos UI de QT considerando los namespace" },
   "date" : "2014-12-04",
   "tags" : [ "qt", "cmake", "english" ]
 }

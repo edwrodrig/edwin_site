@@ -1,0 +1,9 @@
+{
+  "name": "common_duration",
+  "type": "object",
+  "fields": [
+    {"field": "start_date", "type": "date", "label": { "es": "fecha de inicio", "en": "start date" }},
+    {"field": "end_date", "type": "date", "label": { "es": "fecha de término", "en" : "end date" }}
+  ],
+  "label" : { "es" : "duración", "en" : "duration" }
+}

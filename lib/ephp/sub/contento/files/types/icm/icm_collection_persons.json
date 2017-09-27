@@ -1,0 +1,10 @@
+{
+  "name": "icm_persons",
+  "type": "collection",
+  "label" : { "es" : "personas", "en" : "people" },
+  "elem" : {
+    "type" : "custom",
+    "id" : ["surname", "name"],
+    "type_name" : "icm_person"
+  }
+}
