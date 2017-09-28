@@ -72,6 +72,7 @@ function fragment_social_buttons() {
   $social_buttons = [
     ['http://www.github.com/edwrodrig', 'github'],
     ['http://www.linkedin.com/pub/edwin-iv%C3%A1n-rodr%C3%ADguez-le%C3%B3n/35/241/848', 'linkedin'],
+    ['https://stackoverflow.com/users/2469099/edwin-rodr%c3%adguez?tab=profile', 'stack-overflow'],
     ['http://play.google.com/store/apps/developer?id=edwrodrig', 'android'],
     ['http://edwrodrig.deviantart.com/', 'deviantart'],
     ['https://twitter.com/edwrodrig', 'twitter'],

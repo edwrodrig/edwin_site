@@ -35,4 +35,3 @@ foreach ( new \RecursiveIteratorIterator(new \RecursiveDirectoryIterator($dirnam
 <p>The <code>$file</code> variable in the iteration is a <code>DirectoryIterator</code> class. See the <a href="http://php.net/manual/es/class.directoryiterator.php">documentation</a> for useful functionalities.
 </p>
 
-

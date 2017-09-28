@@ -18,4 +18,4 @@ $data = [
 $str = json_encode($data, JSON_PRETTY_PRINT);
 $str .= "\n---\n";
 
-file_put_contents(__DIR__ . sprintf('/posts/%s-%s.md', $date, str_replace(' ', '-', strtolower($title))), $str); 
+file_put_contents(__DIR__ . sprintf('/files/posts/%s-%s.md', $date, str_replace(' ', '-', strtolower($title))), $str); 
