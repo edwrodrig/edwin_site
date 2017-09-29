@@ -18,12 +18,6 @@
   "url": "http://edwrodrig.github.io/farflight"
 },
 {
-  "name": "Hanoi",
-  "description": "Hanoi is a simple Html5 pure canvas Towers of Hanoi game demo. Towers of Hanoi is a puzzle game invented by French mathematician Edouard Lucas in 1883. We are given a tower of eight disks, initially stacked in decreasing size on ome of three pegs: The objective is to transfer the entire tower to one of the other pegs, moving only one disk at a time and never moving a larger one onto a smaller",
-  "image": "http://edwrodrig.github.io/img/projects/hanoi.png",
-  "url": "http://edwrodrig.github.io/hanoi"
-},
-{
   "name": "Ougijaaken",
   "description": "Ougijaaken es un comic fuertemente influenciado por Dragon Ball hecho en mi niñez. El único propósito de publicar esta historia es compartirla ya que es preferible eso antes que permanezca guardada por siempre en mis carpetas. ¡Espero que disfruten!",
   "image": "http://edwrodrig.github.io/img/projects/ougijaaken.jpg",
@@ -34,12 +28,6 @@
   "description": "pitri.js es una pequeña librería javascript para proyectar puntos con perspectiva. Esta libería está escrita en javascript puro lo que la hace adecuada para casos de uso simples donde no queremos usar inflados frameworks. pitri.js provee funciones para definir una vista de camara y transformar un punto 2d en coordenadas de pantalla.",
   "image": "http://edwrodrig.github.io/img/projects/pitri.js.png",
   "url": "http://edwrodrig.github.io/pitri.js"
-},
-{
-  "name": "Polyshape",
-  "description": "Polyshape es un demo simple en html5/javascript donde se muestra diferentes figuras en 3d usando solo canvas 2d. Tu puedes rotar la figura y moverte similar a un juego en primera persona.",
-  "image": "http://edwrodrig.github.io/img/projects/polyshape.png",
-  "url": "http://edwrodrig.github.io/polyshape"
 },
 {
  "name": "Tundra Piechart",
