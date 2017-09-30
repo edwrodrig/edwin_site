@@ -1,0 +1,18 @@
+{
+  "name": "common_person",
+  "type": "custom",
+  "type_name": "common_person_basic",
+  "fields": [
+    {"field": "display_name", "type": "string", "label": { "es" : "nombre visible", "en": "display name"}, "desc" : { "es": "Nombre que se mostrará en pantalla. Útil cuando no se quiere usar el nombre por defecto deducido por el sistema. Ejemplo: En las páginas web, usar el segundo nombre en vez del primero, usar ambos nombres en vez de uno." }},
+    {"field": "birthday", "type": "date", "label": { "es" : "fecha de nacimiento", "en": "birthday"}},
+    {"field": "nationality", "type": "custom", "type_name": "common_country", "label": { "es": "nacionalidad", "en" : "nationality" }},
+    {"field": "address", "type": "custom", "type_name": "common_address"},
+    {"field": "gender", "type": "custom", "type_name" : "common_gender"},
+    {"field": "bio", "type": "string", "style": "rich", "tr": true, "label": { "es": "biografía", "en": "biography" }},
+    {"field": "mail", "type": "string", "label" : { "es" : "correo", "en" : "mail"}},
+    {"field": "phones", "type": "list", "elem" : { "type": "string"}, "label": { "es" : "teléfonos", "en": "phones"}},
+    {"field": "image", "type": "string", "label": { "es" : "imagen", "en": "image"}},
+    {"field": "sort_key", "type": "string", "label" : { "es" : "prefijo de ordenamiento", "en" : "order preffix"}},
+    {"field": "other_data", "type": "string", "style": "area", "label": {"es" : "otros datos", "en": "other data" }}
+  ]
+}

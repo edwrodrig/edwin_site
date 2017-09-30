@@ -1,0 +1,18 @@
+{
+  "name": "cl_person_id_document",
+  "type": "object",
+  "label" : { "es" : "documento de identificación", "en" : "identification document" },
+  "fields": [
+    {
+      "field": "type",
+      "type": "enum",
+      "label" : {"es" : "tipo", "en" : "type"},
+      "options": [
+        { "value": "rut", "label" : "R.U.T." },
+        { "value": "pp" , "label" : { "es" : "pasaporte", "en": "passport"}},
+        { "value": "other", "label" : {"es" : "número", "en" : "number"}}
+      ]
+    },
+    {"field": "number", "type": "string", "display": true,  "label": { "es": "número", "en": "number" }}
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "common_software",
+  "type": "object",
+  "label" : { "es" :"software", "en" : "software" },
+  "fields": [
+    {"field": "name", "type": "string", "display" : true, "tr" : true, "label": { "es": "nombre", "en": "name" }},
+    {"field": "logo", "type": "string", "label": { "es": "logo", "en" : "logo" }},
+    {"field": "subtitle", "type": "string", "tr" : true, "label" : { "es" : "subtítulo", "en" : "subtitle" }}, 
+    {"field": "description", "type": "string", "style" : "area", "tr" : true,  "label": { "es": "descripción", "en": "description" }},
+    {"field": "version", "type": "string", "display" : true, "label" : { "es" : "versión", "en" : "version"}},
+    {"field": "release_date", "type": "date" },
+    {"field": "downloads",
+       "type": "list",
+       "label" : { "es" : "descargas", "en" : "downloads"},
+       "elem": { "type": "object", "fields": [
+         { "field": "os" , "type": "enum", "options": [{"value": "win32"}, {"value": "osx"}, {"value": "linux"}, {"value":"ubuntu"}]},
+         { "field": "type", "type": "enum", "options": [{"value": "exe"}, {"value": "dmg"}, {"value": "portable"}, {"value": "deb"}, {"value": "installer"}] },
+         { "field": "href", "type": "string", "label" : { "es" : "vínculo", "en" : "link"}}
+       ]}
+    }
+  ]
+}

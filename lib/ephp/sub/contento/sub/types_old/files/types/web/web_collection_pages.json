@@ -1,0 +1,12 @@
+{
+    "name": "web_pages",
+    "type": "collection",
+    "label": {
+        "es": "páginas",
+        "en": "pages"
+    },
+    "elem": {
+        "type": "custom",
+        "type_name": "web_page"
+    }
+}

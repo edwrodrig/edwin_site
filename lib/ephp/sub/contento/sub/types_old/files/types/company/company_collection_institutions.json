@@ -1,0 +1,10 @@
+{
+  "name": "company_institutions",
+  "type": "collection",
+  "label" : { "es" : "instituciones", "en" : "institutions" },
+  "elem" : {
+    "type" : "custom",
+    "id" : [ "short_name"],
+    "type_name" : "company_institution"
+  }
+}

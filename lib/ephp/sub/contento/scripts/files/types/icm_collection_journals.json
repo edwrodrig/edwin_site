@@ -1,0 +1,10 @@
+{
+  "name": "icm_journals",
+  "type": "collection",
+  "label" : { "es" : "revistas científicas", "en" : "academic journals" },
+  "elem" : {
+    "type" : "custom",
+    "id" : [ "name" ],
+    "type_name" : "icm_journal"
+  }
+}

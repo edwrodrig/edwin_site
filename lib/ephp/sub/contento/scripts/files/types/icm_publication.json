@@ -1,0 +1,40 @@
+{
+  "name": "icm_publication",
+  "type": "object",
+  "label" : { "es" : "publicación", "en" : "publication" },
+  "fields": [
+    {"field": "title", "type": "string", "display": true, "label": { "es": "título", "en": "title" }},
+    {"field": "authors", "type": "list", "label": { "es": "autores", "en" : "authors" },
+      "elem" : { "type": "custom", "type_name": "common_person_basic",
+        "fields": [
+          {"field": "person", "type": "ref", "collection": "icm_persons", "display": true, "label": { "es": "persona conocida", "en": "known person"}},
+          {"field": "mailing", "type": "bool", "display": true, "label": { "es": "autor de correspondencia", "en": "mailing author" }}
+        ]}
+    },    
+    {"field": "received_date", "type": "date", "display" : true, "label" : { "es" : "fecha de recepción", "en" : "reception date"}},
+    {"field": "accepted_date", "type": "date", "display" : true, "label": { "es" : "fecha de aceptación", "en" : "accepted date" }}, 
+    {"field": "publication_date", "type": "date", "display": true, "label" : { "es" : "fecha de publicación", "en" : "publication date"}},
+    {"field": "inpress", "type": "bool", "display": true, "label" : {"es": "en prensa", "en": "in press" }},
+    {"field": "open_access", "type": "bool", "label" : { "es": "acceso abierto", "en" : "open access" }},
+    {"field": "doi", "type": "string", "display": true, "desc" : { "es" : "identificador digital de objeto", "en" : "digital object identifier" }},
+    {"field": "paper_link", "type": "string", "label": { "es": "enlace al artículo", "en": "paper link" }},
+    {"field": "links", "type": "list", "elem" :{ "type":"string" }, "label": { "es": "enlaces", "en": "links" }},
+    {"field": "use_link", "type": "bool", "label": { "es": "usar link", "en" : "use link"  }, "desc" : { "es" : "Usar link en lugar de doi, util cuando la publicación está en prensa o el doi tiene problemas", "en" : "Use link instead doi" }},
+    {"field": "journal", "type": "object", "label" : { "es" : "referencia", "en" : "reference" },
+      "fields": [
+        {"field": "journal", "type": "ref", "collection": "icm_journals", "display": true, "label": { "es": "revista", "en": "journal" }},
+        {"field": "name", "type": "string", "display" : true, "label" : {"es": "título de libro", "en": "book name"}, "desc" : { "es" : "Ingresar solo si la publicación corresponde a un libro o capítulo"} },
+        {"field": "pagestart", "type": "integer", "min": -1, "label": { "es": "página de inicio", "en": "page start" }, "special" : { "es": "no aplica", "en": "doesn't apply" }},
+        {"field": "pageend", "type": "integer", "min": -1, "label": { "es": "página de término", "en": "page end" }, "special" : { "es": "no aplica", "en": "doesn't apply" }},
+        {"field": "volume", "type": "integer", "min": -1, "label": { "es": "volumen", "en": "volume" }, "special" : { "es": "no aplica", "en": "doesn't apply" }},
+        {"field": "chapter", "type": "integer", "min": -1, "label": { "es": "capítulo", "en": "chapter" }, "special" : { "es": "no aplica", "en": "doesn't apply" }, "desc" : { "es" : "Completar en caso de ser capítulo de libro" }},
+        {"field": "issue", "type": "integer", "min": -1, "label": { "es": "edición", "en": "issue" }, "desc" : { "es" : "Conocido también como issue" }, "special" : { "es": "no aplica", "en": "doesn't apply" }},
+        {"field": "paper_id", "type": "string", "label": { "es": "id del artículo", "en": "paper id" }, "desc" : { "es" : "Algunos papers no tienen volumen ni issue sino un identificador, usar este campo" }},
+        {"field": "text", "type": "string", "label": { "es": "texto", "en": "text" }, "desc" : { "es" : "observaciones o comentarios, deprecated." }}
+      ]
+    },
+    {"field": "research_lines", "type": "list", "elem": { "type": "ref", "collection": "icm_research_lines"}, "label" : { "es": "líneas de investigación", "en": "research lines"}},
+    {"field": "collaboration_networks", "type": "list", "elem": { "type": "ref", "collection": "icm_collaboration_networks" }, "label" : { "es": "redes formales de colaboración", "en": "formal collaboration networks"}},
+    {"field": "raw", "type": "string", "label": { "es": "crudo", "en": "raw" } }
+  ]
+}

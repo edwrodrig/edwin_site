@@ -1,0 +1,13 @@
+{
+  "name": "common_address",
+  "type": "object",
+  "fields": [
+    {"field": "street", "type": "string", "display": true, "label" : { "es": "calle", "en": "street"}},
+    {"field": "number", "type": "string", "display": true, "label": { "es" : "número", "en": "number" }},
+    {"field": "extra", "type": "string", "style": "area"},
+    {"field": "city", "type": "string", "label": { "es" : "ciudad", "en" : "city"}},
+    {"field": "country", "type": "custom", "type_name": "common_country"},
+    {"field": "zip", "type": "string", "label" : { "es" : "código postal", "en" : "zip code" }}
+  ],
+  "label" : { "es" : "dirección", "en" : "address" }
+}

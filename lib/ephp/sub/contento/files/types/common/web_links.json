@@ -1,0 +1,13 @@
+{
+  "name": "web_links",
+  "type": "object",
+  "label": { "es" : "vínculos", "en" : "links" },
+  "fields": [
+    {
+      "field": "links", 
+      "type": "list",
+      "label" : { "es" : "vínculos", "en" : "links" },
+      "elem" : { "type" : "custom", "type_name" : "web_link" }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name" : "web_link",
+  "type": "object",
+  "label" : { "es" : "vínculo", "en" : "link" },
+  "fields": [
+    { "field" : "href", "type" : "string", "trim": true, "label" : { "es" : "vínculo", "en" : "link"}},
+    { "field" : "text", "type" : "string", "trim": true, "tr": true, "label": { "es" : "etiqueta", "en" :"label"}},
+    { "field" : "image", "type" : "string", "label": { "es" : "imagen", "en" : "image" }},
+    { "field" : "bg_color", "type" : "string", "label" : { "es" : "color de fondo" , "en" : "background color"}},
+    { "field" : "bg_color_hover", "type" : "string", "label" : { "es" : "color de fondo iluminado" , "en" : "highlighted background color" }}
+  ]
+}
+
