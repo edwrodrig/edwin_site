@@ -4,6 +4,11 @@ namespace edwin\web;
 
 class TemplatePage extends \theme\console_blog\TemplatePage {
 
+function __construct($metadata = []) {
+  parent::__construct($metadata);
+  $this->set_metadata(['site' => [ 'title' => 'Edwin Rodríguez'], 'tracking_id' => 'UA-49580762-2']);
+}
+
 function head() {
   parent::head();
   \ephp\web\Fa::html_include();

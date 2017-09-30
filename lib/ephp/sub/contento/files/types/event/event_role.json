@@ -1,9 +1,0 @@
-{
-  "name" : "event_role",
-  "type" : "object",
-  "label" : { "es" : "rol" },
-  "field": [
-    { "field" : "name", "type": "string", "label" : { "es" : "nombre" }},
-    { "field" : "description", "type": "string", "style": "area", "label" : { "es" : "descripción"}}
-  ]
-}

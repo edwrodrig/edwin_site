@@ -1,9 +1,0 @@
-{
-  "name": "cl_person",
-  "type": "custom",
-  "type_name": "common_person",
-  "fields": [
-    {"field": "document", "type": "custom", "type_name": "cl_person_id_document" },
-    {"field": "address", "type": "custom", "type_name": "cl_address" }
-  ]
-}

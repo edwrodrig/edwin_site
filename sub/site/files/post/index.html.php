@@ -9,7 +9,7 @@ public $data;
 
 function __construct($data) {
   $this->data = $data;
-  $metadata = ['page' => ['title' => $data['title']]];
+  $metadata = ['title' => tr($data['title'])];
   parent::__construct($metadata);
 
 }

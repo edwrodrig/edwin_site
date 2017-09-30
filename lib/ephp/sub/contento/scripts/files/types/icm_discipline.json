@@ -1,9 +1,0 @@
-{
-    "name": "icm_discipline",
-    "type": "object",
-    "label": { "es": "disciplina", "en" : "discipline" },
-    "fields": [
-       { "field" : "icm_id", "type" : "integer", "display": true, "label": { "es": "identificador icm", "en" : "icm id"}},
-       { "field" : "name", "type" : "string", "tr": true, "display" : true, "label": { "es" : "nombre", "en": "name" }}
-    ]
-}

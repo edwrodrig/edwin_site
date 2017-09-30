@@ -5,10 +5,8 @@ class TemplatePage extends \ephp\web\TemplatePage {
 
 use TemplateCommon;
 
-static public $base_metadata = [];
-
 function __construct($metadata = []) {
-  parent::__construct(array_replace_recursive(self::$base_metadata, $metadata));
+  parent::__construct($metadata);
   $this->font_files = ['https://fonts.googleapis.com/css?family=Cutive+Mono|VT323'];
 
   $this->nav_min_width = '600px';

@@ -1,9 +1,0 @@
-{
-  "name": "web_showcases",
-  "type": "collection",
-  "label" : { "es" : "vitrinas", "en" : "showcases" },
-  "elem" : {
-    "type" : "custom",
-    "type_name" : "web_showcase"
-  }
-}
