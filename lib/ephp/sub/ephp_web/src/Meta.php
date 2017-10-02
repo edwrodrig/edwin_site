@@ -98,23 +98,28 @@ function tags_twitter_card() {
 function tag_title() {
   $arr = [];
   if ( isset($this->data['title']) ) $arr[] = $this->data['title'];
-  if ( isset($this->data['site']['title']) ) $arr[] = $this->data['site']['title'];
+  else {
+    if ( isset($this->data['page']['title']) ) $arr[] = $this->data['page']['title'];
+    if ( isset($this->data['site']['title']) ) $arr[] = $this->data['site']['title'];
+  }
   $title = implode (' | ', $arr);
   if ( empty($title) ) return;
   printf('<title>%s</title>', $title);
 }
 
 function title() {
-  return $this->data['title'] ?? $this->data['site']['title'] ?? null;
+  return $this->data['title'] ?? $this->data['page']['title'] ?? $this->data['site']['title'] ?? null;
 }
 
 function description() {
-  return $this->data['description'] ?? $this->data['site']['description'] ?? null;
+  return $this->data['description'] ?? $this->data['page']['description'] ?? $this->data['site']['description'] ?? null;
 }
 
 function image() {
   return $this->data['image']['url'] ??
          $this->data['image'] ??
+         $this->data['page']['image']['url'] ??
+         $this->data['page']['image'] ??
          $this->data['site']['image']['url'] ??
          $this->data['site']['image'] ?? null;
 }

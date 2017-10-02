@@ -3,7 +3,7 @@
 (new class extends \edwin\web\TemplatePage {
 
 function __construct() {
-  $metadata = ['title' => tr(['es' => 'Artículos', 'en' => 'Posts'])];
+  $metadata = ['page' => ['title' => tr(['es' => 'Artículos', 'en' => 'Posts'])]];
   parent::__construct($metadata);
 }
 
