@@ -1,3 +1,8 @@
+<?php
+/*
+@template \edwrodrig\site\theme\TemplatePost
+@type template
+@data
 {
   "title" :
   {
@@ -12,7 +17,8 @@
   },
   "tags" : [ "html", "facebook", "twitter", "google"]
 }
----
+*/
+?>
 <h2>Código</h2>
 <p>Copia el siguiente código en el <code>head</code> de la página html. Debes reemplazar los valores a los apropiados para tu página.</p>
 

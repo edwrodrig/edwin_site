@@ -1,3 +1,8 @@
+<?php
+/*
+@template \edwrodrig\site\theme\TemplatePost
+@type template
+@data
 {
     "title": {
         "en": "Get file and line where a function is called in php",
@@ -10,7 +15,8 @@
     "date": "2017-02-01",
     "tags": ["php"]
 }
----
+*/
+?>
 <p>There is the code</p>
 
 <pre>

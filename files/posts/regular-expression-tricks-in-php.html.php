@@ -1,3 +1,8 @@
+<?php
+/*
+@template \edwrodrig\site\theme\TemplatePost
+@type template
+@data
 {
   "title": {
     "en" : "Regular expression tricks in php",
@@ -9,7 +14,8 @@
   "date": "2017-01-31",
   "tags": ["php", "regex"]
 }
----
+*/
+?>
 <h2>Capturar una contenido entre string</h2>
 <pre>
 <?=htmlentities(<<<'EOF'

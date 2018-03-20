@@ -1,3 +1,8 @@
+<?php
+/*
+@template \edwrodrig\site\theme\TemplatePost
+@type template
+@data
 {
     "title": {
         "en": "Execute PHP script from web",
@@ -9,7 +14,8 @@
     "date": "2017-05-13",
     "tags": []
 }
----
+*/
+?>
 <p>En ocasiones necesito pasar a algunas personas un pequeño script que haga una función especifica.
 Lo que hacía en tales ocasiones era enviarle dicho script por mail.
 Pero comunmente ese script no funcionaba en la primera ocasión por diferencias en la máquina o en el caso que funcionará, necesitaban una pequeña función adicional.

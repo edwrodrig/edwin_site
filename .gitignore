@@ -2,4 +2,5 @@
 composer.phar
 composer.lock
 .idea
+output
 /vendor

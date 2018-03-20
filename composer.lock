@@ -4,20 +4,59 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "330b88fd72530173e19a25c59953c697",
+    "content-hash": "096819bf560ffd70e3f1e27467285507",
     "packages": [
         {
-            "name": "edwrodrig/static_generator",
-            "version": "4.1.1",
+            "name": "edwrodrig/js",
+            "version": "2.6.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/edwrodrig/static_generator.git",
-                "reference": "461cd1c077fe43e7ccbbeb8cedfcd7fcbaa197d5"
+                "url": "https://github.com/edwrodrig/js.git",
+                "reference": "785f24305c5f25974e5c5a12867daf37c1712417"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/edwrodrig/static_generator/zipball/461cd1c077fe43e7ccbbeb8cedfcd7fcbaa197d5",
-                "reference": "461cd1c077fe43e7ccbbeb8cedfcd7fcbaa197d5",
+                "url": "https://api.github.com/repos/edwrodrig/js/zipball/785f24305c5f25974e5c5a12867daf37c1712417",
+                "reference": "785f24305c5f25974e5c5a12867daf37c1712417",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "edwrodrig\\js\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Edwin Rodríguez",
+                    "email": "edwrodrig@gmail.com"
+                }
+            ],
+            "description": "Javascript front-end utils",
+            "time": "2018-02-19T21:04:23+00:00"
+        },
+        {
+            "name": "edwrodrig/static_generator",
+            "version": "4.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/edwrodrig/static_generator.git",
+                "reference": "b5af619ee1b0f3b33d4f43235aaac75c77d484cf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/edwrodrig/static_generator/zipball/b5af619ee1b0f3b33d4f43235aaac75c77d484cf",
+                "reference": "b5af619ee1b0f3b33d4f43235aaac75c77d484cf",
                 "shasum": ""
             },
             "require": {
@@ -42,7 +81,7 @@
                     "email": "edwrodrig@gmail.com"
                 }
             ],
-            "time": "2018-03-20T02:08:53+00:00"
+            "time": "2018-03-20T03:03:54+00:00"
         },
         {
             "name": "leafo/scssphp",

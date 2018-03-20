@@ -1,3 +1,8 @@
+<?php
+/*
+@template \edwrodrig\site\theme\TemplatePost
+@type template
+@data
 {
     "title": {
         "es": "Comandos \u00fatiles para Rsync"
@@ -8,7 +13,8 @@
     "date": "2017-09-28",
     "tags": []
 }
----
+*/
+?>
 <h2>Copiar de una carpeta a otra</h2>
 <pre>
 rsync -rLptgoDvz -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" --progress <b>source</b> <b>target</b>

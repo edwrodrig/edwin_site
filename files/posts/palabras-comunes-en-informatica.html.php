@@ -1,3 +1,8 @@
+<?php
+/*
+@template \edwrodrig\site\theme\TemplatePost
+@type template
+@data
 {
     "title": {
         "en": "Common computing words",
@@ -10,7 +15,8 @@
     "date": "2017-05-15",
     "tags": []
 }
----
+*/
+?>
 <h2>Conceptos generales</h2>
 <ul>
 <li>bit: Un 0 o un 1</li>

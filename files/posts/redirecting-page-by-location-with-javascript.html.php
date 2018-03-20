@@ -1,3 +1,8 @@
+<?php
+/*
+@template \edwrodrig\site\theme\TemplatePost
+@type template
+@data
 {
     "title": {
         "en": "Redirecting page by location with javascript",
@@ -10,7 +15,8 @@
     "date": "2017-01-31",
     "tags": []
 }
----
+*/
+?>
 <p>Here is the code</p>
 <pre>
 <?=htmlentities(<<<'EOF'

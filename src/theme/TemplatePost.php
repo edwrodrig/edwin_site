@@ -29,8 +29,8 @@ class TemplatePost extends TemplatePage
     }
 
     public function body() {?>
-<div class='section-container'>
-    <div class='containter-padding'>
+<div>
+    <div class='section-container containter-padding'>
         <div class="bigger-font">
             <h1><?=$this->get_title()?></h1>
             <i class="fa fa-clock-o"></i><time><?=$this->get_date()?></time>

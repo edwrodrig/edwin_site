@@ -1,3 +1,8 @@
+<?php
+/*
+@template \edwrodrig\site\theme\TemplatePost
+@type template
+@data
 {
     "title": {
         "en": "Cast signal in new C++11 Qt connection",
@@ -10,7 +15,8 @@
     "date": "2017-02-09",
     "tags": []
 }
----
+*/
+?>
 <p>This is the template</p>
 <pre>
 <?=htmlentities(<<<'EOF'

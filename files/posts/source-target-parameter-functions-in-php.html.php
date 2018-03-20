@@ -1,3 +1,8 @@
+<?php
+/*
+@template \edwrodrig\site\theme\TemplatePost
+@type template
+@data
 {
     "title": {
         "en": "Source Target parameter functions in php",
@@ -10,7 +15,8 @@
     "date": "2016-12-30",
     "tags": []
 }
----
+*/
+?>
 <style>
 .hay { background-color: #8B0000; }
 .nee { background-color: #00008B; }

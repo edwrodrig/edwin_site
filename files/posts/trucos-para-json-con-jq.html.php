@@ -1,3 +1,8 @@
+<?php
+/*
+@template \edwrodrig\site\theme\TemplatePost
+@type template
+@data
 {
     "title": {
         "en": "JSON formatting with jq",
@@ -10,7 +15,8 @@
     "date": "2016-12-30",
     "tags": ["json", "jq"]
 }
----
+*/
+?>
 <h2>Probar sintaxis</h2>
 <p>Imprime el <code>json</code> sangrado con colores. Este comando falla cuando el <code>json</code> no tiene el formato correcto, lo que lo hace ideal para probar la sintaxis.</p>
 <pre>jq . <b>file.json</b></pre>

@@ -1,3 +1,8 @@
+<?php
+/*
+@template \edwrodrig\site\theme\TemplatePost
+@type template
+@data
 {
     "title": {
         "es": "Comandos \u00fatiles con ImageMagick"
@@ -8,7 +13,8 @@
     "date": "2017-05-13",
     "tags": []
 }
----
+*/
+?>
 <p>ImageMagick es el photoshop en línea de comandos. A continuación listaré unos comandos que nos serán útiles a la hora de ciertas manipulaciones de imagenes comunes.</p>
 
 <h2>Cambiar tamaño de imagen</h2>
