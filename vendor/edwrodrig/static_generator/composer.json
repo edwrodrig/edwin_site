@@ -1,0 +1,38 @@
+{
+    "name": "edwrodrig/static_generator",
+    "authors": [
+        {
+            "name": "Edwin Rodríguez",
+            "email": "edwrodrig@gmail.com"
+        }
+    ],
+    "minimum-stability" : "stable",
+    "require": {
+        "php" : "^7.2",
+        "matthiasmullie/minify" : "^1.3",
+        "leafo/scssphp": "v0.7.5",
+        "phpdocumentor/reflection-docblock": "4.3.0"
+    },
+    "require-dev" : {
+        "phpunit/phpunit" : "^6.4"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "edwrodrig\\static_generator\\" : "src/"
+        }
+    },
+    "autoload-dev" : {
+        "psr-4" : {
+            "test\\" : "tests/src/"
+        }
+    },
+    "archive": {
+        "exclude": [
+            "/tests",
+            "/.gitignore",
+            "/.travis.yml",
+            "/phpunit.xml.dist",
+            "/examples"
+        ]
+    }
+}

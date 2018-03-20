@@ -1,0 +1,418 @@
+
+@import 'base';
+
+$default-padding: 1em;
+$section-width: 1300px;
+
+$background-color: black;
+$font-color : #AAA;
+$font-color-highlight: yellow;
+
+$font-normal: 'Cutive Mono', monospace;
+$font-emph: 'VT323', monospace;
+
+$box-background-color: $font-color;
+$box-font-color: $font-color;
+$box-font-color-highlight: $font-color-highlight;
+
+$nav-min-width: 600px;
+
+body {
+  font-family: $font-normal;
+  background-color: $background-color;
+  color: $font-color;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-emph;
+  font-weight:unset;
+}
+
+p {
+  line-height: 1.5em
+}
+
+
+a {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: underline;
+  &:hover {
+    color: $font-color-highlight;
+  }
+}
+
+
+hr {
+  border: 0;
+  border-bottom: 1px dashed;
+  margin: 3em 0;
+}
+
+.grid-padding {
+  @include grid-padding($default-padding);
+}
+
+.section-container {
+  max-width: $section-width;
+  margin: 0 auto
+}
+
+.container-padding {
+  padding: $default-padding;
+}
+
+.paragraph {
+  h2 {
+    margin-bottom: 0.5em;
+    text-decoration: underline;
+  }
+
+  a {
+    color: $font-color-highlight;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  pre {
+    color: white;
+    font-family: inherit;
+    border: 1px solid;
+    padding: 1em;
+    overflow: hidden;
+    font-size: 0.8em;
+    white-space: pre-wrap;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+  code {
+    color: white;
+    font-family: inherit;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-normal {
+  font-family: $font-normal;
+}
+
+.font-emph {
+  font-family: $font-emph;
+  font-weight: unset;
+}
+
+
+.box {
+  background-color: $box-background-color;
+
+  &:hover {
+    background-color: $background-color;
+    color: $font-color-highlight;
+  }
+}
+
+.button {
+  display: block;
+  font-weight: bold;
+  background-color: $box-background-color;
+  color: $background-color;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  text-align: center;
+  padding: 0.5em 0.7em;
+
+  &:hover {
+    background-color: $font-color-highlight;
+    color: $background-color;
+    text-decoration: none;
+  }
+}
+
+.project-box {
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  display:flex;
+
+  @include grid-padding($default-padding);
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
+
+  p {
+      text-align: justify;
+  }
+}
+
+.nav-button {
+  padding: 0.5em 0.2em;
+  font-size: 32px;
+  border-radius: 0.2em;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2)
+  }
+}
+
+.social-buttons-bar {
+  @include grid-padding($default-padding);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/**
+function fragment_project_box($project) {
+t__('a', [
+'class' => [
+'layout-row',
+'grid-padding',
+'box-hover',
+[
+'overflow' => 'hidden',
+'text-decoration' => 'none',
+'color' => 'inherit',
+'@media (max-width : 500px)' => ['layout' => 'column'],
+'> *' => ['overflow' => 'hidden'],
+]
+],
+'href' => $project['url']
+]);
+'style' => ['bg-img' => $project['image']]
+])();
+t__();
+tag('h1')($project['name']);
+tag(['style' => ['text-align' => 'justify']])($project['description']);
+__t();
+
+__t();
+}
+
+
+.nav-bar {
+  overflow-x: hidden;
+  display: flex;
+  align-items: flex-end;
+  @media(max-width: $nav-min-width) {
+    display: none;
+    flex-direction: column;
+    &[nav-show] {
+      display: flex;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    display: block;
+    white-space: nowrap;
+
+  }
+
+  &:hover {
+    background-color: $background-color;
+    color: $font-color-highlight;
+  }
+}
+
+function fragment_project_box($project) {
+t__('a', [
+'class' => [
+'layout-row',
+'grid-padding',
+'box-hover',
+[
+'overflow' => 'hidden',
+'text-decoration' => 'none',
+'color' => 'inherit',
+'@media (max-width : 500px)' => ['layout' => 'column'],
+'> *' => ['overflow' => 'hidden'],
+]
+],
+'href' => $project['url']
+]);
+'style' => ['bg-img' => $project['image']]
+])();
+t__();
+tag('h1')($project['name']);
+tag(['style' => ['text-align' => 'justify']])($project['description']);
+__t();
+
+__t();
+}
+
+.post-box {
+  display:block;
+  text-decoration: none;
+  color: inherit;
+  margin-bottom: 1.5em;
+  &:hover {
+    color : $font-color-highlight;
+  }
+
+  time {
+    display: block;
+  }
+}
+
+style('.layout-row', [
+'display' => 'flex'
+]);
+
+style('.layout-space-between', [
+'justify-content' => 'space-between'
+]);
+
+style('.layout-wrap', [
+'flex-wrap' => 'wrap'
+]);
+
+style('.layout-items-start', [
+'align-items' => 'flex-start'
+]);
+
+style('.layout-items-end' , [
+'align-items' => 'flex-end'
+]);
+
+style('.layout-center', [
+'justify-content' => 'center'
+]);
+
+style('.layout-column', [
+'display' => 'flex',
+'flex-direction' => 'column'
+]);
+
+style('.text-center', [
+'text-align' => 'center'
+]);
+
+style('text-justify', [
+'text-align' => 'justify'
+]);
+
+
+
+style('.container-padding', ['box-sizing' => 'border-box', 'padding' => $this->default_padding]);
+
+style('.span-padding', ['box-sizing' => 'border-box', 'padding' => '0.5em 0.7em']);
+
+style('.layout-grid-3-1', [
+'> *' => [
+'box-sizing' => 'border-box',
+'width' => "calc(33% - $this->default_padding)",
+'@media ( max-width : 850px )' => [
+'width' => '100%'
+]
+]
+]);
+
+style('.layout-grid-3-2-1', [
+'> *' => [
+'box-sizing' => 'border-box',
+'width' => "calc(33% - $this->default_padding)",
+'@media ( max-width : 900px )' => [
+'width' => "calc(50% - $this->default_padding)"
+],
+'@media ( max-width : 600px )' => [
+'width' => '100%'
+]
+]
+]);
+
+style('.layout-grid-2-1', [
+'> *' => [
+'box-sizing' => 'border-box',
+'width' => "calc(50% - $this->default_padding)",
+'@media ( max-width : 700px )' => [
+'width' => '100%'
+]
+]
+]);
+
+style('.layout-grid-4-2-1', [
+'> *' => [
+'box-sizing' => 'border-box',
+'width' => "calc(25% - $this->default_padding)",
+'@media ( max-width : 1100px )' => [
+'width' => "calc(50% - $this->default_padding)"
+],
+'@media ( max-width : 500px )' => [
+'width' => '100%'
+]
+]
+]);
+
+style('.layout-grid-4-3-2-1', [
+'> *' => [
+'box-sizing' => 'border-box',
+'width' => "calc(25% - $this->default_padding)",
+'@media ( max-width : 1100px )' => [
+'width' => "calc(33% - $this->default_padding)"
+],
+'@media ( max-width : 850px )' => [
+'width' => "calc(50% - $this->default_padding)"
+],
+'@media ( max-width : 500px )' => [
+'width' => '100%'
+]
+]
+]);
+
+
+style('.bigger-font', [
+'font-size' => '1.5em'
+]);
+
+}
+
+function fragment_project_box($project) {
+t__('a', [
+'class' => [
+'layout-row',
+'grid-padding',
+'box-hover',
+[
+'overflow' => 'hidden',
+'text-decoration' => 'none',
+'color' => 'inherit',
+'@media (max-width : 500px)' => ['layout' => 'column'],
+'> *' => ['overflow' => 'hidden'],
+]
+],
+'href' => $project['url']
+]);
+t__([
+'class' => [[
+'background-size' => 'cover',
+'background-position' => 'center',
+'background-repeat' => 'no-repeat',
+'width' => '100px',
+'height' => '100px',
+'min-width' => '100px'
+]],
+'style' => ['bg-img' => $project['image']]
+])();
+t__();
+tag('h1')($project['name']);
+tag(['style' => ['text-align' => 'justify']])($project['description']);
+__t();
+
+__t();
+}
+*/
