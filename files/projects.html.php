@@ -23,7 +23,7 @@ $title = Page::get()->get_title();
             <hr/>
             <div class="layout-column grid-padding">
                 <?php
-                foreach ( Site::get()->globals['projects']as $project ) {
+                foreach ( Site::get()->globals['projects'] as $project ) {
                     ?>
                     <a href="<?=$project->get_url()?>" class="box-hover" style="overflow:hidden; text-decoration:none;color:inherit">
                         <div class="layout-row grid-padding">

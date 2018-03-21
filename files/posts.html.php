@@ -23,7 +23,7 @@ $title = Page::get()->get_title();
             <hr/>
             <div class="layout-column grid-padding">
             <?php
-                foreach ( Site::get()->get_templates('post') as $post ) {
+                foreach ( Site::get()->globals['posts'] as $post ) {
                     printf('<a href="%s">%s</a>', $post->get_url(), $post->get_title());
                 }
             ?>

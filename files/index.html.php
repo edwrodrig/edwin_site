@@ -19,7 +19,7 @@ use edwrodrig\static_generator\Site;
         <div>
             <?php
 
-            foreach (Site::get()->get_templates('post') as $post ) {
+            foreach (Site::get()->globals['posts'] as $post ) {
                 ?>
                 <a href="<?=$post->get_url()?>" class="box-hover">
                     <h2><?=$post->get_title()?></h2>

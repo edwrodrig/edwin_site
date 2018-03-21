@@ -17,7 +17,7 @@ class TemplatePost extends TemplatePage
     }
 
     public function get_url() : string {
-        return '/posts/' . basename($this->filename, '.php');
+        return '/posts/' . $this->get_id();
     }
 
     public function get_title() {
@@ -36,7 +36,10 @@ class TemplatePost extends TemplatePage
             <i class="fa fa-clock-o"></i><time><?=$this->get_date()?></time>
         </div>
         <hr/>
-        <?php include $this->filename?>
+        <?php
+            /** @noinspection PhpIncludeInspection */
+            include $this->filename;
+        ?>
     </div>
 </div>
 <?php
