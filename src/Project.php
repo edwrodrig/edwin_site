@@ -8,16 +8,68 @@
 
 namespace edwrodrig\site;
 
+use edwrodrig\contento\type\Url;
 
 class Project
 {
+    /**
+     * @var string
+     */
     private $name;
+
+    /**
+     * @var string
+     */
     private $description;
+
+    /**
+     * @var Url
+     */
     private $image;
+
+    /**
+     * @var Url
+     */
     private $url;
-"name": "Far Flight",
-"description": "Far Flight es un juego html5 en donde tu objetivo es volar tan lejos como puedas sin chocar con los bloques que aparecen en el camino. La velocidad aumenta en cada instante haciendo al juego más difícil con cada segundo que pasa.",
-"image": "http://edwrodrig.github.io/img/projects/far-flight.png",
-"url": "http://edwrodrig.github.io/farflight"
-},
+
+    /**
+     * @param array $data
+     * @return Project
+     * @throws \edwrodrig\contento\type\exception\InvalidUrlException
+     */
+    public static function create_from_array(array $data) : self
+    {
+        $r = new self;
+        $r->name = $data['name'];
+        $r->description = $data['description'];
+        $r->image = new Url($data['image']);
+        $r->url = new Url($data['url']);
+
+        return $r;
+    }
+
+    public function get_name() : string
+    {
+        return $this->name;
+    }
+
+    public function get_description() : string
+    {
+        return $this->description;
+    }
+
+    public function get_image() : Url
+    {
+        return $this->image;
+    }
+
+    public function get_url() : Url
+    {
+        return $this->url;
+    }
+
+    public function get_id() : string {
+        return $this->get_name();
+    }
+
 }

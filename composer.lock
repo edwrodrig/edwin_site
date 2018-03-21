@@ -4,8 +4,44 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "096819bf560ffd70e3f1e27467285507",
+    "content-hash": "51aff86ffef7581f2a5edd3d3394fabf",
     "packages": [
+        {
+            "name": "edwrodrig/contento",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/edwrodrig/contento.git",
+                "reference": "697df5ffd3cb6406da4b779cb210c3cdd54d6b33"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/edwrodrig/contento/zipball/697df5ffd3cb6406da4b779cb210c3cdd54d6b33",
+                "reference": "697df5ffd3cb6406da4b779cb210c3cdd54d6b33",
+                "shasum": ""
+            },
+            "require": {
+                "edwrodrig/query": "1.2.0",
+                "php": "^7.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "edwrodrig\\contento\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Edwin Rodríguez",
+                    "email": "edwrodrig@gmail.com"
+                }
+            ],
+            "time": "2018-03-21T01:41:30+00:00"
+        },
         {
             "name": "edwrodrig/js",
             "version": "2.6.1",
@@ -44,6 +80,45 @@
             ],
             "description": "Javascript front-end utils",
             "time": "2018-02-19T21:04:23+00:00"
+        },
+        {
+            "name": "edwrodrig/query",
+            "version": "1.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/edwrodrig/query.git",
+                "reference": "038e74474450b296140bec6cc5acd5544943ff5e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/edwrodrig/query/zipball/038e74474450b296140bec6cc5acd5544943ff5e",
+                "reference": "038e74474450b296140bec6cc5acd5544943ff5e",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pdo": "*",
+                "php": "^7.2"
+            },
+            "require-dev": {
+                "ext-sqlite3": "*",
+                "phpunit/phpunit": "^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "edwrodrig\\query\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Edwin Rodríguez",
+                    "email": "edwrodrig@gmail.com",
+                    "homepage": "https://edwin.cl",
+                    "role": "Developer"
+                }
+            ],
+            "time": "2018-03-14T02:39:38+00:00"
         },
         {
             "name": "edwrodrig/static_generator",

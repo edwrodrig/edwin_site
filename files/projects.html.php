@@ -23,14 +23,14 @@ $title = Page::get()->get_title();
             <hr/>
             <div class="layout-column grid-padding">
                 <?php
-                foreach ( Site::get()->get_templates('post') as $post ) {
+                foreach ( Site::get()->globals['projects']as $project ) {
                     ?>
-                    <a href="<?=$post->get_url()?>" class="box-hover" style="overflow:hidden; text-decoration:none;color:inherit">
+                    <a href="<?=$project->get_url()?>" class="box-hover" style="overflow:hidden; text-decoration:none;color:inherit">
                         <div class="layout-row grid-padding">
-                            <div class="background-size: cover; background-position: center; background-repeat:no-repeat; width: 100px; height:100px" style="bg-img:image"></div>
+                            <div class="background-size: cover; background-position: center; background-repeat:no-repeat; width: 100px; height:100px" style="background-image:url(<?=$project->get_image()?>"></div>
                             <div>
-                                <h2 style="margin-top:0.2em"><?=$post->get_name()?></h2>
-                                <p class="text-justify"><?=$post->get_description()?></p>
+                                <h2 style="margin-top:0.2em"><?=$project->get_name()?></h2>
+                                <p class="text-justify"><?=$project->get_description()?></p>
                             </div>
                         </div>
                     </a>
