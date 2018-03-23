@@ -62,23 +62,29 @@ class TemplatePage extends Template {
         ?>
         <div>
             <div class="section-container container-padding">
-                <div class="social-buttons-bar">
-                    <a href="http://www.github.com/edwrodrig"><i class="fa fa-github"></i></a>
-                    <a href="http://www.linkedin.com/pub/edwin-iv%C3%A1n-rodr%C3%ADguez-le%C3%B3n/35/241/848"><i class="fa fa-linkedin"></i></a>
-                    <a href="https://stackoverflow.com/users/2469099/edwin-rodr%c3%adguez?tab=profile"><i class="fa fa-stack-verflow"></i></a>
-                    <a href="http://play.google.com/store/apps/developer?id=edwrodrig"><i class="fa fa-android"></i></a>
-                    <a href="http://edwrodrig.deviantart.com/"><i class="fa fa-deviantart"></i></a>
-                    <a href="https://twitter.com/edwrodrig"><i class="fa fa-twitter"></i></a>
-                    <a href="http://www.pinterest.com/edwrodrig"><i class="fa fa-pinterest"></i></a>
-                    <a href="http://www.codepen.io/edwrodrig"><i class="fa fa-codepen"></i></a>
-                    <a href="https://www.youtube.com/user/edwrodrig1"><i class="fa fa-youtube-play"></i></a>
-                </div>
-                <div class="text-center">
+                <?php $this->social_buttons_bar() ?>
+                <div class="footer-endline">
                     <?=date("Y")?> - Edwin Rodríguez León
                 </div>
             </div>
         </div>
 <?php
+    }
+
+    protected function social_buttons_bar() {
+        ?>
+        <div class="social-buttons-bar">
+            <a href="http://www.github.com/edwrodrig"><i class="fa fa-github"></i></a>
+            <a href="http://www.linkedin.com/pub/edwin-iv%C3%A1n-rodr%C3%ADguez-le%C3%B3n/35/241/848"><i class="fa fa-linkedin"></i></a>
+            <a href="https://stackoverflow.com/users/2469099/edwin-rodr%c3%adguez?tab=profile"><i class="fa fa-stack-overflow"></i></a>
+            <a href="http://play.google.com/store/apps/developer?id=edwrodrig"><i class="fa fa-android"></i></a>
+            <a href="http://edwrodrig.deviantart.com/"><i class="fa fa-deviantart"></i></a>
+            <a href="https://twitter.com/edwrodrig"><i class="fa fa-twitter"></i></a>
+            <a href="http://www.pinterest.com/edwrodrig"><i class="fa fa-pinterest"></i></a>
+            <a href="http://www.codepen.io/edwrodrig"><i class="fa fa-codepen"></i></a>
+            <a href="https://www.youtube.com/user/edwrodrig1"><i class="fa fa-youtube-play"></i></a>
+        </div>
+        <?php
     }
 
 }

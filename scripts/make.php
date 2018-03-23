@@ -3,7 +3,7 @@
 include __DIR__ . '/../vendor/autoload.php';
 
 use edwrodrig\contento\collection\json\Collection;
-use edwrodrig\site\Project;
+use edwrodrig\site\data\Project;
 use edwrodrig\static_generator\ResourceMinifier;
 use edwrodrig\js\Config;
 

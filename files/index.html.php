@@ -15,6 +15,10 @@ use edwrodrig\static_generator\Site;
 ?>
 <div>
     <div class="section-container container-padding">
+        <div class="ascii-art">
+            <pre><?=file_get_contents(__DIR__ . '/../data/photo.txt')?></pre>
+        </div>
+        <?php $this->social_buttons_bar() ?>
         <h1>Artículos</h1>
         <div>
             <?php

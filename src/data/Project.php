@@ -6,7 +6,7 @@
  * Time: 13:44
  */
 
-namespace edwrodrig\site;
+namespace edwrodrig\site\data;
 
 use edwrodrig\contento\type\Url;
 

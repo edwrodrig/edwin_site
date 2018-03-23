@@ -11,7 +11,7 @@
         "php" : "^7.2",
 	    "edwrodrig/static_generator": "4.1.3",
         "edwrodrig/js": "2.6.1",
-        "edwrodrig/contento" : "1.0.2"
+        "edwrodrig/contento" : "1.0.9"
     },
     "require-dev" : {
         "phpunit/phpunit" : "^7.0"
