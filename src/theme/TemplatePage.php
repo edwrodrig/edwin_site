@@ -26,6 +26,31 @@ class TemplatePage extends Template {
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive+Mono|VT323">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="/style.css">
+
+        <link rel="shortcut icon" sizes="16x16" href="/assets/favicon-16.png">
+        <link rel="shortcut icon" sizes="24x24" href="/assets/favicon-24.png">
+        <link rel="shortcut icon" sizes="32x32" href="/assets/favicon-32.png">
+        <link rel="shortcut icon" sizes="48x48" href="/assets/favicon-48.png">
+        <link rel="shortcut icon" sizes="64x64" href="/assets/favicon-64.png">
+
+
+        <!-- Mobile (Android, iOS & others) -->
+        <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon-57.png">
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/assets/favicon-57.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon-72.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon-114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon-120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon-144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon-152.png">
+
+        <!-- Windows 8 Tiles -->
+        <meta name="application-name" content="Scotch Scotch scotch">
+        <meta name="msapplication-TileImage" content="/assets/favicon-144.png">
+        <meta name="msapplication-TileColor" content="#2A2A2A">
+
+        <!-- iOS Settings -->
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <script src="/lib.js"></script>
         <title><?=$this->get_title()?></title>
     </head>

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "68c63bba240f1efa90961afa2947233d",
+    "content-hash": "6a8ac7c498ac8ed3d176bffccae13e94",
     "packages": [
         {
             "name": "edwrodrig/contento",
@@ -41,6 +41,42 @@
                 }
             ],
             "time": "2018-03-23T20:01:37+00:00"
+        },
+        {
+            "name": "edwrodrig/image",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/edwrodrig/image.git",
+                "reference": "c81327f0c76bcc763eeca205999a03848c05baf5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/edwrodrig/image/zipball/c81327f0c76bcc763eeca205999a03848c05baf5",
+                "reference": "c81327f0c76bcc763eeca205999a03848c05baf5",
+                "shasum": ""
+            },
+            "require": {
+                "ext-imagick": "*",
+                "php": "^7.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^6.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "edwrodrig\\image\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Edwin Rodríguez",
+                    "email": "edwrodrig@gmail.com"
+                }
+            ],
+            "time": "2018-03-27T01:14:00+00:00"
         },
         {
             "name": "edwrodrig/js",
@@ -1038,16 +1074,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "7.0.2",
+            "version": "7.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "e2f8aa21bc54b6ba218bdd4f9e0dac1e9bc3b4e9"
+                "reference": "536f4d853c12d8189963435088e8ff7c0daeab2e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/e2f8aa21bc54b6ba218bdd4f9e0dac1e9bc3b4e9",
-                "reference": "e2f8aa21bc54b6ba218bdd4f9e0dac1e9bc3b4e9",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/536f4d853c12d8189963435088e8ff7c0daeab2e",
+                "reference": "536f4d853c12d8189963435088e8ff7c0daeab2e",
                 "shasum": ""
             },
             "require": {
@@ -1061,7 +1097,7 @@
                 "phar-io/version": "^1.0",
                 "php": "^7.1",
                 "phpspec/prophecy": "^1.7",
-                "phpunit/php-code-coverage": "^6.0",
+                "phpunit/php-code-coverage": "^6.0.1",
                 "phpunit/php-file-iterator": "^1.4.3",
                 "phpunit/php-text-template": "^1.2.1",
                 "phpunit/php-timer": "^2.0",
@@ -1114,7 +1150,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-02-26T07:03:12+00:00"
+            "time": "2018-03-26T07:36:48+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
