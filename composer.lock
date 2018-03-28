@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "53de19fabc8575fc9100a00afdc852bf",
+    "content-hash": "e8a6b7209e30bc3e23e8d551eb04c398",
     "packages": [
         {
             "name": "edwrodrig/contento",
@@ -158,16 +158,16 @@
         },
         {
             "name": "edwrodrig/static_generator",
-            "version": "4.2.0",
+            "version": "4.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/edwrodrig/static_generator.git",
-                "reference": "b5df58fcac4dccaeb5e7c54ace92d0e2a28fc7bd"
+                "reference": "98519f241bd8d5e628b2b98174ebff943e14bac9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/edwrodrig/static_generator/zipball/b5df58fcac4dccaeb5e7c54ace92d0e2a28fc7bd",
-                "reference": "b5df58fcac4dccaeb5e7c54ace92d0e2a28fc7bd",
+                "url": "https://api.github.com/repos/edwrodrig/static_generator/zipball/98519f241bd8d5e628b2b98174ebff943e14bac9",
+                "reference": "98519f241bd8d5e628b2b98174ebff943e14bac9",
                 "shasum": ""
             },
             "require": {
@@ -183,10 +183,7 @@
             "autoload": {
                 "psr-4": {
                     "edwrodrig\\static_generator\\": "src/"
-                },
-                "files": [
-                    "src/funcs.php"
-                ]
+                }
             },
             "notification-url": "https://packagist.org/downloads/",
             "authors": [
@@ -195,7 +192,7 @@
                     "email": "edwrodrig@gmail.com"
                 }
             ],
-            "time": "2018-03-27T20:22:47+00:00"
+            "time": "2018-03-28T10:15:59+00:00"
         },
         {
             "name": "leafo/scssphp",

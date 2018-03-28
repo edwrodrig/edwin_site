@@ -1,5 +1,5 @@
 
-@import 'base';
+@import 'style/base';
 
 $default-padding: 1em;
 $section-width: 1300px;
@@ -21,6 +21,8 @@ body {
   font-family: $font-normal;
   background-color: $background-color;
   color: $font-color;
+  margin: 0;
+  padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -110,10 +112,19 @@ hr {
   font-weight: unset;
 }
 
+.section-header {
+  font-size: 1.5em;
+}
+
 .header {
   display:flex;
   justify-content:space-between;
   align-items:flex-end;
+}
+
+.align-right {
+  display: flex;
+  justify-content: flex-end;
 }
 
 .header-name {
@@ -122,7 +133,6 @@ hr {
   text-decoration: none;
   font-weight: bold;
 }
-
 
 .box {
   background-color: $box-background-color;
@@ -151,7 +161,7 @@ hr {
   }
 }
 
-.post-box {
+.clickable-box {
   overflow: hidden;
   cursor: pointer;
   color: inherit;
@@ -160,8 +170,10 @@ hr {
   &:hover {
     color: $font-color-highlight;
   }
+}
 
-  h2 {
+.post-box {
+  h1, h2 {
     font-family: $font-emph;
     font-weight: unset;
     margin-bottom: 0.2em;
@@ -177,20 +189,24 @@ hr {
 }
 
 .project-box {
-  overflow: hidden;
-  text-decoration: none;
-  color: inherit;
-  display:flex;
 
-  @include grid-padding($default-padding);
-
-  img {
+  .project-logo {
     width: 100px;
-    height: 100px;
+    min-width: 100px;
+  }
+
+  & > div {
+    display: flex;
+  }
+
+  h1, h2 {
+    margin-top: 0.2em;
+    font-family: $font-emph;
+    font-weight: unset;
   }
 
   p {
-      text-align: justify;
+    text-align: justify;
   }
 }
 

@@ -1,6 +1,7 @@
 <?php
 namespace edwrodrig\site\theme;
 
+use edwrodrig\site\Site;
 use edwrodrig\static_generator\Template;
 
 class TemplatePage extends Template {
@@ -10,7 +11,7 @@ class TemplatePage extends Template {
     }
 
     public function get_title() {
-        return $this->metadata->get_data()['title']['es'];
+        return $this->metadata->get_data()['title'];
     }
 
     /**
@@ -25,7 +26,7 @@ class TemplatePage extends Template {
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive+Mono|VT323">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/style/style.css">
 
         <link rel="shortcut icon" sizes="16x16" href="/assets/favicon-16.png">
         <link rel="shortcut icon" sizes="24x24" href="/assets/favicon-24.png">
@@ -52,7 +53,7 @@ class TemplatePage extends Template {
         <meta content="yes" name="apple-mobile-web-app-capable">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <script src="/lib.js"></script>
-        <title><?=$this->get_title()?></title>
+        <title><?=Site::tr($this->get_title())?></title>
     </head>
     <body>
     <?php $this->body_header()?>
@@ -66,7 +67,7 @@ class TemplatePage extends Template {
     protected function body_header() {
         ?>
         <div>
-            <div class="section-container header">
+            <div class="section-container container-padding header">
                 <a class="header-name" href="/">Edwin Rodríguez</a>
                 <button type="button" class="nav-button" onclick="ANIM.modal_in('nav-menu')">
                     <i class="fa fa-bars"></i>
@@ -87,6 +88,7 @@ class TemplatePage extends Template {
         ?>
         <div>
             <div class="section-container container-padding">
+                <hr>
                 <?php $this->social_buttons_bar() ?>
                 <div class="footer-endline">
                     <?=date("Y")?> - Edwin Rodríguez León

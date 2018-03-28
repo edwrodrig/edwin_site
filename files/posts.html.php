@@ -10,24 +10,24 @@
 }
  */
 
-use edwrodrig\static_generator\Page;
-use edwrodrig\static_generator\Site;
-
-$title = Page::get()->get_title();
+use edwrodrig\site\Site;
 
 ?>
 <div>
     <div class="section-container container-padding">
-        <div class="bigger-font">
-            <h1><?=$title?></h1>
-            <hr/>
-            <div class="layout-column grid-padding">
-            <?php
-                foreach ( Site::get()->globals['posts'] as $post ) {
-                    printf('<a href="%s">%s</a>', $post->get_url(), $post->get_title());
-                }
-            ?>
+        <header class="section-header">
+            <h1><?=Site::tr(Site::page()->get_title())?></h1>
+        </header>
+        <hr>
+        <div class="grid-padding">
+        <?php
+            foreach ( Site::posts() as $post ) {?>
+            <div>
+                <?php $post->html_link_box()?>
             </div>
+            <?php
+            }
+        ?>
         </div>
     </div>
 </div>

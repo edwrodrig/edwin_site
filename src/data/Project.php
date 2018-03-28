@@ -33,6 +33,11 @@ class Project
     private $url;
 
     /**
+     * @var int
+     */
+    private $importance;
+
+    /**
      * @param array $data
      * @return Project
      * @throws \edwrodrig\contento\type\exception\InvalidUrlException
@@ -44,6 +49,7 @@ class Project
         $r->description = $data['description'];
         $r->image = new Url($data['image']);
         $r->url = new Url($data['url']);
+        $r->importance = $data['importance'] ?? 0;
 
         return $r;
     }
@@ -53,7 +59,7 @@ class Project
         return $this->name;
     }
 
-    public function get_description() : string
+    public function get_description()
     {
         return $this->description;
     }
@@ -72,4 +78,7 @@ class Project
         return $this->get_name();
     }
 
+    public static function compare($a, $b) {
+        return $a->importance <=> $b->importance;
+    }
 }
