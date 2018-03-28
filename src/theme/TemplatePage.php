@@ -66,8 +66,8 @@ class TemplatePage extends Template {
     protected function body_header() {
         ?>
         <div>
-            <div class="section-container" style="display:flex;justify-content:space-between">
-                <a href="/">Edwin Rodríguez</a>
+            <div class="section-container header">
+                <a class="header-name" href="/">Edwin Rodríguez</a>
                 <button type="button" class="nav-button" onclick="ANIM.modal_in('nav-menu')">
                     <i class="fa fa-bars"></i>
                 </button>

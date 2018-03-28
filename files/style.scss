@@ -110,6 +110,19 @@ hr {
   font-weight: unset;
 }
 
+.header {
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-end;
+}
+
+.header-name {
+  font-family: $font-emph;
+  font-size: 2em;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 
 .box {
   background-color: $box-background-color;
@@ -138,6 +151,31 @@ hr {
   }
 }
 
+.post-box {
+  overflow: hidden;
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    color: $font-color-highlight;
+  }
+
+  h2 {
+    font-family: $font-emph;
+    font-weight: unset;
+    margin-bottom: 0.2em;
+
+  }
+
+  time {
+    font-style: italic;
+    i {
+      margin-right: 0.5em;
+    }
+  }
+}
+
 .project-box {
   overflow: hidden;
   text-decoration: none;
@@ -157,7 +195,7 @@ hr {
 }
 
 .nav-button {
-  padding: 0.5em 0.2em;
+  padding: 1px 7px 2px 7px;
   font-size: 32px;
   border-radius: 0.2em;
   background-color: transparent;

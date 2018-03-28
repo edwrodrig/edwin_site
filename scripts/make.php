@@ -22,4 +22,6 @@ $site->output_dir = __DIR__ . '/../output';
 $site->globals['posts'] = Collection::create_from_elements($site->get_templates('post'));
 $site->globals['projects'] = Collection::create_from_json(__DIR__ . '/../data/projects.json', Project::class);
 
+$site->globals['posts']->reverse_sort();
+
 $site->regenerate();

@@ -8,6 +8,7 @@
 
 namespace edwrodrig\site\theme;
 
+use function edwrodrig\static_generator\tr;
 
 class TemplatePost extends TemplatePage
 {
@@ -21,11 +22,15 @@ class TemplatePost extends TemplatePage
     }
 
     public function get_title() {
-        return $this->metadata->get_data()['title']['es'];
+        return tr($this->metadata->get_data()['title']);
     }
 
     public function get_date() {
         return $this->metadata->get_data()['date'];
+    }
+
+    static public function compare($a, $b) {
+        return $a->get_date() <=> $b->get_date();
     }
 
     public function body() {?>
