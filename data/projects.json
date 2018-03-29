@@ -45,7 +45,6 @@
   "description": {
     "en" :"Tundra is a piechart viewer and editor software for bioinformatics. You can import data from several sources including MGTaxa, QIIME, Krona and plain text. Edition is very interactive with high degree of freedom. You can export your piechart to PNG and SVG image formats."
   },
-  "image": "http://inf.imo-chile.cl/en/img/software/tundra-piechart.png",
   "url": "http://inf.imo-chile.cl/en/software/tundra.html",
   "importance": 2
 }

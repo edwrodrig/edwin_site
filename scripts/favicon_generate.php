@@ -16,3 +16,7 @@ foreach ( [16, 24, 32, 46, 64, 57, 72, 114, 120, 144, 152] as $size ) {
     $img->writeImage(__DIR__ . '/../files/assets/favicon-' . $size . '.png');
 
 }
+
+$img = \edwrodrig\image\Image::optimize(__DIR__ . '/../data/images/browser.svg', 100);
+$img->scaleImage(200, 200);
+$img->writeImage(__DIR__ . '/../files/assets/project-default-icon.png');

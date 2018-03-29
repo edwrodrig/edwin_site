@@ -39,7 +39,7 @@ class Site
         <a href="<?=$project->get_url()?>" class="project-box clickable-box">
             <div class="grid-padding">
                 <div class="project-logo">
-                    <img width="100px" height="100px" src="<?=$project->get_image()?>"/>
+                    <img width="100px" height="100px" src="<?=$project->get_image() ?? '/assets/project-default-icon.png'?>"/>
                 </div>
                 <div>
                     <h2><?=$project->get_name()?></h2>
