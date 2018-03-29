@@ -8,6 +8,7 @@
 
 namespace edwrodrig\site;
 
+use DateTime;
 use edwrodrig\site\data\Project;
 use edwrodrig\static_generator\Page;
 use edwrodrig\static_generator\Site as BaseSite;
@@ -51,5 +52,18 @@ class Site
 
     public static function absolute_url(string $url) {
         return BaseSite::get()->url($url);
+    }
+
+    public static function date_str(DateTime $date) : string {
+        $locale = \setlocale(LC_TIME, "0");
+        $lang = substr($locale,0, 2);
+        if ( $lang === 'es' ) {
+            $date = ucwords(strftime('%A %e de %B de %G',  $date->getTimestamp()));
+            return str_replace(' De ', ' de ', $date);
+        } else if ( $lang === 'en' ) {
+            return ucwords(strftime('%A, %B %e, %G', $date->getTimestamp()));
+        } else {
+            return strftime('%e/%m/%G', $date->getTimestamp());
+        }
     }
 }

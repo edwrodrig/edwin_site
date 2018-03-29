@@ -14,6 +14,8 @@ $res->sources = [
 
 $res->js()->minify(__DIR__ . '/../files/lib.js');
 
+setlocale(LC_ALL, 'es_CL.utf8');
+//setlocale(LC_ALL, 'en_US.utf-8');
 
 $site = new edwrodrig\static_generator\Site;
 $site->input_dir = __DIR__ . '/../files';

@@ -19,7 +19,7 @@ use edwrodrig\site\Site;
             <h1><?=Site::tr(Site::page()->get_title())?></h1>
         </header>
         <hr>
-        <div class="grid-padding">
+        <div class="flex-column grid-padding">
         <?php
             foreach ( Site::projects() as $project ) {?>
             <div>

@@ -16,7 +16,7 @@ use edwrodrig\site\Site;
 
 $section_posts = function($max_posts = 4) {?>
     <h1><?=Site::tr(['es' => 'Artículos', 'en' => 'Articles'])?></h1>
-    <div class="grid-padding">
+    <div class="flex-column grid-padding">
         <?php
         foreach (Site::posts() as $post ) { if ( --$max_posts < 0 ) break;?>
             <div>
@@ -34,7 +34,7 @@ $section_posts = function($max_posts = 4) {?>
 
 $section_projects = function($max_projects = 2) {?>
     <h1><?=Site::tr(['es'=> 'Proyectos', 'en' => 'Projects'])?></h1>
-    <div class="grid-padding">
+    <div class="flex-column grid-padding">
         <?php
         foreach (Site::projects() as $projects ) { if ( --$max_projects < 0 ) break;?>
             <div>

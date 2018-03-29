@@ -253,6 +253,12 @@ hr {
 #nav-menu {
   background-color: yellow;
 }
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
 /**
 function fragment_project_box($project) {
 t__('a', [
