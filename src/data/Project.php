@@ -47,7 +47,7 @@ class Project
         $r = new self;
         $r->name = $data['name'];
         $r->description = $data['description'];
-        $r->image = isset($data['image']) ? new Url($data['image']) : null;
+        $r->image = $data['image'] ?? null;
         $r->url = new Url($data['url']);
         $r->importance = $data['importance'] ?? 0;
 
@@ -64,7 +64,7 @@ class Project
         return $this->description;
     }
 
-    public function get_image() : ?Url
+    public function get_image() : ?string
     {
         return $this->image;
     }

@@ -19,7 +19,7 @@ setlocale(LC_ALL, 'es_CL.utf8');
 
 $site = new edwrodrig\static_generator\Site;
 $site->input_dir = __DIR__ . '/../files';
-$site->output_dir = __DIR__ . '/../output';
+$site->output_dir = __DIR__ . '/../output/es';
 $site->set_base_url('https://www.edwin.cl');
 
 $site->globals['posts'] = Collection::create_from_elements($site->get_templates('post'));

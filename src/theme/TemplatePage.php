@@ -45,7 +45,7 @@ class TemplatePage extends Template {
         <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon-152.png">
 
         <!-- Windows 8 Tiles -->
-        <meta name="application-name" content="Scotch Scotch scotch">
+        <meta name="application-name" content="<?=Site::tr(['es' => 'Página de Edwin Rodríguez', 'en' => 'Edwin Rodríguez\'s page'])?>">
         <meta name="msapplication-TileImage" content="/assets/favicon-144.png">
         <meta name="msapplication-TileColor" content="#2A2A2A">
 
@@ -74,11 +74,19 @@ class TemplatePage extends Template {
                 </button>
             </div>
         </div>
+        <?php $this->nav_menu()?>
+        <?php
+    }
+
+    public function nav_menu() {?>
         <div id="nav-menu" style="display:none">
-            <a href="/">Home</a>
-            <a href="/posts.html">Artículos</a>
-            <a href="/projects.html">Proyectos</a>
-            <button type="button" onclick="ANIM.modal_out('nav-menu')">Close</button>
+            <div class="section-container nav-menu-items">
+                <h1>Edwin Rodríguez</h1>
+                <a href="/"><?=Site::tr(['es' => 'Inicio', 'en' => 'Home'])?></a>
+                <a href="/posts.html"><?=Site::tr(['es' => 'Artículos', 'en' => 'Article'])?></a>
+                <a href="/projects.html"><?=Site::tr(['es' => 'Proyectos', 'en' => 'Projects'])?></a>
+                <button type="button" class="nav-menu-close" onclick="ANIM.modal_out('nav-menu')"><i class="fa fa-times"></i></i></button>
+            </div>
         </div>
         <?php
     }

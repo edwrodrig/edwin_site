@@ -35,13 +35,15 @@ class TemplatePost extends TemplatePage
     <div class='section-container container-padding'>
         <header class="section-header post-box">
             <h1><?=Site::tr($this->get_title())?></h1>
-            <i class="fa fa-clock-o"></i><time><?=Site::date_str($this->get_date())?></time>
+            <time><i class="fa fa-clock-o"></i><?=Site::date_str($this->get_date())?></time>
         </header>
         <hr/>
+        <div class="paragraph">
         <?php
             /** @noinspection PhpIncludeInspection */
             include $this->filename;
         ?>
+        </div>
     </div>
 </div>
 <?php

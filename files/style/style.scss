@@ -251,7 +251,44 @@ hr {
 }
 
 #nav-menu {
-  background-color: yellow;
+  background-color: black;
+  padding-top: 3em;
+
+  .nav-menu-items {
+    text-align : center;
+
+    a {
+      display: block;
+      font-size: 2em;
+      text-decoration: none;
+      font-family: $font-emph;
+      margin-bottom: 0.5em;
+    }
+
+    h1 {
+      font-size: 3em;
+      font-weigth: bold;
+    }
+
+  }
+
+  .nav-menu-close {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    border: 0;
+
+    color: white;
+    background-color: transparent;
+
+    i {
+      font-size: 32px;
+    }
+
+    &:hover {
+      color: $font-color-highlight;
+    }
+  }
 }
 
 .flex-column {
