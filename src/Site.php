@@ -23,6 +23,10 @@ class Site
         return BaseSite::get()->globals['projects'];
     }
 
+    public static function site_info() {
+        return BaseSite::get()->globals['site_info'];
+    }
+
     public static function lang() : string {
         return BaseSite::get()->get_lang();
     }

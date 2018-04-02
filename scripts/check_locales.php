@@ -1,20 +1,10 @@
 <?php
 
-function check_lang($lang) {
-    static $langs = null;
-    if ( is_null($langs) ) {
-        $langs = explode("\n", shell_exec('locale -a'));
-    }
-    echo "Checking lang[$lang]...";
-    if ( !in_array($lang, $langs) ) {
-        echo "NOT AVAILABLE\n";
-        exit(1);
-    } else {
-        echo "AVAILABLE\n";
-    }
-}
+use edwrodrig\static_generator\Site;
 
-check_lang ('es_CL.utf8');
+include_once __DIR__ . '/../vendor/autoload.php';
 
-
-exit(0);
+if ( Site::check_locales('es_CL.utf8') )
+    exit(0);
+else
+    exit(1);
