@@ -27,5 +27,14 @@
         "psr-4" : {
             "test\\" : "tests/src/"
         }
+    },
+    "scripts" : {
+        "check_locales" : "php scripts/check_locales.php",
+        "pre-install-cmd": [
+            "@check_locales"
+        ],
+        "pre-update-cmd": [
+            "@check_locales"
+        ]
     }
 }
