@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "de667da15cfb048be67b5577d888ab2f",
+    "content-hash": "310a87211259acf6eaca44d2a7904d18",
     "packages": [
         {
             "name": "edwrodrig/contento",
@@ -80,16 +80,16 @@
         },
         {
             "name": "edwrodrig/image",
-            "version": "1.1.1",
+            "version": "1.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/edwrodrig/image.git",
-                "reference": "ff409fed77ed3292aaaba9419a5fdb57044556f9"
+                "reference": "2d04ed9cae3409fdd1341234b499a3f7e7f90d76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/edwrodrig/image/zipball/ff409fed77ed3292aaaba9419a5fdb57044556f9",
-                "reference": "ff409fed77ed3292aaaba9419a5fdb57044556f9",
+                "url": "https://api.github.com/repos/edwrodrig/image/zipball/2d04ed9cae3409fdd1341234b499a3f7e7f90d76",
+                "reference": "2d04ed9cae3409fdd1341234b499a3f7e7f90d76",
                 "shasum": ""
             },
             "require": {
@@ -112,7 +112,7 @@
                     "email": "edwrodrig@gmail.com"
                 }
             ],
-            "time": "2018-03-29T02:51:12+00:00"
+            "time": "2018-04-04T18:38:23+00:00"
         },
         {
             "name": "edwrodrig/js",
@@ -194,16 +194,16 @@
         },
         {
             "name": "edwrodrig/static_generator",
-            "version": "4.5.2",
+            "version": "4.5.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/edwrodrig/static_generator.git",
-                "reference": "0b13a8816f926d0bc37f33c38e16abf9bc5696d5"
+                "reference": "61ba9876470c59eca13823991660108d83af6863"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/edwrodrig/static_generator/zipball/0b13a8816f926d0bc37f33c38e16abf9bc5696d5",
-                "reference": "0b13a8816f926d0bc37f33c38e16abf9bc5696d5",
+                "url": "https://api.github.com/repos/edwrodrig/static_generator/zipball/61ba9876470c59eca13823991660108d83af6863",
+                "reference": "61ba9876470c59eca13823991660108d83af6863",
                 "shasum": ""
             },
             "require": {
@@ -228,7 +228,7 @@
                     "email": "edwrodrig@gmail.com"
                 }
             ],
-            "time": "2018-04-04T13:07:36+00:00"
+            "time": "2018-04-04T18:53:25+00:00"
         },
         {
             "name": "leafo/scssphp",

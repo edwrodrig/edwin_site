@@ -29,25 +29,25 @@ class TemplatePage extends Template {
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="/style/style.css">
 
-        <link rel="shortcut icon" sizes="16x16" href="<?=Image::resize_fit('images/favicon.png', 16, 16)?>">
-        <link rel="shortcut icon" sizes="24x24" href="<?=Image::resize_fit('images/favicon.png', 24, 24)?>">
-        <link rel="shortcut icon" sizes="32x32" href="<?=Image::resize_fit('images/favicon.png', 32, 32)?>">
-        <link rel="shortcut icon" sizes="48x48" href="<?=Image::resize_fit('images/favicon.png', 48, 48)?>">
-        <link rel="shortcut icon" sizes="64x64" href="<?=Image::resize_fit('images/favicon.png', 64, 64)?>">
+        <link rel="shortcut icon" sizes="16x16" href="<?=Image::contain('images/favicon.png', 16, 16)?>">
+        <link rel="shortcut icon" sizes="24x24" href="<?=Image::contain('images/favicon.png', 24, 24)?>">
+        <link rel="shortcut icon" sizes="32x32" href="<?=Image::contain('images/favicon.png', 32, 32)?>">
+        <link rel="shortcut icon" sizes="48x48" href="<?=Image::contain('images/favicon.png', 48, 48)?>">
+        <link rel="shortcut icon" sizes="64x64" href="<?=Image::contain('images/favicon.png', 64, 64)?>">
 
 
         <!-- Mobile (Android, iOS & others) -->
-        <link rel="apple-touch-icon" sizes="57x57" href="<?=Image::resize_fit('images/favicon.png', 57, 57)?>">
-        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?=Image::resize_fit('images/favicon.png', 57, 57)?>">
-        <link rel="apple-touch-icon" sizes="72x72" href="<?=Image::resize_fit('images/favicon.png', 72, 72)?>">
-        <link rel="apple-touch-icon" sizes="114x114" href="<?=Image::resize_fit('images/favicon.png', 114, 114)?>">
-        <link rel="apple-touch-icon" sizes="120x120" href="<?=Image::resize_fit('images/favicon.png', 120, 120)?>">
-        <link rel="apple-touch-icon" sizes="144x144" href="<?=Image::resize_fit('images/favicon.png', 144, 144)?>">
-        <link rel="apple-touch-icon" sizes="152x152" href="<?=Image::resize_fit('images/favicon.png', 152, 152)?>">
+        <link rel="apple-touch-icon" sizes="57x57" href="<?=Image::contain('images/favicon.png', 57, 57)?>">
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?=Image::contain('images/favicon.png', 57, 57)?>">
+        <link rel="apple-touch-icon" sizes="72x72" href="<?=Image::contain('images/favicon.png', 72, 72)?>">
+        <link rel="apple-touch-icon" sizes="114x114" href="<?=Image::contain('images/favicon.png', 114, 114)?>">
+        <link rel="apple-touch-icon" sizes="120x120" href="<?=Image::contain('images/favicon.png', 120, 120)?>">
+        <link rel="apple-touch-icon" sizes="144x144" href="<?=Image::contain('images/favicon.png', 144, 144)?>">
+        <link rel="apple-touch-icon" sizes="152x152" href="<?=Image::contain('images/favicon.png', 152, 152)?>">
 
         <!-- Windows 8 Tiles -->
         <meta name="application-name" content="<?=Site::tr(['es' => 'Página de Edwin Rodríguez', 'en' => 'Edwin Rodríguez\'s page'])?>">
-        <meta name="msapplication-TileImage" content="<?=Image::resize_fit('images/favicon.png', 144, 144)?>">
+        <meta name="msapplication-TileImage" content="<?=Image::contain('images/favicon.png', 144, 144)?>">
         <meta name="msapplication-TileColor" content="#2A2A2A">
 
         <!-- iOS Settings -->

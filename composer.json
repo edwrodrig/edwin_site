@@ -9,10 +9,10 @@
     "minimum-stability" : "stable",
     "require": {
         "php" : "^7.2",
-	    "edwrodrig/static_generator": "4.5.2",
+	    "edwrodrig/static_generator": "4.5.6",
         "edwrodrig/js": "2.6.1",
         "edwrodrig/contento" : "1.3.1",
-        "edwrodrig/image" : "1.1.1",
+        "edwrodrig/image" : "1.2.5",
         "edwrodrig/deployer" : "1.0.0"
     },
     "require-dev" : {

@@ -8,11 +8,10 @@
 
 namespace edwrodrig\site\data;
 
-use edwrodrig\static_generator\cache\Cache;
-use edwrodrig\static_generator\cache\FileItem;
 use edwrodrig\site\Site;
+use edwrodrig\static_generator\cache\ImageItem;
 
-class Image extends FileItem
+class Image extends ImageItem
 {
     public function __construct(string $file, string $suffix = '') {
         parent::__construct(__DIR__  . '/../../data', $file, $suffix);
@@ -23,55 +22,23 @@ class Image extends FileItem
         return (string)Site::cache()->update_cache($this);
     }
 
-
-    public static function image($file) {
-        return  new class($file) extends Image {
-            public function cache_generate(Cache $cache) {
-                $img = \edwrodrig\image\Image::optimize($this->get_source_filename($this->filename));
-                $img->writeImage($cache->cache_filename($this->get_cached_file()));
-            }
-
-        };
-    }
-
-    public static function resize_fit($file, $width, $height, int $svg_factor = 1) {
-        $img = new class($file, $width . 'x' . $height) extends Image {
-            public $width;
-            public $height;
-            public $svg_factor;
-
-            public function cache_generate(Cache $cache) {
-                $img = \edwrodrig\image\Image::optimize($this->get_source_filename($this->filename), $this->svg_factor);
-                $img->setImageBackgroundColor('transparent');
-                $img->scaleImage($this->width, $this->height);
-                $img->writeImage($cache->cache_filename($this->get_cached_file()));
-            }
-
-        };
-        $img->width = $width;
-        $img->height = $height;
+    public static function image($file, int $svg_factor = 1) {
+        $img = new Image($file);
         $img->svg_factor = $svg_factor;
-        if ( pathinfo($file, PATHINFO_EXTENSION) == 'svg' )
-            $img->extension = 'png';
         return $img;
     }
 
-    public static function resize_width($file, $width) {
-        $img = new class($file, $width . 'x') extends Image {
-            public $width;
-
-            public function cache_generate(Cache $cache) {
-                $img = \edwrodrig\image\Image::optimize($this->get_source_filename($this->filename));
-                $img->scaleImage($this->width, 0);
-                $img->writeImage($cache->cache_filename($this->get_cached_file()));
-            }
-
-        };
-
-        $img->width = $width;
+    public static function cover($file, $width, $height, int $svg_factor = 1) {
+        $img = new Image($file);
+        $img->svg_factor = $svg_factor;
+        $img->set_cover($width, $height);
         return $img;
     }
 
-
-
+    public static function contain($file, $width, $height, $background_color = 'transparent', int $svg_factor = 1) {
+        $img = new Image($file);
+        $img->svg_factor = $svg_factor;
+        $img->set_contain($width, $height, $background_color);
+        return $img;
+    }
 }
