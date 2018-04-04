@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "310a87211259acf6eaca44d2a7904d18",
+    "content-hash": "10eb2769a32d0198b62203ab318dc283",
     "packages": [
         {
             "name": "edwrodrig/contento",
@@ -80,16 +80,16 @@
         },
         {
             "name": "edwrodrig/image",
-            "version": "1.2.5",
+            "version": "1.2.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/edwrodrig/image.git",
-                "reference": "2d04ed9cae3409fdd1341234b499a3f7e7f90d76"
+                "reference": "4c2488a6a1ed8eecbb31034c58564020ffccf6b1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/edwrodrig/image/zipball/2d04ed9cae3409fdd1341234b499a3f7e7f90d76",
-                "reference": "2d04ed9cae3409fdd1341234b499a3f7e7f90d76",
+                "url": "https://api.github.com/repos/edwrodrig/image/zipball/4c2488a6a1ed8eecbb31034c58564020ffccf6b1",
+                "reference": "4c2488a6a1ed8eecbb31034c58564020ffccf6b1",
                 "shasum": ""
             },
             "require": {
@@ -112,7 +112,7 @@
                     "email": "edwrodrig@gmail.com"
                 }
             ],
-            "time": "2018-04-04T18:38:23+00:00"
+            "time": "2018-04-04T19:18:52+00:00"
         },
         {
             "name": "edwrodrig/js",
