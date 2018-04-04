@@ -38,4 +38,4 @@ $site->globals['cache'] = new Cache($site->cache('images'));
 $site->regenerate();
 
 $site->globals['cache']->save_index();
-passthru(sprintf('cp -al %s %s', __DIR__ . '/../cache/images/files/images', __DIR__ .'/../output/es/assets/images'));
+$site->globals['cache']->link_cached('images', 'assets/images');
