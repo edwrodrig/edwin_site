@@ -9,6 +9,7 @@
 namespace edwrodrig\site;
 
 use DateTime;
+use edwrodrig\site\data\Image;
 use edwrodrig\site\data\Project;
 use edwrodrig\static_generator\Page;
 use edwrodrig\static_generator\Site as BaseSite;
@@ -27,6 +28,10 @@ class Site
         return BaseSite::get()->globals['site_info'];
     }
 
+    public static function cache() {
+        return BaseSite::get()->globals['cache'];
+    }
+
     public static function lang() : string {
         return BaseSite::get()->get_lang();
     }
@@ -43,7 +48,7 @@ class Site
         <a href="<?=$project->get_url()?>" class="project-box clickable-box">
             <div class="grid-padding">
                 <div class="project-logo">
-                    <img width="100px" height="100px" src="<?=$project->get_image() ?? '/assets/project-default-icon.png'?>"/>
+                    <img width="100px" height="100px" src="<?=$project->get_image() ?? strval(Image::resize_fit('images/browser.svg', 200, 200, 10))?>"/>
                 </div>
                 <div>
                     <h2><?=$project->get_name()?></h2>

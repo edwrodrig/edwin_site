@@ -1,6 +1,7 @@
 <?php
 namespace edwrodrig\site\theme;
 
+use edwrodrig\site\data\Image;
 use edwrodrig\site\Site;
 use edwrodrig\static_generator\Template;
 
@@ -28,25 +29,25 @@ class TemplatePage extends Template {
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="/style/style.css">
 
-        <link rel="shortcut icon" sizes="16x16" href="/assets/favicon-16.png">
-        <link rel="shortcut icon" sizes="24x24" href="/assets/favicon-24.png">
-        <link rel="shortcut icon" sizes="32x32" href="/assets/favicon-32.png">
-        <link rel="shortcut icon" sizes="48x48" href="/assets/favicon-48.png">
-        <link rel="shortcut icon" sizes="64x64" href="/assets/favicon-64.png">
+        <link rel="shortcut icon" sizes="16x16" href="<?=Image::resize_fit('images/favicon.png', 16, 16)?>">
+        <link rel="shortcut icon" sizes="24x24" href="<?=Image::resize_fit('images/favicon.png', 24, 24)?>">
+        <link rel="shortcut icon" sizes="32x32" href="<?=Image::resize_fit('images/favicon.png', 32, 32)?>">
+        <link rel="shortcut icon" sizes="48x48" href="<?=Image::resize_fit('images/favicon.png', 48, 48)?>">
+        <link rel="shortcut icon" sizes="64x64" href="<?=Image::resize_fit('images/favicon.png', 64, 64)?>">
 
 
         <!-- Mobile (Android, iOS & others) -->
-        <link rel="apple-touch-icon" sizes="57x57" href="/assets/favicon-57.png">
-        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/assets/favicon-57.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="/assets/favicon-72.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="/assets/favicon-114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="/assets/favicon-120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="/assets/favicon-144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="/assets/favicon-152.png">
+        <link rel="apple-touch-icon" sizes="57x57" href="<?=Image::resize_fit('images/favicon.png', 57, 57)?>">
+        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?=Image::resize_fit('images/favicon.png', 57, 57)?>">
+        <link rel="apple-touch-icon" sizes="72x72" href="<?=Image::resize_fit('images/favicon.png', 72, 72)?>">
+        <link rel="apple-touch-icon" sizes="114x114" href="<?=Image::resize_fit('images/favicon.png', 114, 114)?>">
+        <link rel="apple-touch-icon" sizes="120x120" href="<?=Image::resize_fit('images/favicon.png', 120, 120)?>">
+        <link rel="apple-touch-icon" sizes="144x144" href="<?=Image::resize_fit('images/favicon.png', 144, 144)?>">
+        <link rel="apple-touch-icon" sizes="152x152" href="<?=Image::resize_fit('images/favicon.png', 152, 152)?>">
 
         <!-- Windows 8 Tiles -->
         <meta name="application-name" content="<?=Site::tr(['es' => 'Página de Edwin Rodríguez', 'en' => 'Edwin Rodríguez\'s page'])?>">
-        <meta name="msapplication-TileImage" content="/assets/favicon-144.png">
+        <meta name="msapplication-TileImage" content="<?=Image::resize_fit('images/favicon.png', 144, 144)?>">
         <meta name="msapplication-TileColor" content="#2A2A2A">
 
         <!-- iOS Settings -->
@@ -109,15 +110,13 @@ class TemplatePage extends Template {
     protected function social_buttons_bar() {
         ?>
         <div class="social-buttons-bar">
-            <a href="http://www.github.com/edwrodrig"><i class="fa fa-github"></i></a>
-            <a href="http://www.linkedin.com/pub/edwin-iv%C3%A1n-rodr%C3%ADguez-le%C3%B3n/35/241/848"><i class="fa fa-linkedin"></i></a>
-            <a href="https://stackoverflow.com/users/2469099/edwin-rodr%c3%adguez?tab=profile"><i class="fa fa-stack-overflow"></i></a>
-            <a href="http://play.google.com/store/apps/developer?id=edwrodrig"><i class="fa fa-android"></i></a>
-            <a href="http://edwrodrig.deviantart.com/"><i class="fa fa-deviantart"></i></a>
-            <a href="https://twitter.com/edwrodrig"><i class="fa fa-twitter"></i></a>
-            <a href="http://www.pinterest.com/edwrodrig"><i class="fa fa-pinterest"></i></a>
-            <a href="http://www.codepen.io/edwrodrig"><i class="fa fa-codepen"></i></a>
-            <a href="https://www.youtube.com/user/edwrodrig1"><i class="fa fa-youtube-play"></i></a>
+            <a href="http://www.github.com/edwrodrig" title="Github"><i class="fa fa-github"></i></a>
+            <a href="http://www.linkedin.com/pub/edwin-iv%C3%A1n-rodr%C3%ADguez-le%C3%B3n/35/241/848" title="LinkedIn"><i class="fa fa-linkedin"></i></a>
+            <a href="https://stackoverflow.com/users/2469099/edwin-rodr%c3%adguez?tab=profile" title="StackOverflow"><i class="fa fa-stack-overflow"></i></a>
+            <a href="http://play.google.com/store/apps/developer?id=edwrodrig" title="Google Play"><i class="fa fa-android"></i></a>
+            <a href="https://twitter.com/edwrodrig" title="Twitter"><i class="fa fa-twitter"></i></a>
+            <a href="http://www.codepen.io/edwrodrig" title="Codepen"><i class="fa fa-codepen"></i></a>
+            <a href="https://www.youtube.com/user/edwrodrig1" title="Youtube"><i class="fa fa-youtube-play"></i></a>
         </div>
         <?php
     }

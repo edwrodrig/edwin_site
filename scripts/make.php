@@ -6,6 +6,7 @@ use edwrodrig\contento\collection\json\Collection;
 use edwrodrig\contento\collection\json\Singleton;
 use edwrodrig\site\data\Project;
 use edwrodrig\site\data\SiteInfo;
+use edwrodrig\static_generator\cache\Cache;
 use edwrodrig\static_generator\ResourceMinifier;
 use edwrodrig\js\Config;
 
@@ -22,6 +23,7 @@ setlocale(LC_ALL, 'es_CL.utf8');
 $site = new edwrodrig\static_generator\Site;
 $site->input_dir = __DIR__ . '/../files';
 $site->output_dir = __DIR__ . '/../output/es';
+$site->cache_dir = __DIR__ . '/../cache';
 $site->set_base_url('https://www.edwin.cl');
 
 $site->globals['posts'] = Collection::create_from_elements($site->get_templates('post'));
@@ -31,4 +33,9 @@ $site->globals['site_info'] = Singleton::create_from_json(__DIR__ . '/../data/si
 $site->globals['posts']->reverse_sort();
 $site->globals['projects']->reverse_sort();
 
+$site->globals['cache'] = new Cache($site->cache('images'));
+
 $site->regenerate();
+
+$site->globals['cache']->save_index();
+passthru(sprintf('cp -al %s %s', __DIR__ . '/../cache/images/files/images', __DIR__ .'/../output/es/assets/images'));

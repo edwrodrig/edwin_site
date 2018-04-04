@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "924dff7c3b4ca0cd691a7161744a4030",
+    "content-hash": "fb8065a4970563e2ec0b85597e15baf3",
     "packages": [
         {
             "name": "edwrodrig/contento",
@@ -194,16 +194,16 @@
         },
         {
             "name": "edwrodrig/static_generator",
-            "version": "4.3.0",
+            "version": "4.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/edwrodrig/static_generator.git",
-                "reference": "9e634af4f15967d918890597db6b5c40a543b692"
+                "reference": "3c5bdbb4747ab2572a4294593d241ac016986935"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/edwrodrig/static_generator/zipball/9e634af4f15967d918890597db6b5c40a543b692",
-                "reference": "9e634af4f15967d918890597db6b5c40a543b692",
+                "url": "https://api.github.com/repos/edwrodrig/static_generator/zipball/3c5bdbb4747ab2572a4294593d241ac016986935",
+                "reference": "3c5bdbb4747ab2572a4294593d241ac016986935",
                 "shasum": ""
             },
             "require": {
@@ -228,7 +228,7 @@
                     "email": "edwrodrig@gmail.com"
                 }
             ],
-            "time": "2018-04-02T15:09:59+00:00"
+            "time": "2018-04-04T02:02:12+00:00"
         },
         {
             "name": "leafo/scssphp",
