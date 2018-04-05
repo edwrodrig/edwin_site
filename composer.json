@@ -29,9 +29,9 @@
         }
     },
     "scripts" : {
-        "check_locales" : "php scripts/check_locales.php",
+        "check_locales" : "php scripts/check_reqs.php",
         "post-install-cmd": [
-            "@check_locales"
+            "@check_reqs"
         ]
     }
 }
