@@ -4,7 +4,7 @@
   "description": {
     "es": "Canal is a herramienta de análisis de automatas celulares elementales basado en web. Puedes establecer tu estado inicial y correr cualquier regla ECA en él. Hay otras opciones que extienden las posibilidades del análisis y las simulaciones."
   },
-  "image": "/assets/projects/canal-web.gif",
+  "image": "canal-web.gif",
   "url": "http://edwrodrig.github.io/canal-web"
 },
 {
@@ -12,7 +12,7 @@
   "description": {
     "en": "If you have problems taking decisions ERoulette is the solution. ERoulette is a customizable roulette desktop application that helps you to choose a random alternative. Make your own options image, assign probabilities and spin it!. As a demostration, ERoulette application is preconfigured as a day activity roulette to choose what thing to do someday."
   },
-  "image": "/assets/projects/eroulette.png",
+  "image": "eroulette.svg",
   "url": "http://edwrodrig.github.io/eroulette"
 },
 {
@@ -20,7 +20,7 @@
   "description": {
     "es" :"Far Flight es un juego html5 en donde tu objetivo es volar tan lejos como puedas sin chocar con los bloques que aparecen en el camino. La velocidad aumenta en cada instante haciendo al juego más difícil con cada segundo que pasa."
   },
-  "image": "/assets/projects/far-flight.png",
+  "image": "far-flight.png",
   "url": "http://edwrodrig.github.io/farflight",
   "importance" : 10
 },
@@ -29,7 +29,7 @@
   "description": {
     "es": "Ougijaaken es un comic fuertemente influenciado por Dragon Ball hecho en mi niñez. El único propósito de publicar esta historia es compartirla ya que es preferible eso antes que permanezca guardada por siempre en mis carpetas. ¡Espero que disfruten!"
   },
-  "image": "/assets/projects/ougijaaken.jpg",
+  "image": "ougijaaken.jpg",
   "url": "http://edwrodrig.github.io/ougijaaken"
 },
 {
@@ -37,7 +37,7 @@
   "description": {
     "es": "pitri.js es una pequeña librería javascript para proyectar puntos con perspectiva. Esta libería está escrita en javascript puro lo que la hace adecuada para casos de uso simples donde no queremos usar inflados frameworks. pitri.js provee funciones para definir una vista de camara y transformar un punto 2d en coordenadas de pantalla."
   },
-  "image": "/assets/projects/pitri.js.png",
+  "image": "pitrijs.png",
   "url": "http://edwrodrig.github.io/pitri.js"
 },
 {

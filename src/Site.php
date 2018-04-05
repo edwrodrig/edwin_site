@@ -48,7 +48,7 @@ class Site
         <a href="<?=$project->get_url()?>" class="project-box clickable-box">
             <div class="grid-padding">
                 <div class="project-logo">
-                    <img width="100px" height="100px" src="<?=$project->get_image() ?? strval(Image::contain('images/browser.svg', 200, 200,  'transparent',10))?>"/>
+                    <img width="100px" height="100px" src="<?=Image::contain('images/projects/' . ($project->get_image() ?? 'default.svg'), 200, 200,  'transparent',10)?>"/>
                 </div>
                 <div>
                     <h2><?=$project->get_name()?></h2>
