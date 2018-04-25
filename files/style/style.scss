@@ -2,7 +2,6 @@
 @import 'style/base';
 
 $default-padding: 1em;
-$section-width: 1300px;
 
 $background-color: black;
 $font-color : #AAA;
@@ -53,11 +52,6 @@ hr {
 
 .grid-padding {
   @include grid-padding($default-padding);
-}
-
-.section-container {
-  max-width: $section-width;
-  margin: 0 auto
 }
 
 .container-padding {

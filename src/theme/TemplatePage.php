@@ -67,13 +67,13 @@ class TemplatePage extends Template {
 
     protected function body_header() {
         ?>
-        <div>
-            <div class="section-container container-padding header">
-                <a class="header-name" href="/">Edwin Rodríguez</a>
-                <button type="button" class="nav-button" onclick="ANIM.modal_in('nav-menu')">
-                    <i class="fa fa-bars"></i>
-                </button>
-            </div>
+        <div class="container-padding" style="position:fixed;width:100%;display:flex;flex-direction:row-reverse;box-sizing:border-box">
+            <button type="button" class="nav-button" onclick="ANIM.modal_in('nav-menu')">
+                <i class="fa fa-bars"></i>
+            </button>
+        </div>
+        <div class="container-padding header">
+            <a class="header-name" href="/">Edwin Rodríguez</a>
         </div>
         <?php $this->nav_menu()?>
         <?php
@@ -81,7 +81,7 @@ class TemplatePage extends Template {
 
     public function nav_menu() {?>
         <div id="nav-menu" style="display:none">
-            <div class="section-container nav-menu-items">
+            <div class="nav-menu-items">
                 <h1>Edwin Rodríguez</h1>
                 <a href="/"><?=Site::tr(['es' => 'Inicio', 'en' => 'Home'])?></a>
                 <a href="/posts.html"><?=Site::tr(['es' => 'Artículos', 'en' => 'Article'])?></a>
