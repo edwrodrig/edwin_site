@@ -1,21 +1,22 @@
 <?php
-/*
-@template \edwrodrig\site\theme\TemplatePost
-@type template
-@data
-{
-    "title": {
-        "en": "Cast signal in new C++11 Qt connection",
-        "es": "Castear signal en las nuevas conecciones C++11 de Qt"
-    },
-    "description": {
-        "en": "Cast signal in new C++11 Qt connection",
-        "es": "Castear signal en las nuevas conecciones C++11 de Qt"
-    },
-    "date": "2017-02-09",
-    "tags": []
-}
-*/
+/**
+ * @template
+ * @type template
+ * @data
+ * {
+ *  "title": {
+ *      "en": "Cast signal in new C++11 Qt connection",
+ *      "es": "Castear signal en las nuevas conecciones C++11 de Qt"
+ *  },
+ *  "description": {
+ *      "en": "Cast signal in new C++11 Qt connection",
+ *      "es": "Castear signal en las nuevas conecciones C++11 de Qt"
+ *  },
+ *  "date": "2017-02-09",
+ *  "tags": []
+ * }
+ * @var $this \edwrodrig\site\theme\TemplatePost
+ */
 ?>
 <p>This is the template</p>
 <pre>

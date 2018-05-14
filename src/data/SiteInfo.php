@@ -1,13 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: edwin
- * Date: 02-04-18
- * Time: 14:21
- */
+declare(strict_types=1);
 
 namespace edwrodrig\site\data;
-
 
 use edwrodrig\contento\type\TranslatableString;
 
@@ -23,18 +17,18 @@ class SiteInfo
      */
     private $description;
 
-    public static function create_from_array(array $data) {
+    public static function createFromArray(array $data) {
         $o = new self;
         $o->title = new TranslatableString($data['title']);
         $o->description = new TranslatableString($data['description']);
         return $o;
     }
 
-    public function get_title() : ?TranslatableString {
+    public function getTitle() : TranslatableString {
         return $this->title;
     }
 
-    public function get_description() : ?TranslatableString {
+    public function getDescription() : TranslatableString {
         return $this->description;
     }
 

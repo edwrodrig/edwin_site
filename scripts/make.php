@@ -6,25 +6,7 @@ use edwrodrig\contento\collection\json\Collection;
 use edwrodrig\contento\collection\json\Singleton;
 use edwrodrig\site\data\Project;
 use edwrodrig\site\data\SiteInfo;
-use edwrodrig\static_generator\cache\Cache;
-use edwrodrig\static_generator\ResourceMinifier;
-use edwrodrig\js\Config;
-
-$res = new ResourceMinifier;
-$res->sources = [
-    Config::RESOURCE_DIR . '/anim.js'
-];
-
-$res->js()->minify(__DIR__ . '/../files/lib.js');
-
-setlocale(LC_ALL, 'es_CL.utf8');
-//setlocale(LC_ALL, 'en_US.utf-8');
-
-$site = new edwrodrig\static_generator\Site;
-$site->input_dir = __DIR__ . '/../files';
-$site->output_dir = __DIR__ . '/../output/es';
-$site->cache_dir = __DIR__ . '/../cache';
-$site->set_base_url('https://www.edwin.cl');
+use edwrodrig\static_generator\cache\CacheManager;
 
 $site->globals['posts'] = Collection::create_from_elements($site->get_templates('post'));
 $site->globals['projects'] = Collection::create_from_json(__DIR__ . '/../data/projects.json', Project::class);
@@ -33,9 +15,18 @@ $site->globals['site_info'] = Singleton::create_from_json(__DIR__ . '/../data/si
 $site->globals['posts']->reverse_sort();
 $site->globals['projects']->reverse_sort();
 
-$site->globals['cache'] = new Cache($site->cache('images'));
 
-$site->regenerate();
+$cache = new CacheManager(__DIR__ . '/../output/cache/images');
+    $cache->setTargetWebPath('cache/images');
 
-$site->globals['cache']->save_index();
-$site->globals['cache']->link_cached('images', 'assets/images');
+$context = new \edwrodrig\static_generator\Context(__DIR__ . '/../files', __DIR__ . '/../output/es');
+    $context->registerCache($cache);
+    $context->setTargetWebPath('es');
+    setlocale(LC_ALL, 'es_CL.utf-8');
+
+    $context->generate();
+
+
+    $cache->save();
+
+

@@ -1,22 +1,21 @@
 <?php
-/*
- @template \edwrodrig\site\theme\TemplatePage
- @type template
- @data {
-    "title" : {
-        "es" : "Artículos",
-        "en" : "Posts"
-    }
-}
+/**
+ * @template \edwrodrig\site\theme\TemplatePage
+ *
+ * @data {
+ *   "title" : {
+ *       "es" : "Artículos",
+ *       "en" : "Posts"
+ *   }
+ * }
+ * @var $this \edwrodrig\site\theme\TemplatePage
  */
-
-use edwrodrig\site\Site;
 
 ?>
 <div>
     <div class="section-container container-padding">
         <header class="section-header">
-            <h1><?=Site::tr(Site::page()->get_title())?></h1>
+            <h1><?=$this->tr($this->getTitle())?></h1>
         </header>
         <hr>
         <div class="flex-column grid-padding">

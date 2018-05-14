@@ -1,30 +1,20 @@
 <?php
 namespace edwrodrig\site\theme;
 
+use DateTime;
 use edwrodrig\site\data\Image;
-use edwrodrig\site\Site;
-use edwrodrig\static_generator\Template;
+use edwrodrig\static_generator\template\TemplateHtmlBasic;
 
-class TemplatePage extends Template {
+class TemplatePage extends TemplateHtmlBasic {
 
-    public function body() {
-        parent::print();
-    }
-
-    public function get_title() {
-        return $this->metadata->get_data()['title'];
+    public function getTitle() {
+        return $this->getData()['title'];
     }
 
     /**
-     * @throws \Exception
+     * @throws \edwrodrig\static_generator\exception\NoTranslationAvailableException
      */
-    public function print() {
-    ?>
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+    public function head() : void {?>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive+Mono|VT323">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="/style/style.css">
@@ -46,7 +36,7 @@ class TemplatePage extends Template {
         <link rel="apple-touch-icon" sizes="152x152" href="<?=Image::contain('images/favicon.png', 152, 152)?>">
 
         <!-- Windows 8 Tiles -->
-        <meta name="application-name" content="<?=Site::tr(['es' => 'Página de Edwin Rodríguez', 'en' => 'Edwin Rodríguez\'s page'])?>">
+        <meta name="application-name" content="<?=$this->tr(['es' => 'Página de Edwin Rodríguez', 'en' => 'Edwin Rodríguez\'s page'])?>">
         <meta name="msapplication-TileImage" content="<?=Image::contain('images/favicon.png', 144, 144)?>">
         <meta name="msapplication-TileColor" content="#2A2A2A">
 
@@ -54,18 +44,23 @@ class TemplatePage extends Template {
         <meta content="yes" name="apple-mobile-web-app-capable">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <script src="/lib.js"></script>
-        <title><?=Site::tr($this->get_title())?></title>
-    </head>
-    <body>
-    <?php $this->body_header()?>
-    <?php $this->body()?>
-    <?php $this->body_footer()?>
-    </body>
-    </html>
+        <title><?=$this->tr($this->getTitle())?></title>
     <?php
     }
 
-    protected function body_header() {
+    /**
+     * @throws \edwrodrig\static_generator\exception\NoTranslationAvailableException
+     */
+    public function body() : void {
+        $this->bodyHeader();
+        $this->bodyContent();
+        $this->bodyFooter();
+    }
+
+    /**
+     * @throws \edwrodrig\static_generator\exception\NoTranslationAvailableException
+     */
+    protected function bodyHeader() {
         ?>
         <div class="container-padding" style="position:fixed;width:100%;display:flex;flex-direction:row-reverse;box-sizing:border-box">
             <button type="button" class="nav-button" onclick="ANIM.modal_in('nav-menu')">
@@ -73,32 +68,48 @@ class TemplatePage extends Template {
             </button>
         </div>
         <div class="container-padding header">
-            <a class="header-name" href="/">Edwin Rodríguez</a>
+            <a class="header-name" href="<?=$this->url('/')?>">Edwin Rodríguez</a>
         </div>
-        <?php $this->nav_menu()?>
-        <?php
+        <?php $this->navMenu();
     }
 
-    public function nav_menu() {?>
+    /**
+     * @throws \edwrodrig\static_generator\exception\NoTranslationAvailableException
+     */
+    public function navMenu() {?>
         <div id="nav-menu" style="display:none">
             <div class="nav-menu-items">
                 <h1>Edwin Rodríguez</h1>
-                <a href="/"><?=Site::tr(['es' => 'Inicio', 'en' => 'Home'])?></a>
-                <a href="/posts.html"><?=Site::tr(['es' => 'Artículos', 'en' => 'Article'])?></a>
-                <a href="/projects.html"><?=Site::tr(['es' => 'Proyectos', 'en' => 'Projects'])?></a>
+                <a href="<?=$this->url('/')?>"><?=$this->tr(['es' => 'Inicio', 'en' => 'Home'])?></a>
+                <a href="<?=$this->url('/posts.html')?>"><?=$this->tr(['es' => 'Artículos', 'en' => 'Article'])?></a>
+                <a href="<?=$this->url('/projects.html')?>"><?=$this->tr(['es' => 'Proyectos', 'en' => 'Projects'])?></a>
                 <button type="button" class="nav-menu-close" onclick="ANIM.modal_out('nav-menu')"><i class="fa fa-times"></i></i></button>
             </div>
         </div>
         <?php
     }
 
+    /**
+     * The body content
+     *
+     * Echo the content between the {@see TemplatePage::bodyHeader() body header} and {@see TemplatePage::bodyFooter() body footer}.
+     */
+    protected function bodyContent() {
+        /** @noinspection PhpIncludeInspection */
+        include $this->page_info->getSourceAbsolutePath();
+    }
 
-    protected function body_footer() {
+    /**
+     * The footer section.
+     *
+     * Contain just the {@see TemplatePage::socialButtonsBar() social buttons} and the current year with my name
+     */
+    protected function bodyFooter() {
         ?>
         <div>
             <div class="section-container container-padding">
                 <hr>
-                <?php $this->social_buttons_bar() ?>
+                <?php $this->socialButtonsBar() ?>
                 <div class="footer-endline">
                     <?=date("Y")?> - Edwin Rodríguez León
                 </div>
@@ -107,7 +118,10 @@ class TemplatePage extends Template {
 <?php
     }
 
-    protected function social_buttons_bar() {
+    /**
+     * The social buttons section
+     */
+    protected function socialButtonsBar() {
         ?>
         <div class="social-buttons-bar">
             <a href="http://www.github.com/edwrodrig" title="Github"><i class="fa fa-github"></i></a>
@@ -120,6 +134,27 @@ class TemplatePage extends Template {
         </div>
         <?php
     }
+
+    /**
+     * Get the date in readable format.
+     *
+     * The date is already translated bt the {@see Template::getLang() current language}
+     * @param DateTime $date
+     * @return string
+     */
+    public function dateStr(DateTime $date) : string {
+        $lang = $this->getLang();
+        if ( $lang === 'es' ) {
+            $date = ucwords(strftime('%A %e de %B de %G',  $date->getTimestamp()));
+            return str_replace(' De ', ' de ', $date);
+        } else if ( $lang === 'en' ) {
+            return ucwords(strftime('%A, %B %e, %G', $date->getTimestamp()));
+        } else {
+            return strftime('%e/%m/%G', $date->getTimestamp());
+        }
+    }
+
+
 
 }
 

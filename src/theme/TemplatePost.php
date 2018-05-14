@@ -8,40 +8,48 @@
 
 namespace edwrodrig\site\theme;
 
-use DateTime;
-use edwrodrig\site\Site;
+use edwrodrig\site\data\Post;
+use edwrodrig\static_generator\PagePhp;
 
 class TemplatePost extends TemplatePage
 {
+    /**
+     * @var Post
+     */
+    private $post;
 
-    public function get_template_type() : string {
+    public function __construct(PagePhp $page_info) {
+        parent::__construct($page_info);
+        $this->post = Post::createFromArray($this->getData());
+    }
+
+    public function getPost() : Post {
+        return $this->post;
+    }
+
+    public function getTemplateType() : string {
         return 'post';
     }
 
-    public function get_url() : string {
-        return '/posts/' . $this->get_id();
+    public function getTitle() : string {
+        return $this->tr($this->post->getTitle());
     }
 
-    public function get_date() : DateTime {
-        return new DateTime($this->metadata->get_data()['date']);
+    public function getPublicationDate() : string {
+        return $this->dateStr($this->post->getPublicationDate());
     }
 
-    static public function compare($a, $b) {
-        return $a->get_date() <=> $b->get_date();
-    }
-
-    public function body() {?>
+    public function bodyContent() {?>
 <div>
     <div class='section-container container-padding'>
         <header class="section-header post-box">
-            <h1><?=Site::tr($this->get_title())?></h1>
-            <time><i class="fa fa-clock-o"></i><?=Site::date_str($this->get_date())?></time>
+            <h1><?=$this->getTitle()?></h1>
+            <time><i class="fa fa-clock-o"></i><?=$this->getPublicationDate()?></time>
         </header>
         <hr/>
         <div class="paragraph">
         <?php
-            /** @noinspection PhpIncludeInspection */
-            include $this->filename;
+            parent::bodyContent();
         ?>
         </div>
     </div>
@@ -50,11 +58,4 @@ class TemplatePost extends TemplatePage
     }
 
 
-    public function html_link_box() {?>
-    <a href="<?=$this->get_url()?>" class="clickable-box post-box">
-        <h2><?=Site::tr($this->get_title())?></h2>
-        <time><i class="fa fa-clock-o"></i><?=Site::date_str($this->get_date())?></time>
-    </a>
-<?php
-    }
 }

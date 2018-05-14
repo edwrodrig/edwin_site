@@ -1,13 +1,9 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: edwin
- * Date: 20-03-18
- * Time: 13:44
- */
+declare(strict_types=1);
 
 namespace edwrodrig\site\data;
 
+use edwrodrig\contento\type\TranslatableString;
 use edwrodrig\contento\type\Url;
 
 class Project
@@ -18,12 +14,12 @@ class Project
     private $name;
 
     /**
-     * @var string
+     * @var TranslatableString
      */
     private $description;
 
     /**
-     * @var Url
+     * @var ?string
      */
     private $image;
 
@@ -42,11 +38,11 @@ class Project
      * @return Project
      * @throws \edwrodrig\contento\type\exception\InvalidUrlException
      */
-    public static function create_from_array(array $data) : self
+    public static function createFromArray(array $data) : self
     {
         $r = new self;
         $r->name = $data['name'];
-        $r->description = $data['description'];
+        $r->description = new TranslatableString($data['description']);
         $r->image = $data['image'] ?? null;
         $r->url = new Url($data['url']);
         $r->importance = $data['importance'] ?? 0;
@@ -54,31 +50,31 @@ class Project
         return $r;
     }
 
-    public function get_name() : string
+    public function getName() : string
     {
         return $this->name;
     }
 
-    public function get_description()
+    public function getDescription() : TranslatableString
     {
         return $this->description;
     }
 
-    public function get_image() : ?string
+    public function getImage() : ?string
     {
         return $this->image;
     }
 
-    public function get_url() : Url
+    public function getUrl() : Url
     {
         return $this->url;
     }
 
-    public function get_id() : string {
-        return $this->get_name();
+    public function getId() : string {
+        return $this->getName();
     }
 
-    public static function compare($a, $b) {
+    public static function compare(Project $a, Project $b) {
         return $a->importance <=> $b->importance;
     }
 }
