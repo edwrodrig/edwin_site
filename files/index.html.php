@@ -1,50 +1,51 @@
 <?php
-/*
- @template \edwrodrig\site\theme\TemplatePage
- @type template
- @data {
-    "title" : {
-        "es" : "Edwin Rodríguez León",
-        "en" : "Edwin Rodríguez León"
-    }
-}
-*/
-
-use edwrodrig\site\Site;
+/**
+ * @template
+ * @data {
+ *    "title" : {
+ *        "es" : "Edwin Rodríguez León",
+ *        "en" : "Edwin Rodríguez León"
+ *    }
+ * }
+ * @var $this edwrodrig\site\theme\TemplatePage
+ */
 
 //LOCAL FUNCTIONS
 
+use edwrodrig\site\theme\PostLink;
+use edwrodrig\site\theme\ProjectBox;
+
 $section_posts = function($max_posts = 4) {?>
-    <h1><?=Site::tr(['es' => 'Artículos', 'en' => 'Articles'])?></h1>
+    <h1><?=$this->tr(['es' => 'Artículos', 'en' => 'Articles'])?></h1>
     <div class="flex-column grid-padding">
         <?php
-        foreach (Site::posts() as $post ) { if ( --$max_posts < 0 ) break;?>
+        foreach ($this->getRepos()->getPosts() as $post ) { if ( --$max_posts < 0 ) break;?>
             <div>
-                <?php $post->html_link_box()?>
+                <?php (new PostLink($post, $this))->html()?>
             </div>
             <?php
         }
         ?>
         <div class="align-right">
-            <a class="button" href="/posts.html"><?=Site::tr(['es' => 'Más artículos', 'en' => 'More articles'])?></a>
+            <a class="button" href="<?=$this->url('/posts.html')?>"><?=$this->tr(['es' => 'Más artículos', 'en' => 'More articles'])?></a>
         </div>
     </div>
 <?php
 };
 
 $section_projects = function($max_projects = 2) {?>
-    <h1><?=Site::tr(['es'=> 'Proyectos', 'en' => 'Projects'])?></h1>
+    <h1><?=$this->tr(['es'=> 'Proyectos', 'en' => 'Projects'])?></h1>
     <div class="flex-column grid-padding">
         <?php
-        foreach (Site::projects() as $projects ) { if ( --$max_projects < 0 ) break;?>
+        foreach ( $this->getRepos()->getProjects() as $project ) { if ( --$max_projects < 0 ) break;?>
             <div>
-                <?php Site::html_project_box($projects)?>
+                <?php (new ProjectBox($project, $this))->html()?>
             </div>
             <?php
         }
         ?>
         <div class="align-right">
-            <a class="button" href="/projects.html"><?=Site::tr(['es' => 'Más proyectos', 'en' => 'More projects'])?></a>
+            <a class="button" href="<?=$this->url('/projects.html')?>"><?=$this->tr(['es' => 'Más proyectos', 'en' => 'More projects'])?></a>
         </div>
     </div>
     <?php

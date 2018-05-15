@@ -1,29 +1,31 @@
 <?php
-/*
- @template \edwrodrig\site\theme\TemplatePage
- @type template
- @data {
-    "title" : {
-        "es" : "Proyectos",
-        "en" : "Projects"
-    }
-}
+/**
+ * @noinspection PhpUnhandledExceptionInspection
+ * @template
+ * @data {
+ *   "title" : {
+ *       "es" : "Proyectos",
+ *       "en" : "Projects"
+ *   }
+ * }
+ * @var $this \edwrodrig\site\theme\TemplatePage
  */
 
-use edwrodrig\site\Site;
+
+use edwrodrig\site\theme\ProjectBox;
 
 ?>
 <div>
     <div class="section-container container-padding">
         <header class="section-header">
-            <h1><?=Site::tr(Site::page()->get_title())?></h1>
+            <h1><?=$this->tr($this->getTitle())?></h1>
         </header>
         <hr>
         <div class="flex-column grid-padding">
         <?php
-            foreach ( Site::projects() as $project ) {?>
+            foreach ( $this->getRepos()->getProjects() as $project ) {?>
             <div>
-                <?php Site::html_project_box($project)?>
+                <?php (new ProjectBox($project, $this))->html() ?>
             </div>
             <?php
             }

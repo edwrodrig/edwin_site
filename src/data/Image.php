@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: edwin
- * Date: 03-04-18
- * Time: 14:38
- */
+declare(strict_types=1);
 
 namespace edwrodrig\site\data;
 
