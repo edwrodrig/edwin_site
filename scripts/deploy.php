@@ -1,16 +1,16 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: edwin
- * Date: 29-03-18
- * Time: 22:54
- */
 
-require_once(__DIR__ . '/../vendor/autoload.php');
+include_once __DIR__ . '/../vendor/autoload.php';
 
-$d = new edwrodrig\deployer\Github;
-$d->user = 'edwrodrig';
-$d->target = 'edwrodrig.github.io';
-$d->source = __DIR__ . '/../output/es';
+$github = new edwrodrig\deployer\Github;
 
-$d();
+$github
+    ->setTargetUser('edwrodrig')
+    ->setTargetRepoName('edwrodrig.github.io')
+    ->setTargetRepoBranch('master')
+    ->setSourceDir(__DIR__ . '/../output/es');
+
+$github->getSsh()->setIdentityFile(__DIR__ . '/../config/id_rsa');
+
+
+echo $github->execute();

@@ -11,7 +11,7 @@
 }
 */
 ?>
-<h2>Iterate files excluding dots</h2>
+<h2>Iterar archivos excluyendo directorios con puntos</h2>
 
 <pre>
 foreach (new DirectoryIterator($dirname) as $file) {
