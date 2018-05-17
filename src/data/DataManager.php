@@ -3,11 +3,10 @@ declare(strict_types=1);
 
 namespace edwrodrig\site\data;
 
-use edwrodrig\contento\collection\json\Collection;
-use edwrodrig\contento\collection\json\Singleton;
+use edwrodrig\contento\collection\Collection;
+use edwrodrig\contento\collection\Singleton;
 use edwrodrig\site\theme\TemplatePost;
 use edwrodrig\static_generator\Context;
-use edwrodrig\static_generator\util\PageFileFactory;
 
 class DataManager
 {
@@ -58,8 +57,8 @@ class DataManager
      */
     public function getProjects() {
         if ( is_null($this->projects) ) {
-            $this->projects = Collection::create_from_json(__DIR__ . '/../../data/projects.json', Project::class);
-            $this->projects->reverse_sort();
+            $this->projects = Collection::createFromJson(__DIR__ . '/../../data/projects.json', Project::class);
+            $this->projects->reverseSort();
         }
         return $this->projects;
     }
@@ -79,8 +78,8 @@ class DataManager
      */
     public function getPosts() {
         if ( is_null($this->posts) ) {
-            $this->posts = Collection::create_from_elements(iterator_to_array($this->getPostFromTemplates()));
-            $this->posts->reverse_sort();
+            $this->posts = Collection::createFromElements(iterator_to_array($this->getPostFromTemplates()));
+            $this->posts->reverseSort();
         }
         return $this->posts;
     }
@@ -100,7 +99,7 @@ class DataManager
      */
     public function getSiteInfo() : SiteInfo {
         if ( is_null($this->site_info) ) {
-            $this->site_info = Singleton::create_from_json(__DIR__ . '/../../data/site_info.json', SiteInfo::class);
+            $this->site_info = Singleton::createFromJson(__DIR__ . '/../../data/site_info.json', SiteInfo::class);
         }
         return $this->site_info;
     }

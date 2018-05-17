@@ -27,6 +27,12 @@ class TemplatePost extends TemplatePage
         return $this->post;
     }
 
+    public function getData() : array {
+        $data = parent::getData();
+        $data['id'] = $this->getId();
+        return $data;
+    }
+
     public function getTemplateType() : string {
         return 'post';
     }

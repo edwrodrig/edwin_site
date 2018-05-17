@@ -59,7 +59,7 @@ $section_projects = function($max_projects = 2) {?>
         <div class="ascii-art">
             <pre><?=file_get_contents(__DIR__ . '/../data/photo.txt')?></pre>
         </div>
-        <?php $this->social_buttons_bar() ?>
+        <?php $this->socialButtonsBar() ?>
         <?php $section_posts(4) ?>
         <hr>
         <?php $section_projects(2)?>

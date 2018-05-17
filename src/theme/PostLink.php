@@ -27,7 +27,7 @@ class PostLink
     }
 
     public function getUrl() : string {
-        return $this->template->url($this->getUrl());
+        return $this->template->url($this->post->getUrl());
     }
 
     public function getTitle() : string {

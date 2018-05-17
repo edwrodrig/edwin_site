@@ -2,11 +2,7 @@
 
 include __DIR__ . '/../vendor/autoload.php';
 
-use edwrodrig\contento\collection\json\Collection;
-use edwrodrig\contento\collection\json\Singleton;
 use edwrodrig\site\data\DataManager;
-use edwrodrig\site\data\Project;
-use edwrodrig\site\data\SiteInfo;
 use edwrodrig\static_generator\cache\CacheManager;
 
 $data = new DataManager;
