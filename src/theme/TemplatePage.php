@@ -2,7 +2,7 @@
 namespace edwrodrig\site\theme;
 
 use DateTime;
-use edwrodrig\site\data\DataManager;
+use edwrodrig\site\data\Repository;
 use edwrodrig\site\data\Image;
 use edwrodrig\static_generator\cache\ImageItem;
 use edwrodrig\static_generator\template\TemplateHtmlBasic;
@@ -10,16 +10,17 @@ use edwrodrig\static_generator\template\TemplateHtmlBasic;
 class TemplatePage extends TemplateHtmlBasic {
 
     public function getTitle() {
-        return $this->getData()['title'];
+        return $this->tr($this->getData()['title']);
     }
 
     /**
      * @throws \edwrodrig\static_generator\exception\NoTranslationAvailableException
+     * @throws \edwrodrig\static_generator\exception\CacheDoesNotExists
      */
     public function head() : void {?>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive+Mono|VT323">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="/style/style.css">
+        <link rel="stylesheet" href="<?=$this->url('/style/style.css')?>">
 
         <link rel="shortcut icon" sizes="16x16" href="<?=$this->imageContain('favicon.png', 16, 16)?>">
         <link rel="shortcut icon" sizes="24x24" href="<?=$this->imageContain('favicon.png', 24, 24)?>">
@@ -46,7 +47,7 @@ class TemplatePage extends TemplateHtmlBasic {
         <meta content="yes" name="apple-mobile-web-app-capable">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <script src="/lib.js"></script>
-        <title><?=$this->tr($this->getTitle())?></title>
+        <title><?=$this->getTitle()?></title>
     <?php
     }
 
@@ -85,7 +86,7 @@ class TemplatePage extends TemplateHtmlBasic {
                 <a href="<?=$this->url('/')?>"><?=$this->tr(['es' => 'Inicio', 'en' => 'Home'])?></a>
                 <a href="<?=$this->url('/posts.html')?>"><?=$this->tr(['es' => 'Artículos', 'en' => 'Article'])?></a>
                 <a href="<?=$this->url('/projects.html')?>"><?=$this->tr(['es' => 'Proyectos', 'en' => 'Projects'])?></a>
-                <button type="button" class="nav-menu-close" onclick="ANIM.modal_out('nav-menu')"><i class="fa fa-times"></i></i></button>
+                <button type="button" class="nav-menu-close" onclick="ANIM.modal_out('nav-menu')"><i class="fa fa-times"></i></button>
             </div>
         </div>
         <?php
@@ -156,11 +157,6 @@ class TemplatePage extends TemplateHtmlBasic {
         }
     }
 
-
-    public function getRepos() : DataManager {
-        return $this->page_info->getContext()->data;
-    }
-
     /**
      * @param string $file
      * @param int $width
@@ -175,8 +171,6 @@ class TemplatePage extends TemplateHtmlBasic {
         $image->setSalt();
         return strval($this->getCache('cache/images')->update($image));
     }
-
-
 
 }
 

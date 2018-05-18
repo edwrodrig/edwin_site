@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "content-hash": "2a347078a2377ab65619fe27fae45475",
@@ -222,12 +222,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/edwrodrig/static_generator.git",
-                "reference": "4707825eb0806869db264627ba2e9fc03db4a116"
+                "reference": "7e2f91a05438f87dad65546bc3668c457b288aa3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/edwrodrig/static_generator/zipball/4707825eb0806869db264627ba2e9fc03db4a116",
-                "reference": "4707825eb0806869db264627ba2e9fc03db4a116",
+                "url": "https://api.github.com/repos/edwrodrig/static_generator/zipball/7e2f91a05438f87dad65546bc3668c457b288aa3",
+                "reference": "7e2f91a05438f87dad65546bc3668c457b288aa3",
                 "shasum": ""
             },
             "require": {
@@ -264,7 +264,7 @@
                     "role": "Developer"
                 }
             ],
-            "time": "2018-05-17T12:01:26+00:00"
+            "time": "2018-05-18T02:06:07+00:00"
         },
         {
             "name": "leafo/scssphp",

@@ -4,7 +4,7 @@
   "description": {
     "es": "Canal is a herramienta de análisis de automatas celulares elementales basado en web. Puedes establecer tu estado inicial y correr cualquier regla ECA en él. Hay otras opciones que extienden las posibilidades del análisis y las simulaciones."
   },
-  "image": "canal-web.gif",
+  "image": "canal-web.svg",
   "url": "http://edwrodrig.github.io/canal-web"
 },
 {

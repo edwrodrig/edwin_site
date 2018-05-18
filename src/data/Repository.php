@@ -7,8 +7,10 @@ use edwrodrig\contento\collection\Collection;
 use edwrodrig\contento\collection\Singleton;
 use edwrodrig\site\theme\TemplatePost;
 use edwrodrig\static_generator\Context;
+use edwrodrig\static_generator\Repository as BaseRepository;
+use edwrodrig\static_generator\template\Template;
 
-class DataManager
+class Repository extends BaseRepository
 {
     /**
      * @var Post[]|\Generator|null
@@ -26,16 +28,9 @@ class DataManager
     private $site_info = null;
 
 
-    /**
-     * @var Context
-     */
-    private $context;
-
-
-    public function setContext(Context $context) : DataManager {
-        $this->context = $context;
+    public function setContext(Context $context) : BaseRepository {
         $this->posts = null;
-        return $this;
+        return parent::setContext($context);
     }
 
     /**
@@ -102,5 +97,18 @@ class DataManager
             $this->site_info = Singleton::createFromJson(__DIR__ . '/../../data/site_info.json', SiteInfo::class);
         }
         return $this->site_info;
+    }
+
+    /**
+     * Method to get type hint of a repository.
+     *
+     * ```
+     * Repository::get($template)->getHintedCollection();
+     * ```
+     * @param Context|Template $object a object with a getRepository() method
+     * @return Repository
+     */
+    public static function get($object) : self {
+        return $object->getRepository();
     }
 }
