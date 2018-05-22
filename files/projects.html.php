@@ -1,7 +1,6 @@
 <?php
 /**
  * @noinspection PhpUnhandledExceptionInspection
- * @template
  * @data {
  *   "title" : {
  *       "es" : "Proyectos",

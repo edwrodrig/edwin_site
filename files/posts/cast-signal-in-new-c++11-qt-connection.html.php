@@ -1,9 +1,6 @@
 <?php
 /**
- * @template
- * @type template
- * @data
- * {
+ * @data {
  *  "title": {
  *      "en": "Cast signal in new C++11 Qt connection",
  *      "es": "Castear signal en las nuevas conecciones C++11 de Qt"

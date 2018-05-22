@@ -1,6 +1,5 @@
 <?php
 /**
- * @template \edwrodrig\site\theme\TemplatePage
  *
  * @data {
  *   "title" : {
