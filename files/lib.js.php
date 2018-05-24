@@ -3,6 +3,4 @@
  * @var $this edwrodrig\static_generator\template\TemplateJs
  */
 
-use edwrodrig\js\Config;
-
-readfile(Config::RESOURCE_DIR . '/anim.js');
+include __DIR__ . '/../vendor/edwrodrig/js/src/anim.js';

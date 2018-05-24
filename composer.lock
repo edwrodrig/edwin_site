@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2a347078a2377ab65619fe27fae45475",
+    "content-hash": "1f0c5d4d97f8387178579e1c42047811",
     "packages": [
         {
             "name": "edwrodrig/contento",
@@ -140,23 +140,20 @@
         },
         {
             "name": "edwrodrig/js",
-            "version": "2.6.1",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/edwrodrig/js.git",
-                "reference": "785f24305c5f25974e5c5a12867daf37c1712417"
+                "reference": "f9984e07256dc3201da32982c9aa529764d3b2eb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/edwrodrig/js/zipball/785f24305c5f25974e5c5a12867daf37c1712417",
-                "reference": "785f24305c5f25974e5c5a12867daf37c1712417",
+                "url": "https://api.github.com/repos/edwrodrig/js/zipball/f9984e07256dc3201da32982c9aa529764d3b2eb",
+                "reference": "f9984e07256dc3201da32982c9aa529764d3b2eb",
                 "shasum": ""
             },
-            "require": {
-                "php": "^7.0"
-            },
             "require-dev": {
-                "phpunit/phpunit": "^6.4"
+                "bower-asset/qunit": "^2.6"
             },
             "type": "library",
             "autoload": {
@@ -170,12 +167,14 @@
             ],
             "authors": [
                 {
-                    "name": "Edwin Rodríguez",
-                    "email": "edwrodrig@gmail.com"
+                    "name": "Edwin Rodríguez León",
+                    "email": "edwrodrig@gmail.com",
+                    "homepage": "http://www.edwin.cl",
+                    "role": "Developer"
                 }
             ],
             "description": "Javascript front-end utils",
-            "time": "2018-02-19T21:04:23+00:00"
+            "time": "2018-05-23T21:29:29+00:00"
         },
         {
             "name": "edwrodrig/query",
@@ -222,12 +221,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/edwrodrig/static_generator.git",
-                "reference": "7e2f91a05438f87dad65546bc3668c457b288aa3"
+                "reference": "e87da0b0d828ce31e420bcb0745e69a9e82218d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/edwrodrig/static_generator/zipball/7e2f91a05438f87dad65546bc3668c457b288aa3",
-                "reference": "7e2f91a05438f87dad65546bc3668c457b288aa3",
+                "url": "https://api.github.com/repos/edwrodrig/static_generator/zipball/e87da0b0d828ce31e420bcb0745e69a9e82218d4",
+                "reference": "e87da0b0d828ce31e420bcb0745e69a9e82218d4",
                 "shasum": ""
             },
             "require": {
@@ -244,7 +243,8 @@
             },
             "suggest": {
                 "edwrodrig/contento": "To manage types and collections",
-                "edwrodrig/image": "To work with images"
+                "edwrodrig/image": "To work with images",
+                "edwrodrig/js": "To add some common javascript utils"
             },
             "type": "library",
             "autoload": {
@@ -264,20 +264,20 @@
                     "role": "Developer"
                 }
             ],
-            "time": "2018-05-18T02:06:07+00:00"
+            "time": "2018-05-24T17:56:51+00:00"
         },
         {
             "name": "leafo/scssphp",
-            "version": "v0.7.5",
+            "version": "v0.7.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/leafo/scssphp.git",
-                "reference": "8b538d828bbb75276974605c4a1a435e939da74e"
+                "reference": "585f6ae84de62ffecf69c23805f25d78d7e4b794"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/leafo/scssphp/zipball/8b538d828bbb75276974605c4a1a435e939da74e",
-                "reference": "8b538d828bbb75276974605c4a1a435e939da74e",
+                "url": "https://api.github.com/repos/leafo/scssphp/zipball/585f6ae84de62ffecf69c23805f25d78d7e4b794",
+                "reference": "585f6ae84de62ffecf69c23805f25d78d7e4b794",
                 "shasum": ""
             },
             "require": {
@@ -316,7 +316,7 @@
                 "scss",
                 "stylesheet"
             ],
-            "time": "2018-02-09T02:04:21+00:00"
+            "time": "2018-05-24T02:18:53+00:00"
         },
         {
             "name": "matthiasmullie/minify",
@@ -907,12 +907,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "52187754b0eed0b8159f62a6fa30073327e8c2ca"
+                "reference": "837e7924a40fffda434ac6c896f6f6dacd6ba4e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/52187754b0eed0b8159f62a6fa30073327e8c2ca",
-                "reference": "52187754b0eed0b8159f62a6fa30073327e8c2ca",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/837e7924a40fffda434ac6c896f6f6dacd6ba4e1",
+                "reference": "837e7924a40fffda434ac6c896f6f6dacd6ba4e1",
                 "shasum": ""
             },
             "require": {
@@ -962,7 +962,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-04-29T14:59:09+00:00"
+            "time": "2018-05-22T03:55:48+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -1156,12 +1156,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "c334182679740a262feb5a9c1cd0904a9be36cc2"
+                "reference": "da68a9eba0b057eac97e293e011400761a2a17f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/c334182679740a262feb5a9c1cd0904a9be36cc2",
-                "reference": "c334182679740a262feb5a9c1cd0904a9be36cc2",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/da68a9eba0b057eac97e293e011400761a2a17f0",
+                "reference": "da68a9eba0b057eac97e293e011400761a2a17f0",
                 "shasum": ""
             },
             "require": {
@@ -1232,7 +1232,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-05-16T19:48:37+00:00"
+            "time": "2018-05-24T04:52:10+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -1285,12 +1285,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/comparator.git",
-                "reference": "26ca1eac8083f6732a4baabde92d47844c4d581a"
+                "reference": "71d4a9394b5a0d4e98a35493c81dbd2cba657a7b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/26ca1eac8083f6732a4baabde92d47844c4d581a",
-                "reference": "26ca1eac8083f6732a4baabde92d47844c4d581a",
+                "url": "https://api.github.com/repos/sebastianbergmann/comparator/zipball/71d4a9394b5a0d4e98a35493c81dbd2cba657a7b",
+                "reference": "71d4a9394b5a0d4e98a35493c81dbd2cba657a7b",
                 "shasum": ""
             },
             "require": {
@@ -1341,7 +1341,7 @@
                 "compare",
                 "equality"
             ],
-            "time": "2018-05-15T05:38:27+00:00"
+            "time": "2018-05-23T07:33:54+00:00"
         },
         {
             "name": "sebastian/diff",

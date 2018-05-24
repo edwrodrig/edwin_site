@@ -66,7 +66,7 @@ class TemplatePage extends TemplateHtmlBasic {
     protected function bodyHeader() {
         ?>
         <div class="container-padding" style="position:fixed;width:100%;display:flex;flex-direction:row-reverse;box-sizing:border-box">
-            <button type="button" class="nav-button" onclick="ANIM.modal_in('nav-menu')">
+            <button type="button" class="nav-button" onclick="ANIM.modalIn('nav-menu')">
                 <i class="fa fa-bars"></i>
             </button>
         </div>
@@ -86,7 +86,7 @@ class TemplatePage extends TemplateHtmlBasic {
                 <a href="<?=$this->url('/')?>"><?=$this->tr(['es' => 'Inicio', 'en' => 'Home'])?></a>
                 <a href="<?=$this->url('/posts.html')?>"><?=$this->tr(['es' => 'Artículos', 'en' => 'Article'])?></a>
                 <a href="<?=$this->url('/projects.html')?>"><?=$this->tr(['es' => 'Proyectos', 'en' => 'Projects'])?></a>
-                <button type="button" class="nav-menu-close" onclick="ANIM.modal_out('nav-menu')"><i class="fa fa-times"></i></button>
+                <button type="button" class="nav-menu-close" onclick="ANIM.modalOut('nav-menu')"><i class="fa fa-times"></i></button>
             </div>
         </div>
         <?php
