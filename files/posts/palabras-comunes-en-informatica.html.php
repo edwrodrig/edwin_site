@@ -1,21 +1,19 @@
 <?php
-/*
-@template \edwrodrig\site\theme\TemplatePost
-@type template
-@data
-{
-    "title": {
-        "en": "Common computing words",
-        "es": "Palabras comunes en informática"
-    },
-    "description": {
-        "en": "Common computing words",
-        "es": "Apuntes para el curso de informatica y programación dictado para el Instituto Milenio de Oceanografía"
-    },
-    "date": "2017-05-15",
-    "tags": []
-}
-*/
+/**
+ * @data {
+ *   "title": {
+ *     "en": "Common computing words",
+ *     "es": "Palabras comunes en informática"
+ *   },
+ *   "description": {
+ *     "en": "Common computing words",
+ *     "es": "Apuntes para el curso de informatica y programación dictado para el Instituto Milenio de Oceanografía"
+ *   },
+ *   "date": "2017-05-15",
+ *   "tags": []
+ * }
+ * @var $this \edwrodrig\site\theme\TemplatePost
+ */
 ?>
 <h2>Conceptos generales</h2>
 <ul>

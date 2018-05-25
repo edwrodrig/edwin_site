@@ -1,21 +1,19 @@
 <?php
-/*
-@template \edwrodrig\site\theme\TemplatePost
-@type template
-@data
-{
-    "title": {
-        "en": "JSON formatting with jq",
-        "es": "Trucos para json con jq"
-    },
-    "description": {
-      "en": "JSON formatting with jq",
-      "es": "Funciones recurrentes de formateo y manejo de json usando jq." 
-    },
-    "date": "2016-12-30",
-    "tags": ["json", "jq"]
-}
-*/
+/**
+ * @data {
+ *   "title": {
+ *       "en": "JSON formatting with jq",
+ *       "es": "Trucos para json con jq"
+ *   },
+ *   "description": {
+ *     "en": "JSON formatting with jq",
+ *     "es": "Funciones recurrentes de formateo y manejo de json usando jq."
+ *   },
+ *   "date": "2016-12-30",
+ *   "tags": ["json", "jq"]
+ * }
+ * @var $this \edwrodrig\site\theme\TemplatePost
+ */
 ?>
 <h2>Probar sintaxis</h2>
 <p>Imprime el <code>json</code> sangrado con colores. Este comando falla cuando el <code>json</code> no tiene el formato correcto, lo que lo hace ideal para probar la sintaxis.</p>

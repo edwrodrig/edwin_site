@@ -1,19 +1,17 @@
 <?php
-/*
-@template \edwrodrig\site\theme\TemplatePost
-@type template
-@data
-{
-    "title": {
-        "es": "Comandos \u00fatiles para Rsync"
-    },
-    "description": {
-        "es": "Comandos \u00fatiles para Rsync"
-    },
-    "date": "2017-09-28",
-    "tags": []
-}
-*/
+/**
+ * @data {
+ *   "title": {
+ *       "es": "Comandos \u00fatiles para Rsync"
+ *   },
+ *   "description": {
+ *       "es": "Comandos \u00fatiles para Rsync"
+ *   },
+ *   "date": "2017-09-28",
+ *   "tags": []
+ * }
+ * @var $this \edwrodrig\site\theme\TemplatePost
+ */
 ?>
 <h2>Copiar de una carpeta a otra</h2>
 <pre>

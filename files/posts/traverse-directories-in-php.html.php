@@ -1,15 +1,13 @@
 <?php
-/*
-@template \edwrodrig\site\theme\TemplatePost
-@type template
-@data
-{
-  "title" : { "en" :"Traverse directories on PHP","es" : "Recorrer directorios en PHP" },
-  "description": { "en" : "Diferent ways to traverse directories on php", "es" : "Recorrer directorios en PHP"},
-  "date" : "2016-12-23",
-  "tags" : [ "php", "english" ]
-}
-*/
+/**
+ * @data {
+ * "title" : { "en" :"Traverse directories on PHP","es" : "Recorrer directorios en PHP" },
+ * "description": { "en" : "Diferent ways to traverse directories on php", "es" : "Recorrer directorios en PHP"},
+ * "date" : "2016-12-23",
+ * "tags" : [ "php", "english" ]
+ * }
+ * @var $this \edwrodrig\site\theme\TemplatePost
+ */
 ?>
 <h2>Iterar archivos excluyendo directorios con puntos</h2>
 

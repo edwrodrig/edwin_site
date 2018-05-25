@@ -46,7 +46,7 @@ class TemplatePage extends TemplateHtmlBasic {
         <!-- iOS Settings -->
         <meta content="yes" name="apple-mobile-web-app-capable">
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-        <script src="/lib.js"></script>
+        <script src="<?=$this->url('/lib.js')?>"></script>
         <title><?=$this->getTitle()?></title>
     <?php
     }

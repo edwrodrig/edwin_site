@@ -1,20 +1,18 @@
 <?php
-/*
-@template \edwrodrig\site\theme\TemplatePost
-@type template
-@data
-{
-    "title": {
-        "en": "Execute PHP script from web",
-        "es": "Ejecutar script PHP desde la web"
-    },
-    "description": {
-        "en": "Execute PHP script from web"
-    },
-    "date": "2017-05-13",
-    "tags": []
-}
-*/
+/**
+ * @data {
+ *   "title": {
+ *       "en": "Execute PHP script from web",
+ *       "es": "Ejecutar script PHP desde la web"
+ *   },
+ *   "description": {
+ *       "en": "Execute PHP script from web"
+ *   },
+ *   "date": "2017-05-13",
+ *   "tags": []
+ * }
+ * @var $this \edwrodrig\site\theme\TemplatePost
+ */
 ?>
 <p>En ocasiones necesito pasar a algunas personas un pequeño script que haga una función especifica.
 Lo que hacía en tales ocasiones era enviarle dicho script por mail.

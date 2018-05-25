@@ -1,23 +1,21 @@
 <?php
-/*
-@template \edwrodrig\site\theme\TemplatePost
-@type template
-@data
-{
-  "title" :
-  {
-    "en" :"Testing multiple classes using c++11 lambdas in Qt",
-    "es" : "Probando muchas clases usando lambdas en Qt"
-  },
-  "description":
-  {
-    "en" : "In this article is explained an alternative the organize you Qt unit test in one main file using c++11 lambda functions.",
-    "es" : "En este artículo es explicado una alternativa para organizar tus pruebas unitarias en un solo archivo usando funciones lambda."
-  },
-  "date" : "2014-05-05",
-  "tags" : [ "qt", "test", "c++11" ]
-}
-*/
+/**
+ * @data {
+ * "title" :
+ * {
+ *   "en" :"Testing multiple classes using c++11 lambdas in Qt",
+ *   "es" : "Probando muchas clases usando lambdas en Qt"
+ * },
+ * "description":
+ * {
+ *   "en" : "In this article is explained an alternative the organize you Qt unit test in one main file using c++11 lambda functions.",
+ *   "es" : "En este artículo es explicado una alternativa para organizar tus pruebas unitarias en un solo archivo usando funciones lambda."
+ * },
+ * "date" : "2014-05-05",
+ * "tags" : [ "qt", "test", "c++11" ]
+ * }
+ * @var $this \edwrodrig\site\theme\TemplatePost
+ */
 ?>
 <p>Me parece problemático organizar mis pruebas unitarias de QT en muchas clases. Algunas macros como <code>QTEST_APPLESS_MAIN</code> te obliga a tener un proyecto por clase de prueba unitaria, lo que puede convertirse en un dolor de cabeza. Si tu estas usando c++11, puedes aprovechar las funciones lambdas para lidiar fácilmente con este problema.</p>
 

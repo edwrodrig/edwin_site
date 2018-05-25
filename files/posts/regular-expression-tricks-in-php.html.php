@@ -1,20 +1,18 @@
 <?php
-/*
-@template \edwrodrig\site\theme\TemplatePost
-@type template
-@data
-{
-  "title": {
-    "en" : "Regular expression tricks in php",
-    "es" : "Trucos de expresiones reguales en php"
-  },
-  "description": {
-    "es": "En este artículo una serie de trucos de expresiones regulares comunes usando php" 
-  },
-  "date": "2017-01-31",
-  "tags": ["php", "regex"]
-}
-*/
+/**
+ * @data {
+ * "title": {
+ *   "en" : "Regular expression tricks in php",
+ *   "es" : "Trucos de expresiones reguales en php"
+ * },
+ * "description": {
+ *   "es": "En este artículo una serie de trucos de expresiones regulares comunes usando php"
+ * },
+ * "date": "2017-01-31",
+ * "tags": ["php", "regex"]
+ * }
+ * @var $this \edwrodrig\site\theme\TemplatePost
+ */
 ?>
 <h2>Capturar una contenido entre string</h2>
 <pre>

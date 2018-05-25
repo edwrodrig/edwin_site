@@ -1,23 +1,21 @@
 <?php
-/*
-@template \edwrodrig\site\theme\TemplatePost
-@type template
-@data
-{
-  "title" :
-  {
-    "en" : "Social metadata for pages",
-    "es" : "Metadata social para páginas"
-  },
-  "date" : "2014-04-18",
-  "description" :
-  {
-    "en" : "In this article is explained how to add social metadata for a html page. This metadata is used for showing nice description boxes in social networks when you share a link on them.",
-    "es" : "En este artículo es explicado como agregar metadata social a una página html. Esta metadata es usada para mostrar buenas cajas de descripción en redes sociales a la hora de compartir un vínculo"
-  },
-  "tags" : [ "html", "facebook", "twitter", "google"]
-}
-*/
+/**
+ * @data {
+ * "title" :
+ * {
+ *   "en" : "Social metadata for pages",
+ *   "es" : "Metadata social para páginas"
+ * },
+ * "date" : "2014-04-18",
+ * "description" :
+ * {
+ *   "en" : "In this article is explained how to add social metadata for a html page. This metadata is used for showing nice description boxes in social networks when you share a link on them.",
+ *  "es" : "En este artículo es explicado como agregar metadata social a una página html. Esta metadata es usada para mostrar buenas cajas de descripción en redes sociales a la hora de compartir un vínculo"
+ * },
+ * "tags" : [ "html", "facebook", "twitter", "google"]
+ * }
+ * @var $this \edwrodrig\site\theme\TemplatePost
+ */
 ?>
 <h2>Código</h2>
 <p>Copia el siguiente código en el <code>head</code> de la página html. Debes reemplazar los valores a los apropiados para tu página.</p>

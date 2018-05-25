@@ -1,21 +1,19 @@
 <?php
-/*
-@template \edwrodrig\site\theme\TemplatePost
-@type template
-@data
-{
-    "title": {
-        "en": "Source Target parameter functions in php",
-        "es": "Parámetros origen destino en funciones de PHP"
-    },
-    "description": {
-        "en": "Source Target parameter functions in php",
-        "es": "Parámetros origen destino en funciones de PHP"
-    },
-    "date": "2016-12-30",
-    "tags": []
-}
-*/
+/**
+ * @data {
+ *   "title": {
+ *       "en": "Source Target parameter functions in php",
+ *       "es": "Parámetros origen destino en funciones de PHP"
+ *   },
+ *   "description": {
+ *       "en": "Source Target parameter functions in php",
+ *       "es": "Parámetros origen destino en funciones de PHP"
+ *   },
+ *   "date": "2016-12-30",
+ *   "tags": []
+ * }
+ * @var $this \edwrodrig\site\theme\TemplatePost
+ */
 ?>
 <style>
 .hay { background-color: #8B0000; }

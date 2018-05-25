@@ -1,21 +1,19 @@
 <?php
-/*
-@template \edwrodrig\site\theme\TemplatePost
-@type template
-@data
-{
-    "title": {
-        "en": "Redirecting page by location with javascript",
-        "es": "Redireccionando página según idioma con javascript"
-    },
-    "description": {
-        "en": "Redirecting page by location with javascript",
-        "es": "Redireccionando página según idioma con javascript"
-    },
-    "date": "2017-01-31",
-    "tags": []
-}
-*/
+/**
+ * @data {
+ *   "title": {
+ *       "en": "Redirecting page by location with javascript",
+ *       "es": "Redireccionando página según idioma con javascript"
+ *   },
+ *   "description": {
+ *       "en": "Redirecting page by location with javascript",
+ *       "es": "Redireccionando página según idioma con javascript"
+ *   },
+ *   "date": "2017-01-31",
+ *   "tags": []
+ * }
+ * @var $this \edwrodrig\site\theme\TemplatePost
+ */
 ?>
 <p>Here is the code</p>
 <pre>

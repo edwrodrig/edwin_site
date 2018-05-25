@@ -1,21 +1,20 @@
 <?php
-/*
-@template \edwrodrig\site\theme\TemplatePost
-@type template
-@data
-{
-    "title": {
-        "en": "Get file and line where a function is called in php",
-        "es": "Obtener el archivo y la linea de una llamada de función en PHP"
-    },
-    "description": {
-        "en": "Get file and line where a function is called in php",
-        "es": "Obtener el archivo y la linea de una llamada de función en PHP"
-    },
-    "date": "2017-02-01",
-    "tags": ["php"]
-}
-*/
+/**
+ * @data {
+ *   "title": {
+ *       "en": "Get file and line where a function is called in php",
+ *       "es": "Obtener el archivo y la linea de una llamada de función en PHP"
+ *   },
+ *   "description": {
+ *       "en": "Get file and line where a function is called in php",
+ *       "es": "Obtener el archivo y la linea de una llamada de función en PHP"
+ *   },
+ *   "date": "2017-02-01",
+ *   "tags": ["php"]
+ * }
+ * @var $this \edwrodrig\site\theme\TemplatePost
+ */
+
 ?>
 <p>There is the code</p>
 

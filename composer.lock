@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
     "content-hash": "1f0c5d4d97f8387178579e1c42047811",
@@ -221,12 +221,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/edwrodrig/static_generator.git",
-                "reference": "e87da0b0d828ce31e420bcb0745e69a9e82218d4"
+                "reference": "01c3e086fc6055606dbaa3f63e3f835d081c47e3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/edwrodrig/static_generator/zipball/e87da0b0d828ce31e420bcb0745e69a9e82218d4",
-                "reference": "e87da0b0d828ce31e420bcb0745e69a9e82218d4",
+                "url": "https://api.github.com/repos/edwrodrig/static_generator/zipball/01c3e086fc6055606dbaa3f63e3f835d081c47e3",
+                "reference": "01c3e086fc6055606dbaa3f63e3f835d081c47e3",
                 "shasum": ""
             },
             "require": {
@@ -238,6 +238,7 @@
             "require-dev": {
                 "edwrodrig/contento": "dev-master",
                 "edwrodrig/image": "^2.0",
+                "edwrodrig/js": "^3.0",
                 "mikey179/vfsstream": "^1.6",
                 "phpunit/phpunit": "^7.0"
             },
@@ -264,7 +265,7 @@
                     "role": "Developer"
                 }
             ],
-            "time": "2018-05-24T17:56:51+00:00"
+            "time": "2018-05-25T04:38:38+00:00"
         },
         {
             "name": "leafo/scssphp",
@@ -1156,12 +1157,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "da68a9eba0b057eac97e293e011400761a2a17f0"
+                "reference": "df5774cf74338312752fb39dc3307ab3853b9672"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/da68a9eba0b057eac97e293e011400761a2a17f0",
-                "reference": "da68a9eba0b057eac97e293e011400761a2a17f0",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/df5774cf74338312752fb39dc3307ab3853b9672",
+                "reference": "df5774cf74338312752fb39dc3307ab3853b9672",
                 "shasum": ""
             },
             "require": {
@@ -1232,7 +1233,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-05-24T04:52:10+00:00"
+            "time": "2018-05-25T12:16:25+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
