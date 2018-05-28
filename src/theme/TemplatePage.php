@@ -2,50 +2,84 @@
 namespace edwrodrig\site\theme;
 
 use DateTime;
-use edwrodrig\site\data\Repository;
-use edwrodrig\site\data\Image;
+
 use edwrodrig\static_generator\cache\ImageItem;
+use edwrodrig\static_generator\html\meta\AppleWebApplication;
+use edwrodrig\static_generator\html\meta\Favicon;
+use edwrodrig\static_generator\html\meta\OpenGraph;
+use edwrodrig\static_generator\html\meta\SeoTags;
+use edwrodrig\static_generator\html\meta\TwitterCardSummary;
 use edwrodrig\static_generator\template\TemplateHtmlBasic;
 
 class TemplatePage extends TemplateHtmlBasic {
 
-    public function getTitle() {
-        return $this->tr($this->getData()['title']);
+    public function getTitle() : ?string {
+        /**
+         * This does not throw
+         * @noinspection PhpUnhandledExceptionInspection
+         */
+        return $this->tr($this->getData()['title'], null);
+    }
+
+    public function getDescription() : ?string {
+        /**
+         * This does not throw in this case
+         * @noinspection PhpUnhandledExceptionInspection
+         */
+        return $this->tr($this->getData()['description'], null);
     }
 
     /**
      * @throws \edwrodrig\static_generator\exception\NoTranslationAvailableException
      * @throws \edwrodrig\static_generator\exception\CacheDoesNotExists
      */
-    public function head() : void {?>
+    public function head() : void {
+
+        $meta = new SeoTags;
+        $meta
+            ->setDescription($this->getDescription());
+
+        $og = new OpenGraph;
+        $og
+            ->setType('website')
+            ->setTitle($this->getTitle())
+            ->setDescription($this->getDescription())
+            //->setImage()
+            //->setImageHeight()
+            //->setImageWidth()
+            ->setUpdateTime(new DateTime())
+            ->setSeeAlso('https://github.com/edwrodrig');
+
+        $twitter_card = new TwitterCardSummary;
+        $twitter_card
+            ->setTitle($this->getTitle())
+            ->setDescription($this->getDescription())
+            //->setImage()
+            //->setImageAlt()
+            ->setSite('@edwrodrig');
+
+        $favicon = new Favicon;
+        $favicon
+            ->setIcon16x16($this->imageContain('favicon.png', 16, 16))
+            ->setIcon24x24($this->imageContain('favicon.png', 24, 24))
+            ->setIcon32x32($this->imageContain('favicon.png', 32, 32))
+            ->setIcon48x48($this->imageContain('favicon.png', 48, 48))
+            ->setIcon64x64($this->imageContain('favicon.png', 64, 64));
+
+        $apple = new AppleWebApplication;
+        $apple
+            ->setIcon72x72($this->imageContain('favicon.png', 72, 72))
+            ->setIcon152x125($this->imageContain('favicon.png', 152, 152))
+            ->setIcon167x167($this->imageContain('favicon.png', 167, 167))
+            ->setIcon180x180($this->imageContain('favicon.png', 180, 180))
+            ->setWebCapable(true)
+            ->setStatusBarStyle('black-translucent');
+
+        ?>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive+Mono|VT323">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="<?=$this->url('/style/style.css')?>">
 
-        <link rel="shortcut icon" sizes="16x16" href="<?=$this->imageContain('favicon.png', 16, 16)?>">
-        <link rel="shortcut icon" sizes="24x24" href="<?=$this->imageContain('favicon.png', 24, 24)?>">
-        <link rel="shortcut icon" sizes="32x32" href="<?=$this->imageContain('favicon.png', 32, 32)?>">
-        <link rel="shortcut icon" sizes="48x48" href="<?=$this->imageContain('favicon.png', 48, 48)?>">
-        <link rel="shortcut icon" sizes="64x64" href="<?=$this->imageContain('favicon.png', 64, 64)?>">
-
-
-        <!-- Mobile (Android, iOS & others) -->
-        <link rel="apple-touch-icon" sizes="57x57" href="<?=$this->imageContain('favicon.png', 57, 57)?>">
-        <link rel="apple-touch-icon-precomposed" sizes="57x57" href="<?=$this->imageContain('favicon.png', 57, 57)?>">
-        <link rel="apple-touch-icon" sizes="72x72" href="<?=$this->imageContain('favicon.png', 72, 72)?>">
-        <link rel="apple-touch-icon" sizes="114x114" href="<?=$this->imageContain('favicon.png', 114, 114)?>">
-        <link rel="apple-touch-icon" sizes="120x120" href="<?=$this->imageContain('favicon.png', 120, 120)?>">
-        <link rel="apple-touch-icon" sizes="144x144" href="<?=$this->imageContain('favicon.png', 144, 144)?>">
-        <link rel="apple-touch-icon" sizes="152x152" href="<?=$this->imageContain('favicon.png', 152, 152)?>">
-
-        <!-- Windows 8 Tiles -->
-        <meta name="application-name" content="<?=$this->tr(['es' => 'Página de Edwin Rodríguez', 'en' => 'Edwin Rodríguez\'s page'])?>">
-        <meta name="msapplication-TileImage" content="<?=$this->imageContain('favicon.png', 144, 144)?>">
-        <meta name="msapplication-TileColor" content="#2A2A2A">
-
-        <!-- iOS Settings -->
-        <meta content="yes" name="apple-mobile-web-app-capable">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <script src="<?=$this->url('/lib.js')?>"></script>
         <title><?=$this->getTitle()?></title>
     <?php

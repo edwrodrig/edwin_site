@@ -1,10 +1,13 @@
 <?php
 /**
- *
+ * @noinspection PhpUnhandledExceptionInspection
  * @data {
  *   "title" : {
  *       "es" : "Artículos",
  *       "en" : "Posts"
+ *   },
+ *   "description" : {
+ *     "es" : "Algunos artículos sobre programación y otros temas. No esperen nada muy elaborado."
  *   }
  * }
  * @var $this \edwrodrig\site\theme\TemplatePage

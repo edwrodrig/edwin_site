@@ -221,12 +221,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/edwrodrig/static_generator.git",
-                "reference": "01c3e086fc6055606dbaa3f63e3f835d081c47e3"
+                "reference": "3e03f08c4caa382fad2033d52b1d409d945d5604"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/edwrodrig/static_generator/zipball/01c3e086fc6055606dbaa3f63e3f835d081c47e3",
-                "reference": "01c3e086fc6055606dbaa3f63e3f835d081c47e3",
+                "url": "https://api.github.com/repos/edwrodrig/static_generator/zipball/3e03f08c4caa382fad2033d52b1d409d945d5604",
+                "reference": "3e03f08c4caa382fad2033d52b1d409d945d5604",
                 "shasum": ""
             },
             "require": {
@@ -265,7 +265,7 @@
                     "role": "Developer"
                 }
             ],
-            "time": "2018-05-25T04:38:38+00:00"
+            "time": "2018-05-28T19:39:00+00:00"
         },
         {
             "name": "leafo/scssphp",
@@ -586,12 +586,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/webmozart/assert.git",
-                "reference": "23bf61bc8a7cc229d7ce8689b1bf818a9e192cac"
+                "reference": "1fc2d96ee97d5052f44662563587a0213895343d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/23bf61bc8a7cc229d7ce8689b1bf818a9e192cac",
-                "reference": "23bf61bc8a7cc229d7ce8689b1bf818a9e192cac",
+                "url": "https://api.github.com/repos/webmozart/assert/zipball/1fc2d96ee97d5052f44662563587a0213895343d",
+                "reference": "1fc2d96ee97d5052f44662563587a0213895343d",
                 "shasum": ""
             },
             "require": {
@@ -628,7 +628,7 @@
                 "check",
                 "validate"
             ],
-            "time": "2018-04-19T15:46:26+00:00"
+            "time": "2018-05-26T14:16:30+00:00"
         }
     ],
     "packages-dev": [
@@ -908,19 +908,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "837e7924a40fffda434ac6c896f6f6dacd6ba4e1"
+                "reference": "c3d75e10359757240ac0fe353b93669c7840fef9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/837e7924a40fffda434ac6c896f6f6dacd6ba4e1",
-                "reference": "837e7924a40fffda434ac6c896f6f6dacd6ba4e1",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/c3d75e10359757240ac0fe353b93669c7840fef9",
+                "reference": "c3d75e10359757240ac0fe353b93669c7840fef9",
                 "shasum": ""
             },
             "require": {
                 "ext-dom": "*",
                 "ext-xmlwriter": "*",
                 "php": "^7.1",
-                "phpunit/php-file-iterator": "^1.4.2",
+                "phpunit/php-file-iterator": "^2.0",
                 "phpunit/php-text-template": "^1.2.1",
                 "phpunit/php-token-stream": "^3.0",
                 "sebastian/code-unit-reverse-lookup": "^1.0.1",
@@ -963,29 +963,29 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-05-22T03:55:48+00:00"
+            "time": "2018-05-28T12:14:36+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
-            "version": "1.4.x-dev",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-file-iterator.git",
-                "reference": "730b01bc3e867237eaac355e06a36b85dd93a8b4"
+                "reference": "e20525b0c2945c7c317fff95660698cb3d2a53bc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/730b01bc3e867237eaac355e06a36b85dd93a8b4",
-                "reference": "730b01bc3e867237eaac355e06a36b85dd93a8b4",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-file-iterator/zipball/e20525b0c2945c7c317fff95660698cb3d2a53bc",
+                "reference": "e20525b0c2945c7c317fff95660698cb3d2a53bc",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": "^7.1"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.4.x-dev"
+                    "dev-master": "2.0.x-dev"
                 }
             },
             "autoload": {
@@ -1000,7 +1000,7 @@
             "authors": [
                 {
                     "name": "Sebastian Bergmann",
-                    "email": "sb@sebastian-bergmann.de",
+                    "email": "sebastian@phpunit.de",
                     "role": "lead"
                 }
             ],
@@ -1010,7 +1010,7 @@
                 "filesystem",
                 "iterator"
             ],
-            "time": "2017-11-27T13:52:08+00:00"
+            "time": "2018-05-28T12:13:49+00:00"
         },
         {
             "name": "phpunit/php-text-template",
@@ -1157,12 +1157,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "df5774cf74338312752fb39dc3307ab3853b9672"
+                "reference": "0d37eca9f82f8f59f47b8f35c01f033ac4baf764"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/df5774cf74338312752fb39dc3307ab3853b9672",
-                "reference": "df5774cf74338312752fb39dc3307ab3853b9672",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/0d37eca9f82f8f59f47b8f35c01f033ac4baf764",
+                "reference": "0d37eca9f82f8f59f47b8f35c01f033ac4baf764",
                 "shasum": ""
             },
             "require": {
@@ -1177,8 +1177,8 @@
                 "phar-io/version": "^1.0",
                 "php": "^7.1",
                 "phpspec/prophecy": "^1.7",
-                "phpunit/php-code-coverage": "^6.0.4",
-                "phpunit/php-file-iterator": "^1.4.5",
+                "phpunit/php-code-coverage": "^6.0-dev",
+                "phpunit/php-file-iterator": "^2.0",
                 "phpunit/php-text-template": "^1.2.1",
                 "phpunit/php-timer": "^2.0",
                 "sebastian/comparator": "^3.0",
@@ -1233,7 +1233,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2018-05-25T12:16:25+00:00"
+            "time": "2018-05-28T12:14:54+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -1350,12 +1350,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/diff.git",
-                "reference": "eea784213d383dcdf56c9002074bb61f647b0e97"
+                "reference": "227f803c33aad0c004f77ca61815ee8e76d94788"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/eea784213d383dcdf56c9002074bb61f647b0e97",
-                "reference": "eea784213d383dcdf56c9002074bb61f647b0e97",
+                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/227f803c33aad0c004f77ca61815ee8e76d94788",
+                "reference": "227f803c33aad0c004f77ca61815ee8e76d94788",
                 "shasum": ""
             },
             "require": {
@@ -1398,7 +1398,7 @@
                 "unidiff",
                 "unified diff"
             ],
-            "time": "2018-05-15T05:49:24+00:00"
+            "time": "2018-05-28T13:38:20+00:00"
         },
         {
             "name": "sebastian/environment",
