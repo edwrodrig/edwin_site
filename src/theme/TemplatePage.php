@@ -43,8 +43,10 @@ class TemplatePage extends TemplateHtmlBasic {
     }
 
     /**
-     * @throws \edwrodrig\static_generator\exception\NoTranslationAvailableException
      * @throws \edwrodrig\static_generator\exception\CacheDoesNotExists
+     * @throws \edwrodrig\static_generator\exception\NoTranslationAvailableException
+     * @throws \edwrodrig\static_generator\exception\RelativePathCanNotBeFullException
+     * @throws \edwrodrig\static_generator\exception\UnregisteredWebDomainException
      */
     public function head() : void {
 
@@ -63,7 +65,9 @@ class TemplatePage extends TemplateHtmlBasic {
             ->setType('website')
             ->setTitle($this->getTitle())
             ->setDescription($this->getDescription())
-            ->setImage('http://www.edwin.cl' . $this->url(strval($meta_image)))
+            ->setImage($this->fullUrl(strval($meta_image)))
+            ->setImageWidth($meta_image->getAdditionalData()['width'])
+            ->setImageHeight($meta_image->getAdditionalData()['height'])
             ->setUpdateTime(new DateTime())
             ->setSeeAlso('https://github.com/edwrodrig')
             ->print();
@@ -72,7 +76,7 @@ class TemplatePage extends TemplateHtmlBasic {
         $twitter_card
             ->setTitle($this->getTitle())
             ->setDescription($this->getDescription())
-            ->setImage('http://www.edwin.cl' . $this->url(strval($meta_image)))
+            ->setImage($this->fullUrl(strval($meta_image)))
             ->setImageAlt('My portrait')
             ->setSite('@edwrodrig')
             ->print();

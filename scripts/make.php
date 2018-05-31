@@ -14,6 +14,7 @@ $cache = new CacheManager(__DIR__ . '/../cache/images');
 $context = new \edwrodrig\static_generator\Context(__DIR__ . '/../files', __DIR__ . '/../output');
     $context->setRepository($data);
     $context->registerCache($cache);
+    $context->setTargetWebDomain('http://www.edwin.cl');
     //$context->setTargetWebPath('es');
 
     setlocale(LC_ALL, 'es_CL.utf-8');
