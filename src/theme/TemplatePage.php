@@ -13,20 +13,33 @@ use edwrodrig\static_generator\template\TemplateHtmlBasic;
 
 class TemplatePage extends TemplateHtmlBasic {
 
-    public function getTitle() : ?string {
+    /**
+     * Get the page title from metadata
+     *
+     * Every page must have a title
+     * @return string
+     * @throws \edwrodrig\static_generator\exception\NoTranslationAvailableException
+     */
+    public function getTitle() : string {
         /**
          * This does not throw
          * @noinspection PhpUnhandledExceptionInspection
          */
-        return $this->tr($this->getData()['title'], null);
+        return $this->tr($this->getData()['title']);
     }
 
-    public function getDescription() : ?string {
+    /**
+     * Get the page description from metadata
+     * Every page must have a description
+     * @return string
+     * @throws \edwrodrig\static_generator\exception\NoTranslationAvailableException
+     */
+    public function getDescription() : string {
         /**
          * This does not throw in this case
          * @noinspection PhpUnhandledExceptionInspection
          */
-        return $this->tr($this->getData()['description'], null);
+        return $this->tr($this->getData()['description']);
     }
 
     /**
@@ -35,28 +48,34 @@ class TemplatePage extends TemplateHtmlBasic {
      */
     public function head() : void {
 
+        $image = new ImageItem(__DIR__ . '/../../data/images', 'meta.jpg');
+        $image->setSalt();
+
+        $meta_image = $this->getCache('cache/images')->update($image);
+
         $meta = new SeoTags;
         $meta
-            ->setDescription($this->getDescription());
+            ->setDescription($this->getDescription())
+            ->print();
 
         $og = new OpenGraph;
         $og
             ->setType('website')
             ->setTitle($this->getTitle())
             ->setDescription($this->getDescription())
-            //->setImage()
-            //->setImageHeight()
-            //->setImageWidth()
+            ->setImage('http://www.edwin.cl' . $this->url(strval($meta_image)))
             ->setUpdateTime(new DateTime())
-            ->setSeeAlso('https://github.com/edwrodrig');
+            ->setSeeAlso('https://github.com/edwrodrig')
+            ->print();
 
         $twitter_card = new TwitterCardSummary;
         $twitter_card
             ->setTitle($this->getTitle())
             ->setDescription($this->getDescription())
-            //->setImage()
-            //->setImageAlt()
-            ->setSite('@edwrodrig');
+            ->setImage('http://www.edwin.cl' . $this->url(strval($meta_image)))
+            ->setImageAlt('My portrait')
+            ->setSite('@edwrodrig')
+            ->print();
 
         $favicon = new Favicon;
         $favicon
@@ -64,7 +83,8 @@ class TemplatePage extends TemplateHtmlBasic {
             ->setIcon24x24($this->imageContain('favicon.png', 24, 24))
             ->setIcon32x32($this->imageContain('favicon.png', 32, 32))
             ->setIcon48x48($this->imageContain('favicon.png', 48, 48))
-            ->setIcon64x64($this->imageContain('favicon.png', 64, 64));
+            ->setIcon64x64($this->imageContain('favicon.png', 64, 64))
+            ->print();
 
         $apple = new AppleWebApplication;
         $apple
@@ -73,7 +93,8 @@ class TemplatePage extends TemplateHtmlBasic {
             ->setIcon167x167($this->imageContain('favicon.png', 167, 167))
             ->setIcon180x180($this->imageContain('favicon.png', 180, 180))
             ->setWebCapable(true)
-            ->setStatusBarStyle('black-translucent');
+            ->setStatusBarStyle('black-translucent')
+            ->print();
 
         ?>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive+Mono|VT323">

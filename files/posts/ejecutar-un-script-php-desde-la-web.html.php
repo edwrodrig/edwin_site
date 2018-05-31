@@ -6,6 +6,7 @@
  *       "es": "Ejecutar script PHP desde la web"
  *   },
  *   "description": {
+ *       "es": "Comando para poder ejecutar un script PHP que esta disponible por una URL",
  *       "en": "Execute PHP script from web"
  *   },
  *   "date": "2017-05-13",

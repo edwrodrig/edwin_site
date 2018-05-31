@@ -9,7 +9,7 @@
     "minimum-stability" : "dev",
     "require": {
         "php" : "^7.2",
-	    "edwrodrig/static_generator": "dev-master",
+	    "edwrodrig/static_generator": "^5.0",
         "edwrodrig/contento" : "dev-master",
         "edwrodrig/js": "^3.0",
         "edwrodrig/image" : "^2.0",

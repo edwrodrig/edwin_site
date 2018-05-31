@@ -10,6 +10,7 @@
 {
   "name": "ERoulette",
   "description": {
+    "es": "ERoulette es una simple aplicación para hacer ruletas. Está programado en QtQuick",
     "en": "If you have problems taking decisions ERoulette is the solution. ERoulette is a customizable roulette desktop application that helps you to choose a random alternative. Make your own options image, assign probabilities and spin it!. As a demostration, ERoulette application is preconfigured as a day activity roulette to choose what thing to do someday."
   },
   "image": "eroulette.svg",

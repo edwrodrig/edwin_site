@@ -8,7 +8,7 @@ $github
     ->setTargetUser('edwrodrig')
     ->setTargetRepoName('edwrodrig.github.io')
     ->setTargetRepoBranch('master')
-    ->setSourceDir(__DIR__ . '/../output/es');
+    ->setSourceDir(__DIR__ . '/../output');
 
 $github->getSsh()->setIdentityFile(__DIR__ . '/../config/id_rsa');
 

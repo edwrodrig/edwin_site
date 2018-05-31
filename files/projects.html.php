@@ -5,6 +5,9 @@
  *   "title" : {
  *       "es" : "Proyectos",
  *       "en" : "Projects"
+ *   },
+ *   "description" : {
+ *       "es" : "Proyectos que he programado laboralmente o por amor al arte."
  *   }
  * }
  * @var $this \edwrodrig\site\theme\TemplatePage
