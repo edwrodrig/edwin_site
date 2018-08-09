@@ -15,7 +15,7 @@
 	    "edwrodrig/static_generator": "^5.1",
         "edwrodrig/contento" : "dev-master",
         "edwrodrig/js": "^3.0",
-        "edwrodrig/image" : "^2.0",
+        "edwrodrig/image" : "^2.1",
         "edwrodrig/deployer" : "^2.1"
     },
     "require-dev" : {
