@@ -104,6 +104,8 @@ class TemplatePage extends TemplateHtmlBasic {
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cutive+Mono|VT323">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="<?=$this->url('/style/style.css')?>">
+        <meta name="p:domain_verify" content="1f460d1f1d07c2ed75aa9bf4de514720"/>
+
 
         <script src="<?=$this->url('/lib.js')?>"></script>
         <title><?=$this->getTitle()?></title>
