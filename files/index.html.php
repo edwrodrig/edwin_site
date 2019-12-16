@@ -15,14 +15,13 @@
 
 //LOCAL FUNCTIONS
 
-use edwrodrig\site\data\Repository;
 use edwrodrig\site\theme\PostLink;
 use edwrodrig\site\theme\ProjectBox;
 
 $section_posts = function($max_posts = 4) {?>
     <h1><?=$this->tr(['es' => 'Artículos', 'en' => 'Articles'])?></h1>
     <div class="flex-column grid-padding">
-        <?php foreach ( Repository::get($this)->getPosts() as $post ) :
+        <?php foreach ( $this->getRepository()->getPosts() as $post ) :
             if ( --$max_posts < 0 ) break;?>
             <div>
                 <?php (new PostLink($post, $this))->html()?>
@@ -38,7 +37,7 @@ $section_posts = function($max_posts = 4) {?>
 $section_projects = function($max_projects = 2) {?>
     <h1><?=$this->tr(['es'=> 'Proyectos', 'en' => 'Projects'])?></h1>
     <div class="flex-column grid-padding">
-        <?php foreach ( Repository::get($this)->getProjects() as $project ) :
+        <?php foreach ( $this->getRepository()->getProjects() as $project ) :
             if ( --$max_projects < 0 ) break;?>
             <div>
                 <?php (new ProjectBox($project, $this))->html()?>

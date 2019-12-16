@@ -3,7 +3,7 @@
 include __DIR__ . '/../vendor/autoload.php';
 
 use edwrodrig\site\data\Repository;
-use edwrodrig\static_generator\cache\CacheManager;
+use edwrodrig\file_cache\CacheManager;
 
 $data = new Repository;
 

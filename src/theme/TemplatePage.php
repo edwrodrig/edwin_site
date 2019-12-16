@@ -3,7 +3,12 @@ namespace edwrodrig\site\theme;
 
 use DateTime;
 
-use edwrodrig\static_generator\cache\ImageItem;
+use edwrodrig\file_cache\ImageItem;
+use edwrodrig\site\data\Repository;
+use edwrodrig\static_generator\exception\CacheDoesNotExists;
+use edwrodrig\static_generator\exception\NoTranslationAvailableException;
+use edwrodrig\static_generator\exception\RelativePathCanNotBeFullException;
+use edwrodrig\static_generator\exception\UnregisteredWebDomainException;
 use edwrodrig\static_generator\html\meta\AppleWebApplication;
 use edwrodrig\static_generator\html\meta\Favicon;
 use edwrodrig\static_generator\html\meta\OpenGraph;
@@ -18,7 +23,7 @@ class TemplatePage extends TemplateHtmlBasic {
      *
      * Every page must have a title
      * @return string
-     * @throws \edwrodrig\static_generator\exception\NoTranslationAvailableException
+     * @throws NoTranslationAvailableException
      */
     public function getTitle() : string {
         /**
@@ -32,7 +37,7 @@ class TemplatePage extends TemplateHtmlBasic {
      * Get the page description from metadata
      * Every page must have a description
      * @return string
-     * @throws \edwrodrig\static_generator\exception\NoTranslationAvailableException
+     * @throws NoTranslationAvailableException
      */
     public function getDescription() : string {
         /**
@@ -43,10 +48,10 @@ class TemplatePage extends TemplateHtmlBasic {
     }
 
     /**
-     * @throws \edwrodrig\static_generator\exception\CacheDoesNotExists
-     * @throws \edwrodrig\static_generator\exception\NoTranslationAvailableException
-     * @throws \edwrodrig\static_generator\exception\RelativePathCanNotBeFullException
-     * @throws \edwrodrig\static_generator\exception\UnregisteredWebDomainException
+     * @throws CacheDoesNotExists
+     * @throws NoTranslationAvailableException
+     * @throws RelativePathCanNotBeFullException
+     * @throws UnregisteredWebDomainException
      */
     public function head() : void {
 
@@ -113,7 +118,7 @@ class TemplatePage extends TemplateHtmlBasic {
     }
 
     /**
-     * @throws \edwrodrig\static_generator\exception\NoTranslationAvailableException
+     * @throws NoTranslationAvailableException
      */
     public function body() : void {
         $this->bodyHeader();
@@ -122,7 +127,7 @@ class TemplatePage extends TemplateHtmlBasic {
     }
 
     /**
-     * @throws \edwrodrig\static_generator\exception\NoTranslationAvailableException
+     * @throws NoTranslationAvailableException
      */
     protected function bodyHeader() {
         ?>
@@ -138,7 +143,7 @@ class TemplatePage extends TemplateHtmlBasic {
     }
 
     /**
-     * @throws \edwrodrig\static_generator\exception\NoTranslationAvailableException
+     * @throws NoTranslationAvailableException
      */
     public function navMenu() {?>
         <div id="nav-menu" style="display:none">
@@ -223,7 +228,7 @@ class TemplatePage extends TemplateHtmlBasic {
      * @param int $width
      * @param int $height
      * @return string
-     * @throws \edwrodrig\static_generator\exception\CacheDoesNotExists
+     * @throws CacheDoesNotExists
      */
     public function imageContain(string $file, int $width, int $height) {
 
@@ -231,6 +236,13 @@ class TemplatePage extends TemplateHtmlBasic {
         $image->resizeContain($width, $height);
         $image->setSalt();
         return strval($this->getCache('cache/images')->update($image));
+    }
+
+    /**
+     * @return Repository
+     */
+    public function getRepository() : Repository {
+        return parent::getRepository();
     }
 
 }

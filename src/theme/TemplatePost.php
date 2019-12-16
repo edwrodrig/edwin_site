@@ -9,6 +9,7 @@
 namespace edwrodrig\site\theme;
 
 use edwrodrig\site\data\Post;
+use edwrodrig\static_generator\exception\NoTranslationAvailableException;
 use edwrodrig\static_generator\PagePhp;
 
 class TemplatePost extends TemplatePage
@@ -16,7 +17,7 @@ class TemplatePost extends TemplatePage
     /**
      * @var Post
      */
-    private $post;
+    private Post $post;
 
     public function __construct(PagePhp $page_info) {
         parent::__construct($page_info);
@@ -39,7 +40,7 @@ class TemplatePost extends TemplatePage
 
     /**
      * @return string
-     * @throws \edwrodrig\static_generator\exception\NoTranslationAvailableException
+     * @throws NoTranslationAvailableException
      */
     public function getTitle() : string {
         return $this->tr($this->post->getTitle());

@@ -25,7 +25,7 @@ use edwrodrig\site\theme\ProjectBox;
         </header>
         <hr>
         <div class="flex-column grid-padding">
-        <?php foreach ( Repository::get($this)->getProjects() as $project ) : ?>
+        <?php foreach ( $this->getRepository()->getProjects() as $project ) : ?>
             <div>
                 <?php (new ProjectBox($project, $this))->html() ?>
             </div>

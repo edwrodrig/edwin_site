@@ -17,22 +17,22 @@ class Post
     /**
      * @var string
      */
-    private $id;
+    private string $id;
 
     /**
      * @var TranslatableString
      */
-    private $title;
+    private TranslatableString $title;
 
     /**
      * @var TranslatableString
      */
-    private $description;
+    private TranslatableString $description;
 
     /**
      * @var DateTime
      */
-    private $publication_date;
+    private DateTime $publication_date;
 
     public static function createFromArray(array $data) {
         $post = new self;

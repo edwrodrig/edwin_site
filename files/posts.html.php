@@ -13,7 +13,6 @@
  * @var $this \edwrodrig\site\theme\TemplatePage
  */
 
-use edwrodrig\site\data\Repository;
 use edwrodrig\site\theme\PostLink;
 
 ?>
@@ -24,7 +23,7 @@ use edwrodrig\site\theme\PostLink;
         </header>
         <hr>
         <div class="flex-column grid-padding">
-        <?php foreach ( Repository::get($this)->getPosts() as $post ) : ?>
+        <?php foreach ( $this->getRepository()->getPosts() as $post ) : ?>
             <div>
                 <?php (new PostLink($post, $this))->html()?>
             </div>

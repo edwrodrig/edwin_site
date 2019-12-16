@@ -3,8 +3,10 @@ declare(strict_types=1);
 
 namespace edwrodrig\site\theme;
 
+use edwrodrig\file_cache\ImageItem;
 use edwrodrig\site\data\Project;
-use edwrodrig\static_generator\cache\ImageItem;
+use edwrodrig\static_generator\exception\CacheDoesNotExists;
+use edwrodrig\static_generator\exception\NoTranslationAvailableException;
 
 /**
  * Class ProjectBox
@@ -15,12 +17,12 @@ class ProjectBox
     /**
      * @var Project
      */
-    private $project;
+    private Project $project;
 
     /**
      * @var TemplatePage
      */
-    private $template;
+    private TemplatePage $template;
 
     public function __construct(Project $project, TemplatePage $template) {
         $this->project = $project;
@@ -33,7 +35,7 @@ class ProjectBox
 
     /**
      * @return string
-     * @throws \edwrodrig\static_generator\exception\NoTranslationAvailableException
+     * @throws NoTranslationAvailableException
      */
     public function getDescription() : string {
         return $this->template->tr($this->project->getDescription(), '');
@@ -45,7 +47,7 @@ class ProjectBox
 
     /**
      * @return string
-     * @throws \edwrodrig\static_generator\exception\CacheDoesNotExists
+     * @throws CacheDoesNotExists
      */
     public function getImage() : string {
         $file = $this->project->getImage() ?? 'default.svg';
@@ -57,8 +59,8 @@ class ProjectBox
     }
 
     /**
-     * @throws \edwrodrig\static_generator\exception\CacheDoesNotExists
-     * @throws \edwrodrig\static_generator\exception\NoTranslationAvailableException
+     * @throws CacheDoesNotExists
+     * @throws NoTranslationAvailableException
      */
     public function html() {?>
         <a href="<?=$this->getUrl()?>" class="project-box clickable-box">

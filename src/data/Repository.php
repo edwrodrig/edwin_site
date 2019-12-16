@@ -7,37 +7,45 @@ use edwrodrig\contento\collection\Collection;
 use edwrodrig\contento\collection\Singleton;
 use edwrodrig\site\theme\TemplatePost;
 use edwrodrig\static_generator\Context;
+use edwrodrig\static_generator\exception\InvalidTemplateClassException;
+use edwrodrig\static_generator\exception\InvalidTemplateMetadataException;
 use edwrodrig\static_generator\Repository as BaseRepository;
-use edwrodrig\static_generator\template\Template;
+use edwrodrig\static_generator\util\exception\IgnoredPageFileException;
+use Generator;
 
 class Repository extends BaseRepository
 {
     /**
-     * @var Post[]|\Generator|null
+     * @var Post[]|Generator
      */
-    private $posts = null;
+    private $posts;
 
     /**
-     * @var Project[]|\Generator|null
+     * @var Project[]|Generator
      */
-    private $projects = null;
+    private $projects;
 
     /**
-     * @var SiteInfo|null
+     * @var SiteInfo
      */
-    private $site_info = null;
+    private SiteInfo $site_info;
 
 
-    public function setContext(Context $context) : BaseRepository {
-        $this->posts = null;
+    /**
+     * @param Context $context
+     * @return BaseRepository
+     */
+    public function setContext(Context $context) : BaseRepository
+    {
+        unset($this->posts);
         return parent::setContext($context);
     }
 
     /**
-     * @param Context $context
-     * @return \Generator
-     * @throws \edwrodrig\static_generator\exception\InvalidTemplateClassException
-     * @throws \edwrodrig\static_generator\util\exception\IgnoredPageFileException
+     * @return Generator
+     * @throws InvalidTemplateClassException
+     * @throws InvalidTemplateMetadataException
+     * @throws IgnoredPageFileException
      */
     protected function getPostFromTemplates() {
         foreach ( $this->context->getTemplates() as $template ) {
@@ -48,10 +56,10 @@ class Repository extends BaseRepository
     }
 
     /**
-     * @return Project[]|\Generator
+     * @return Project[]|Generator
      */
     public function getProjects() {
-        if ( is_null($this->projects) ) {
+        if ( !isset($this->projects) ) {
             $this->projects = Collection::createFromJson(__DIR__ . '/../../data/projects.json', Project::class);
             $this->projects->reverseSort();
         }
@@ -67,12 +75,13 @@ class Repository extends BaseRepository
     }
 
     /**
-     * @return Post[]|\Generator
-     * @throws \edwrodrig\static_generator\exception\InvalidTemplateClassException
-     * @throws \edwrodrig\static_generator\util\exception\IgnoredPageFileException
+     * @return Post[]|Generator
+     * @throws IgnoredPageFileException
+     * @throws InvalidTemplateClassException
+     * @throws InvalidTemplateMetadataException
      */
     public function getPosts() {
-        if ( is_null($this->posts) ) {
+        if ( !isset($this->posts) ) {
             $this->posts = Collection::createFromElements(iterator_to_array($this->getPostFromTemplates()));
             $this->posts->reverseSort();
         }
@@ -82,8 +91,9 @@ class Repository extends BaseRepository
     /**
      * @param string $id
      * @return Post
-     * @throws \edwrodrig\static_generator\exception\InvalidTemplateClassException
-     * @throws \edwrodrig\static_generator\util\exception\IgnoredPageFileException
+     * @throws IgnoredPageFileException
+     * @throws InvalidTemplateClassException
+     * @throws InvalidTemplateMetadataException
      */
     public function getPost(string $id) : Post {
         return $this->getPosts()[$id];
@@ -93,22 +103,9 @@ class Repository extends BaseRepository
      * @return SiteInfo
      */
     public function getSiteInfo() : SiteInfo {
-        if ( is_null($this->site_info) ) {
+        if ( !isset($this->site_info) ) {
             $this->site_info = Singleton::createFromJson(__DIR__ . '/../../data/site_info.json', SiteInfo::class);
         }
         return $this->site_info;
-    }
-
-    /**
-     * Method to get type hint of a repository.
-     *
-     * ```
-     * Repository::get($template)->getHintedCollection();
-     * ```
-     * @param Context|Template $object a object with a getRepository() method
-     * @return Repository
-     */
-    public static function get($object) : self {
-        return $object->getRepository();
     }
 }
