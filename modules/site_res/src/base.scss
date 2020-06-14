@@ -1,0 +1,125 @@
+/**
+  Main container
+ */
+@mixin main-container($width) {
+  max-width: $width;
+  margin: 0 auto;
+}
+
+/**
+ Mixin to generate container grids with padding.
+
+ This makes natural to generate some padding of objects.
+ It sets the margins of the container and the padding. So you need to set a outer container for the container or the
+ objects if you want to set the margins
+ */
+@mixin grid($padding) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -$padding;
+  margin-left: -$padding;
+  & > * {
+    margin-top: $padding;
+    margin-left: $padding;
+  }
+}
+
+/**
+  Grid with fixed column number with max-width with padding
+
+  $elements is a assoc array with numbers as key and max-width as values.
+  Use a value of 100% for the default value.
+
+ */
+@mixin grid-fixed($elements, $padding) {
+  @include grid($padding);
+
+  & > * {
+    @each $number, $max-width in $elements {
+
+      @if $max-width == 100% {
+        width: calc(#{100% / $number} - #{$padding});
+      }
+      @else {
+        @media (max-width: $max-width) {
+          width: calc(#{100% / $number} - #{$padding});
+        }
+      }
+    }
+  }
+}
+
+/**
+ Used by mixin
+ */
+%responsive-wrapper {
+  position: relative;
+  height: 0;
+
+  & > * {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}
+/**
+  Responsive container.
+
+ This mixin is use to construct container classes for divs that keeps aspect ratio of it contents contents.
+ The content is automatically fills the container.
+ ```
+ <div class="responsive-container">
+   <some_element></some_element>
+ </div>
+ ```
+
+  The container uses their width attributes. So if you want to set the size of the element you need to put an outer div for this purpose.
+  ```
+  <div style="width:43%">
+    <div class="responsive-container">
+      <some_element></some_element>
+    </div>
+  </div>
+ ```
+ */
+@mixin responsive-wrapper($width, $height) {
+  @extend %responsive-wrapper;
+  width: 100%;
+  padding-bottom: 100% * $height / $width;
+}
+
+/**
+  Popup menu
+
+  This is the style for a element that pop up some thing while hover and hide when the cursor move out.
+  You must use in the following way
+  ```
+  <div class="popup-menu">
+    <span class="parent">Some content</span>
+    <menu>
+      <div class="child">
+        <span>Some inner content</span>
+      </div>
+    </menu>
+  </div>
+  ```
+  The item with class parent is the inner content is the always visible element.
+  The item with class children is the inner content that will popup.
+  Menu item should always be and it is not stylable.
+  the menu > div item should be present but is stylable, except by the position property because is always position:absolute
+ */
+%popup-menu {
+  & > menu { display: none; }
+  &:hover > menu { display: block; }
+
+  & > menu {
+    padding:0;
+    margin:0;
+    position: relative;
+    & > div { position: absolute; }
+  }
+}
+

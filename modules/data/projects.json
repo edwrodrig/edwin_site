@@ -1,0 +1,21 @@
+[
+{
+  "name": "Canal-web",
+  "description": "Canal is a herramienta de análisis de autómatas celulares elementales basado en web. Puedes establecer tu estado inicial y correr cualquier regla ECA en él. Hay otras opciones que extienden las posibilidades del análisis y las simulaciones.",
+  "image": "canal-web.svg",
+  "url": "http://edwrodrig.github.io/canal-web"
+},
+{
+  "name": "pitri.js",
+  "description": "pitri.js es una pequeña librería javascript para proyectar puntos con perspectiva. Esta biblioteca está escrita en javascript puro lo que la hace adecuada para casos de uso simples donde no queremos usar inflados frameworks. pitri.js provee funciones para definir una vista de cámara y transformar un punto 2d en coordenadas de pantalla.",
+  "image": "pitrijs.png",
+  "url": "http://edwrodrig.github.io/pitri.js"
+},
+{
+ "name": "Tundra Piechart",
+  "description": "Tundra es un editor y visualizador de gráficos de torta bio-informáticos. Puedes importar datos de muchas fuentes incluyendo MGTaxa, QIIME, Krona y texto plano. La edición es muy interactiva con un alto grado de libertad. Tu puedes exportar tus gráficos a formatos PNG y SVG.",
+  "image" : "tundra-piechart.svg",
+  "url": "http://inf.imo-chile.cl/software/tundra.html",
+  "importance": 2
+}
+]

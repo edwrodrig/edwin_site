@@ -1,5 +1,0 @@
-<component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="Deploy to Github" type="PhpLocalRunConfigurationType" factoryName="PHP Console" folderName="Deploy" path="$PROJECT_DIR$/scripts/deploy.php">
-    <method />
-  </configuration>
-</component>

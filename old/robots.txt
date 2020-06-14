@@ -1,6 +1,0 @@
-User-agent: *
-Comment: {{ description }}
-Crawl-delay: 10
-Request-rate: 1/10m
-Robot-version: 2.0
-Sitemap: {{ base_path }}/sitemap.xml
