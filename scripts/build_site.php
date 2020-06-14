@@ -10,7 +10,7 @@ use edwrodrig\mypage\site\Builder;
 
 try {
     $builder = new Builder();
-    $builder->makeSite(__DIR__ . '/../modules/data/html', __DIR__ . '/../modules/site/www');
+    $builder->makeSite(__DIR__ . '/../modules/data/html', __DIR__ . '/../modules/www');
 } catch ( ExceptionWithData $exception ) {
     echo $exception->getMessage(), "\n";
     echo json_encode($exception->getData(),JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE), "\n";

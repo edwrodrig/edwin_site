@@ -1,10 +1,10 @@
 <?php
 declare(strict_types=1);
-/**
- * @var labo86\staty_core\PagePhp $page
- */
-use edwrodrig\mypage\site\BlockPage;
 
+use edwrodrig\mypage\site\BlockPage;
+use labo86\staty_core\PagePhp;
+
+/** @var PagePhp $page */
 $BLOCK = new BlockPage($page);
 ?>
 

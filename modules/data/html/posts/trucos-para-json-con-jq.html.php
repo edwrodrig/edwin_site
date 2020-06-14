@@ -1,11 +1,10 @@
 <?php
 declare(strict_types=1);
-/**
- * @var labo86\staty_core\PagePhp $page
- */
 
 use edwrodrig\mypage\site\BlockPagePost;
+use labo86\staty_core\PagePhp;
 
+/** @var PagePhp $page */
 $page->prepareMetadata([
     'title' => "Trucos para json con jq",
     'description' => "Funciones recurrentes de formateo y manejo de json usando jq",

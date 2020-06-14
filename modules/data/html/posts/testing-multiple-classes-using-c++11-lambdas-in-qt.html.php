@@ -1,11 +1,10 @@
 <?php
 declare(strict_types=1);
-/**
- * @var labo86\staty_core\PagePhp $page
- */
 
 use edwrodrig\mypage\site\BlockPagePost;
+use labo86\staty_core\PagePhp;
 
+/** @var PagePhp $page */
 $page->prepareMetadata([
     'title' => "Probando muchas clases usando lambdas en Qt",
     'description' => 'En este artículo es explicado una alternativa para organizar tus pruebas unitarias en un solo archivo usando funciones lambda',

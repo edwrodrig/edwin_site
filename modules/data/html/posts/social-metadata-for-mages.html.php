@@ -1,11 +1,10 @@
 <?php
 declare(strict_types=1);
-/**
- * @var labo86\staty_core\PagePhp $page
- */
 
 use edwrodrig\mypage\site\BlockPagePost;
+use labo86\staty_core\PagePhp;
 
+/** @var PagePhp $page */
 $page->prepareMetadata([
     'title' => "Metadata social para páginas",
     'description' => 'En este artículo es explicado como agregar metadata social a una página html. Esta metadata es usada para mostrar buenas cajas de descripción en redes sociales a la hora de compartir un vínculo',

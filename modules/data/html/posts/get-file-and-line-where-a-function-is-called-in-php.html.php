@@ -1,11 +1,10 @@
 <?php
 declare(strict_types=1);
-/**
- * @var labo86\staty_core\PagePhp $page
- */
 
 use edwrodrig\mypage\site\BlockPagePost;
+use labo86\staty_core\PagePhp;
 
+/** @var PagePhp $page */
 $page->prepareMetadata([
     'title' => "Obtener el archivo y la linea de una llamada de función en PHP",
     'publication_date' => "2017-02-01",

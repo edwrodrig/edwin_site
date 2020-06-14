@@ -1,12 +1,11 @@
 <?php
 declare(strict_types=1);
-/**
- * @var labo86\staty_core\PagePhp $page
- */
 
 use edwrodrig\mypage\site\BlockPage;
 use edwrodrig\mypage\site\BlockProjectBox;
+use labo86\staty_core\PagePhp;
 
+/** @var PagePhp $page */
 $page->prepareMetadata([
     'title' => "Proyectos",
     'description' => "Proyectos que he programado laboralmente o por amor al arte"

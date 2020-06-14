@@ -1,11 +1,10 @@
 <?php
 declare(strict_types=1);
-/**
- * @var labo86\staty_core\PagePhp $page
- */
 
 use edwrodrig\mypage\site\BlockPagePost;
+use labo86\staty_core\PagePhp;
 
+/** @var PagePhp $page */
 $page->prepareMetadata([
     'title' => "Envolver UI considerando namespace usando CMake",
     'description' => 'Una macro para envolver archivos UI de QT considerando los namespace',

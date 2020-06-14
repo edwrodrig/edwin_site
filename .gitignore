@@ -2,6 +2,7 @@
 /.phpunit.result.cache
 /composer.lock
 /composer.phar
+/modules/www
 /vendor
 /.idea/*
 !/.idea/dictionaries

@@ -1,12 +1,11 @@
 <?php
 declare(strict_types=1);
-/**
- * @var labo86\staty_core\PagePhp $page
- */
 
 use edwrodrig\mypage\site\BlockPage;
 use edwrodrig\mypage\site\BlockPostLink;
+use labo86\staty_core\PagePhp;
 
+/** @var PagePhp $page */
 $page->prepareMetadata([
     'title' => "Artículos",
     'description' => "Algunos artículos sobre programación y otros temas. No esperen nada muy elaborado"

@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
-/**
- * @var labo86\staty_core\PagePhp $page
- */
+
 
 use edwrodrig\mypage\site\BlockPagePost;
+use labo86\staty_core\PagePhp;
 
+/** @var PagePhp $page */
 $page->prepareMetadata([
     'title' => "Palabras comunes en informática",
     'description' => "Apuntes para el curso de informatica y programación dictado para el Instituto Milenio de Oceanografía",

@@ -1,13 +1,12 @@
 <?php
 declare(strict_types=1);
-/**
- * @var labo86\staty_core\PagePhp $page
- */
 
 use edwrodrig\mypage\site\BlockPage;
 use edwrodrig\mypage\site\BlockPostLink;
 use edwrodrig\mypage\site\BlockProjectBox;
+use labo86\staty_core\PagePhp;
 
+/** @var PagePhp $page */
 $page->prepareMetadata([
     'title' => "Edwin Rodríguez",
     'description' => "Programador chileno. PHP, C++, Qt5 y otras cosas"
