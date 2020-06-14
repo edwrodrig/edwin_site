@@ -1,0 +1,4 @@
+exclude_patterns:
+  - "modules/site_res/webpack.config.js"
+  - "modules/site_res/test/*"
+  - "modules/site_res/dist/*"
