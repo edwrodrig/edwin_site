@@ -2,7 +2,7 @@ edwrodrig\mypage
 ========
 Mi página personal
 
-[![License](https://img.shields.io/github/license/edwrodrig/mypage)](https://github.com/labo86/upi/blob/master/LICENSE)
+[![License](https://img.shields.io/github/license/edwrodrig/mypage)](https://github.com/labo86/edwrodrig/mypage/master/LICENSE)
 [![Build Status](https://travis-ci.org/edwrodrig/mypage.svg?branch=master)](https://travis-ci.org/edwrodrig/mypage)
 [![codecov.io Code Coverage](https://codecov.io/gh/edwrodrig/mypage/branch/master/graph/badge.svg)](https://codecov.io/github/edwrodrig/mypage?branch=master)
 [![Code Climate](https://codeclimate.com/github/edwrodrig/mypage/badges/gpa.svg)](https://codeclimate.com/github/edwrodrig/mypage)
